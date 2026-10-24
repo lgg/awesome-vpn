@@ -6,16 +6,18 @@
 
 **English-first · vendor-neutral · self-hosting-friendly · updated as the ecosystem changes.** The focus is useful software and technical resources, not free public proxy lists or VPN advertisements.
 
-This list covers **VPNs, application proxies, local DPI circumvention, encrypted DNS, mesh networking, and reverse tunnels**. These solve different problems: a local DPI-bypass tool **does not** inherently hide your public IP; a proxy client **does not** provide a server or subscription by itself. See [Compatibility](COMPATIBILITY.md) and [Troubleshooting](TROUBLESHOOTING.md).
+This list covers **VPNs, application proxies, local DPI circumvention, encrypted DNS, mesh networking, and reverse tunnels**. These solve different problems: a local DPI-bypass tool **does not** inherently hide your public IP; a proxy client **does not** provide a server or subscription by itself. See the **[client directory by platform](CLIENTS.md)**, [Compatibility](COMPATIBILITY.md) and [Troubleshooting](TROUBLESHOOTING.md).
 
 **Legend:** `[OSS]` source available under an open-source license · `[Closed]` proprietary/closed-source client · `[Legacy]` archived or apparently dormant; verify before use · `[Self-hosted]` deploy on infrastructure you control. Activity and supported features can change; always check upstream releases and documentation.
 
 ## Contents
 
+- [Client directory and selection guide](CLIENTS.md)
 - [Proxy and VPN cores](#proxy-and-vpn-cores)
 - [Desktop clients](#desktop-clients)
 - [Android clients](#android-clients)
 - [iOS, iPadOS and Apple clients](#ios-ipados-and-apple-clients)
+- [HarmonyOS NEXT clients](#harmonyos-next-clients)
 - [VPNs and private mesh networks](#vpns-and-private-mesh-networks)
 - [Decentralized and anonymity networks](#decentralized-and-anonymity-networks)
 - [Server panels and dashboards](#server-panels-and-dashboards)
@@ -31,6 +33,7 @@ This list covers **VPNs, application proxies, local DPI circumvention, encrypted
 - [Research and curated discussions](#research-and-curated-discussions)
 - [Maintenance and contributing](#maintenance-and-contributing)
 
+**Looking for an app to install?** Start with **[CLIENTS.md](CLIENTS.md)** for a platform-by-platform index, original GitHub releases and verified App Store listings. Use the sections below for broader project discovery.
 ## Proxy and VPN cores
 
 - **[Xray-core](https://github.com/XTLS/Xray-core)** [OSS] — Extensible proxy core for VLESS, VMess, Trojan, Shadowsocks, REALITY and more.
@@ -51,12 +54,14 @@ This list covers **VPNs, application proxies, local DPI circumvention, encrypted
 - **[OpenVPN](https://github.com/OpenVPN/openvpn)** [OSS] — Traditional TLS VPN daemon.
 - **[SoftEther VPN](https://github.com/SoftEtherVPN/SoftEtherVPN)** [OSS] — Multiprotocol VPN server and client suite.
 
+
 ## Desktop clients
 
 Windows, macOS and Linux availability varies by release; verify the build for your OS and CPU.
 
 - **[sing-box for Desktop](https://github.com/SagerNet/sing-box-for-desktop)** [OSS] — Official experimental desktop GUI (initially Windows); check release readiness.
 - **[v2rayN](https://github.com/2dust/v2rayN)** [OSS] — Multi-platform GUI for Xray, sing-box and other proxy cores; profiles and subscriptions.
+- **[v2RayTun](https://github.com/LXST-CODE/v2RayTun)** [Closed] — Windows/macOS/Linux builds in a multi-platform Xray client distribution; download tracks differ by OS.
 - **[WINGS V DeX](https://github.com/WINGS-N/WINGSV_DeX)** [OSS] — Linux/Windows companion for WINGS V, supporting Xray and VK TURN transports.
 - **[SkipIt](https://github.com/getskipit/skipit)** [OSS] — Windows desktop client using Xray-core and sing-box; verify current OS builds and release maturity.
 - **[Clash Verge Rev](https://github.com/clash-verge-rev/clash-verge-rev)** [OSS] — Desktop GUI based on mihomo.
@@ -68,6 +73,27 @@ Windows, macOS and Linux availability varies by release; verify the build for yo
 - **[Satelite Proxy](https://github.com/zn0wii/satelite-proxy)** [OSS] — Newer desktop client with sing-box/Xray/mihomo integrations; check platform builds.
 - **[Zephyr](https://github.com/Juwan-Hwang/Zephyr)** [OSS] — Lightweight Tauri/Rust mihomo desktop client.
 - **[Bettbox](https://github.com/appshubcc/Bettbox)** [OSS] — Desktop/Android network toolbox; consult upstream for supported cores.
+- **[INCY](https://github.com/INCY-DEV/incy-platforms)** [Closed] — Cross-platform Xray client with official desktop binary releases; **desktop is pre-alpha** and GitHub is a downloads/metadata repository, not full client source.
+- **[OneXray](https://github.com/YuanDevTeam/OneXray)** [OSS] — Xray GUI for Windows, macOS, Linux and mobile, with native configuration imports and Remnawave subscriptions.
+- **[GenyConnect](https://github.com/genyleap/GenyConnect)** [OSS] — Multi-platform tunnel/routing client; check upstream-supported builds and capabilities.
+- **[AnyPortal](https://github.com/AnyPortal/AnyPortal)** — GUI for Xray/sing-box/mihomo on Windows, macOS, Linux and Android; **iOS tunneling is not available** per upstream.
+- **[husi](https://github.com/xchacha20-poly1305/husi)** — Sing-box-family Android and desktop client; macOS desktop builds currently target Apple Silicon, check platform requirements.
+- **[FlClashX](https://github.com/pluralplay/FlClashX)** [OSS] — FlClash-derived mihomo client adapted for Remnawave subscriptions; confirm fork-specific maintenance.
+- **[Clash Nyanpasu](https://github.com/libnyanpasu/clash-nyanpasu)** [OSS] — Desktop mihomo/Clash GUI with profiles and subscription workflow.
+- **[Sparkle](https://github.com/xishang0128/sparkle)** [OSS] — Electron-based mihomo GUI, still evolving.
+- **[sing-box-windows](https://github.com/xinggaoya/sing-box-windows)** [OSS] — Tauri desktop sing-box GUI for Windows, macOS and Linux.
+- **[OneBox](https://github.com/OneOhCloud/OneBox)** [OSS] — Sing-box desktop GUI; upstream distinguishes official macOS support from community-maintained builds.
+- **[Pandora-Box](https://github.com/snakem982/Pandora-Box)** [OSS] — Simple mihomo GUI for desktop environments.
+- **[Prizrak-Box](https://github.com/legiz-ru/Prizrak-Box)** [OSS] — Pandora-Box-derived desktop mihomo client with additional platforms/builds.
+- **[GUI.for.Clash](https://github.com/GUI-for-Cores/GUI.for.Clash)** [OSS] — Wails-based mihomo/Clash desktop GUI.
+- **[ClashX.Meta](https://github.com/MetaCubeX/ClashX.Meta)** [OSS] — macOS menu-bar proxy GUI in the Clash Meta ecosystem.
+- **[ClashBar](https://github.com/Sitoi/ClashBar)** [OSS] — SwiftUI/AppKit macOS menu-bar mihomo client.
+- **[V2rayU](https://github.com/yanue/V2rayU)** — macOS proxy GUI for V2Ray/Xray-related profiles.
+- **[V2RayXS](https://github.com/tzmax/V2RayXS)** [OSS] — macOS GUI for Xray-core.
+- **[ShadowsocksX-NG](https://github.com/shadowsocks/ShadowsocksX-NG)** [OSS] — Dedicated macOS Shadowsocks client.
+- **[Netch](https://github.com/netchx/netch)** [OSS] — Windows system-/application-level proxy client; check version-specific modes.
+- **[Invisible Man XRay](https://github.com/InvisibleManVPN/InvisibleMan-XRayClient)** [OSS] — Windows WPF Xray GUI; last significant activity older, verify releases.
+- **[Shadowsocks for Windows](https://github.com/shadowsocks/shadowsocks-windows)** [Legacy] — Classic C# client; upstream had no recent updates as of 2026.
 - **[Happ Desktop](https://github.com/Happ-proxy/happ-desktop)** [Closed] — Official Windows/macOS/Linux release repository for the Xray-powered Happ utility.
 - **[Nekoray](https://github.com/MatsuriDayo/nekoray)** [Legacy] — Archived Qt client; use only for historical reference.
 
@@ -77,14 +103,26 @@ Windows, macOS and Linux availability varies by release; verify the build for yo
 - **[sing-box for Android (SFA)](https://github.com/SagerNet/sing-box-for-android)** [OSS] — Android GUI for sing-box.
 - **[NekoBox for Android](https://github.com/MatsuriDayo/NekoBoxForAndroid)** [OSS] — Advanced sing-box-based Android client; check release recency.
 - **[WINGS V](https://github.com/WINGS-N/WINGSV)** [OSS] — Android Xray-oriented client with per-app controls, WireGuard integration and local DPI-bypass features.
-- **[v2RayTun](https://github.com/LXST-CODE/v2RayTun)** — Xray-based client with public releases, issue tracker and roadmap; source availability may be limited.
+- **[v2RayTun](https://github.com/LXST-CODE/v2RayTun)** [Closed] — Cross-platform Xray/AmneziaWG client for Android/TV, Apple and desktop; official GitHub lists platform-specific releases but is not full application source.
 - **[Clash Meta for Android](https://github.com/MetaCubeX/ClashMetaForAndroid)** [OSS] — Android rule-based tunneling client.
 - **[Exclave](https://github.com/ExclaveNetwork/Exclave)** [OSS] — Android proxy client.
 - **[Hiddify](https://github.com/hiddify/hiddify-app)** [OSS] — Cross-platform client with sing-box-related protocols and subscriptions.
 - **[Karing](https://github.com/KaringX/karing)** [OSS] — Cross-platform routing/proxy utility.
 - **[Amnezia VPN](https://github.com/amnezia-vpn/amnezia-client)** [OSS] — Client supporting self-hosted VPN deployments and AmneziaWG.
 - **[Happ Android](https://github.com/Happ-proxy/happ-android)** [Closed] — Official Android release repository (not a full source-code guarantee).
+- **[INCY for Android](https://github.com/INCY-DEV/incy-platforms)** [Closed] — Android/Android TV releases for Xray; source code is not published, use official signed APK/store.
+- **[OneXray for Android](https://github.com/YuanDevTeam/OneXray)** [OSS] — Cross-platform Xray client with direct subscriptions and local routing.
+- **[Clash Mi](https://github.com/KaringX/clashmi)** [OSS] — Mihomo-based multi-platform client with Android and iOS releases.
+- **[husi for Android](https://github.com/xchacha20-poly1305/husi)** — Advanced proxy client with sing-box-based tooling; check OS and ABI requirements.
+- **[FlClashX](https://github.com/pluralplay/FlClashX)** [OSS] — Community fork of FlClash including Android/TV distribution.
+- **[YumeBox](https://github.com/YumeYucca/YumeBox)** [OSS] — Android mihomo GUI; check release/feature maturity.
+- **[Shadowsocks Android](https://github.com/shadowsocks/shadowsocks-android)** [OSS] — Official Shadowsocks client focused on the Shadowsocks protocol, not all Xray protocols.
+- **[SimpleXray](https://github.com/lhear/SimpleXray)** [OSS] — Smaller Xray-based Android GUI.
+- **[AnyPortal for Android](https://github.com/AnyPortal/AnyPortal)** — Multi-engine proxy GUI; mobile build limitations described upstream.
+- **[Xray GUI (SaeedDev94)](https://github.com/SaeedDev94/Xray)** [OSS] — Minimal Android Xray client.
 - **[Outline Client](https://github.com/OutlineFoundation/outline-apps)** [OSS] — Outline client/manager ecosystem.
+
+**Root users:** See [Surfing](https://github.com/GitMetaio/Surfing) and [box4magisk](https://github.com/CHIZI-0618/box4magisk) under router/transparent-proxy tools; these are not ordinary rootless VPN apps.
 
 **Android caveat:** A standard Android installation generally permits only one active `VpnService` tunnel. Running a proxy client and a separate DPI-bypass app simultaneously may require a supported in-app integration or non-VPN proxy mode. Do not assume every listed client can be combined.
 
@@ -94,6 +132,15 @@ Windows, macOS and Linux availability varies by release; verify the build for yo
 - **[Karing](https://github.com/KaringX/karing)** [OSS] — Apple and other platform releases where available.
 - **[Hiddify](https://github.com/hiddify/hiddify-app)** [OSS] — Apple-platform client; check regional App Store availability.
 - **[Amnezia VPN](https://github.com/amnezia-vpn/amnezia-client)** [OSS] — Apple and other platform client builds.
+- **[v2RayTun for Apple](https://github.com/LXST-CODE/v2RayTun)** [Closed] — iOS/macOS Xray client, with region-dependent App Store availability and separate release tracks.
+- **[INCY](https://apps.apple.com/us/app/incy/id6756943388)** [Closed] — iPhone/iPad/Apple TV Xray client; developer publishes platform downloads at [INCY GitHub](https://github.com/INCY-DEV/incy-platforms), not full application source.
+- **[OneXray](https://github.com/YuanDevTeam/OneXray)** [OSS] — Xray client with iOS/macOS builds and official store releases.
+- **[Clash Mi](https://github.com/KaringX/clashmi)** [OSS] — Mihomo-based iOS/macOS proxy utility with official App Store listing.
+- **[V2Box](https://apps.apple.com/us/app/v2box-v2ray-client/id6446814690)** [Closed] — Apple-platform Xray-related client with DNS tunneling options, custom JSON imports and subscription controls (features vary by version).
+- **[Loon](https://apps.apple.com/us/app/loon/id1373567447)** [Closed] — Paid Apple-platform policy routing/proxy utility with scripting.
+- **[Surge 5](https://apps.apple.com/us/app/surge-5/id1442620678)** [Closed] — Advanced Apple networking/proxy rules and debugging utility; check in-app licensing.
+- **[Quantumult X](https://apps.apple.com/us/app/quantumult-x/id1443988620)** [Closed] — Paid Apple proxy/rule engine with scripting and custom routing.
+- **[Egern](https://apps.apple.com/us/app/egern/id1616105820)** [Closed] — Apple proxy and network tools; check protocol requirements and pricing.
 - **[Happ](https://happ.info/)** [Closed] — Xray-powered client with App Store distribution and vendor-maintained downloads.
 - **[Streisand](https://apps.apple.com/us/app/streisand/id6450534064)** [Closed] — Apple-platform proxy client; app availability varies by region.
 - **[Shadowrocket](https://apps.apple.com/us/app/shadowrocket/id932747118)** [Closed] — Paid Apple-platform network/proxy client.
@@ -103,6 +150,10 @@ Windows, macOS and Linux availability varies by release; verify the build for yo
 
 **Note:** App Store listings, GitHub release assets and public source availability are three separate things. Never infer that a client is open source merely because it has a GitHub releases repository.
 
+## HarmonyOS NEXT clients
+
+- **[ClashBox](https://github.com/xiaobaigroup/ClashBox)** [OSS] — Native HarmonyOS NEXT mihomo-based GUI; check signing and HarmonyOS version requirements. It is **not** merely an Android APK.
+- **[Hey](https://github.com/popsiclelmlm/Hey)** [OSS] — Native HarmonyOS NEXT network tunneling and protocol-debugging client.
 ## VPNs and private mesh networks
 
 For private connectivity between your own devices and services; not interchangeable with censorship-bypass proxy transport.
@@ -164,6 +215,7 @@ Never post real subscription URLs, tokens, panel credentials or VPN private keys
 
 ## Deployment, forwarding and tunnels
 
+- **[Xray-install](https://github.com/XTLS/Xray-install)** [OSS] — **Official** Xray installer/update scripts, linked by Xray's own README.
 - **[v2ray-agent](https://github.com/mack-a/v2ray-agent)** [OSS] — Multi-protocol installer for Xray, TUIC, Hysteria 2 and sing-box.
 - **[233boy/v2ray](https://github.com/233boy/v2ray)** [OSS] — V2Ray install and management scripts.
 - **[sing-box-yg](https://github.com/yonggekkk/sing-box-yg)** [OSS] — VPS setup scripts for sing-box and associated transports.
@@ -223,6 +275,15 @@ Strategies such as fragmentation, spoofed packets, TTL tricks and protocol camou
 
 ## Routers, OpenWrt and transparent proxying
 
+- **[Nikki](https://github.com/nikkinikki-org/OpenWrt-nikki)** [OSS] — Mihomo-based OpenWrt transparent proxy package.
+- **[PassWall](https://github.com/Openwrt-Passwall/openwrt-passwall)** [OSS] — OpenWrt LuCI proxy management and traffic routing.
+- **[PassWall2](https://github.com/Openwrt-Passwall/openwrt-passwall2)** [OSS] — Related OpenWrt LuCI proxy package; check support matrix before choosing between versions.
+- **[luci-app-xray](https://github.com/yichya/luci-app-xray)** [OSS] — OpenWrt LuCI integration for Xray configuration.
+- **[box4magisk](https://github.com/CHIZI-0618/box4magisk)** [OSS] — Root/Magisk module for Android transparent proxy using sing-box, mihomo, Xray and V2Ray.
+- **[Surfing](https://github.com/GitMetaio/Surfing)** [OSS] — Root-only Magisk/KernelSU system-wide proxy based on mihomo.
+- **[clash-for-linux](https://github.com/wnlen/clash-for-linux)** [OSS] — Terminal-based Linux deployment of Clash/mihomo.
+- **[clashctl](https://github.com/nelvko/clashctl)** [OSS] — CLI setup and management for mihomo on headless Linux.
+- **[fancyss](https://github.com/hq450/fancyss)** [OSS] — ASUS/Merlin router proxy plugin; hardware and firmware support must be checked.
 - **[OpenClash](https://github.com/vernesong/OpenClash)** [OSS] — Mihomo/Clash-oriented OpenWrt client integration.
 - **[HomeProxy](https://github.com/immortalwrt/homeproxy)** [OSS] — sing-box-based ImmortalWrt/OpenWrt proxy management.
 - **[zapret2-openwrt](https://github.com/1andrevich/zapret2-openwrt)** [OSS] — OpenWrt packages for the Zapret2 DPI-bypass engine.
@@ -254,6 +315,8 @@ Rule formats are **not automatically interchangeable**: `geoip.dat`, `geosite.da
 - **[RKNHardering](https://github.com/xtclovver/RKNHardering)** [OSS] — Android diagnostic checks for VPN/proxy detection, including interface signals and IP comparisons; results are **heuristics**, not a guarantee of invisibility.
 - **[DPYProxy](https://github.com/UPB-SysSec/DPYProxy)** [OSS] — Research proxy for testing DPI/DNS censorship evasion mechanisms, including automatic DNS circumvention experiments.
 - **[Geneva](https://github.com/Kkevsterrr/geneva)** [OSS] — Academic censorship-evasion strategy exploration using generated packet-manipulation strategies; research-grade, not a plug-and-play VPN.
+- **[xray-knife](https://github.com/lilendian0x00/xray-knife)** [OSS] — CLI diagnostics and utilities for Xray/sing-box connections; use only on authorized endpoints.
+- **[xray-checker](https://github.com/kutovoys/xray-checker)** [OSS] — Prometheus exporter for checking Xray proxy availability, latency and operational health.
 - **[OONI Probe](https://github.com/ooni/probe)** [OSS] — Internet censorship measurement client.
 - **[OONI Probe CLI](https://github.com/ooni/probe-cli)** [OSS] — CLI measurement and testing engine.
 - **[OONI Explorer](https://explorer.ooni.org/)** — Public censorship measurement datasets.
@@ -274,6 +337,8 @@ Start with the [practical diagnostic checklist](TROUBLESHOOTING.md): distinguish
 
 - **[RKNHardering detection reference](https://xtclovver.github.io/RKNHardering/help/ru/)** — Explanations of Android VPN detection signals, with evidence-level distinctions.
 - **[Zapret2 manual](https://github.com/bol-van/zapret2/blob/master/docs/manual.md)** — Original DPI-engine documentation and diagnostics.
+- **[libXray](https://github.com/XTLS/libXray)** [OSS] — Maintained wrapper for embedding Xray into multi-platform apps.
+- **[AndroidLibXrayLite](https://github.com/2dust/AndroidLibXrayLite)** [OSS] — Go Mobile/AAR bridge for Android Xray clients.
 - **[Xray documentation](https://xtls.github.io/en/)** — Xray configuration, DNS, routing, protocols and transport reference.
 - **[Xray examples](https://github.com/XTLS/Xray-examples)** — Upstream example configurations.
 - **[Xray docs source](https://github.com/XTLS/Xray-docs-next)** — Documentation source and changes.
@@ -291,9 +356,17 @@ Start with the [practical diagnostic checklist](TROUBLESHOOTING.md): distinguish
 
 ## Communities and reference catalogs
 
+- **[Project Xray Telegram](https://t.me/projectXray)** — Official community referenced by XTLS/Xray-core.
+- **[Project XTLS channel](https://t.me/projectXtls)** — Official development news referenced by XTLS/Xray-core.
+- **[Project VLESS (RU)](https://t.me/projectVless)** — Russian-language VLESS technical community linked by XTLS/Xray-core.
+- **[Project XHTTP](https://t.me/projectXhttp)** — XHTTP community linked by XTLS/Xray-core.
 - **[Xray UI Telegram channel](https://t.me/XrayUI)** — Channel linking 3x-ui, x-ui, s-ui and Raha.
 - **[Xray UI group](https://t.me/XrayUIGroup)** — Public group linked from the official channel.
 - **[Xray UI topic link](https://t.me/c/2479497161/1)** — User-contributed deep link; Telegram membership may be required.
+- **[INCY Telegram](https://t.me/incy_public)** — Project community linked from INCY official releases.
+- **[Clash Mi Telegram](https://t.me/ClashMiApp)** — Community linked by KaringX's Clash Mi project.
+- **[v2RayTun Telegram](https://t.me/v2raytun)** — Official client release/news community linked from its GitHub README.
+- **[Nikki Telegram](https://t.me/nikkinikki_org)** — OpenWrt Nikki community linked from upstream.
 - **[Happ Proxy Telegram](https://t.me/happ_proxy)** — Happ-related Telegram community.
 - **[v2rayN Telegram group](https://t.me/v2rayN)** — Client community linked from official v2rayN documentation.
 - **[v2rayN Telegram channel](https://t.me/github_2dust)** — v2rayN release/development updates.
@@ -324,6 +397,8 @@ Start with the [practical diagnostic checklist](TROUBLESHOOTING.md): distinguish
 
 The list favors **maintained original repositories, official distribution pages, and verifiable technical resources**. Links are not endorsements or independent security audits. Activity is a point-in-time observation, not an uptime guarantee.
 
+- [Client directory](CLIENTS.md) — OS/architecture-aware choice guide, current sources and proprietary/legacy labels.
+- [Client research notes](CLIENT-RESEARCH-2026.md) — New-project verification, sources and exclusions.
 - [Research notes](RESEARCH-2026.md) — Audited sources, primary discussions and editorial decisions from the October 2026 deep research.
 - [Contributing guidelines](CONTRIBUTING.md) — How to propose a project, verify links, and avoid misleading compatibility claims.
 - [Client compatibility matrix](COMPATIBILITY.md) — Platform, family of core, source/distribution and caveats. A supported core does **not** imply every transport is supported.

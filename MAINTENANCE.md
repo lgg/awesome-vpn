@@ -39,3 +39,17 @@
 ## Discovery references
 
 Cross-checked with [awesome-sing-box](https://github.com/oceanapplications/awesome-sing-box), [Proxy Client Radar](https://clientsradar.com/), source GitHub repositories and the user-supplied VPN/DPI/Xray/TG links. These references are discovery aids, not independent source-code security audits.
+
+## Client directory updates (2026-10-25)
+
+- [INCY](https://github.com/INCY-DEV/incy-platforms): GitHub hosts official releases and metadata; **application source is closed**, desktop builds are **pre-alpha**. Core Xray licensing is separate.
+- [v2RayTun](https://github.com/LXST-CODE/v2RayTun): the official README includes Android/TV, iOS, macOS, Windows, Linux; independent release tracks, limited source disclosure and regional App Store variation.
+- [OneXray](https://github.com/YuanDevTeam/OneXray): GPL-3.0 application source, with OS-specific store/releases; inspect available builds rather than assuming one installer supports all operating systems.
+- [FlClashX](https://github.com/pluralplay/FlClashX): community fork of FlClash, adapted for Remnawave; trust upstream signed builds only.
+- [NekoBox Android](https://github.com/MatsuriDayo/NekoBoxForAndroid): widely used, but last observed GitHub push February 2026, so check current release support.
+- [husi](https://github.com/xchacha20-poly1305/husi): Apple Silicon desktop macOS support; **do not** advertise Intel desktop builds without current evidence.
+- [OneBox](https://github.com/OneOhCloud/OneBox): explicit support/supporting-platform differences, project README states maintenance horizon to Dec 31 2027; verify long-term continuation.
+- [singcast](https://github.com/mapleafgo/singcast): current README describes older Clash rather than sing-box; excluded from README curated picks pending metadata clarification.
+- [YumeBox](https://github.com/YumeYucca/YumeBox): repository has an AGPL-3.0 license but README.md was absent from default branch at review time; feature list intentionally conservative.
+
+See [CLIENTS.md](CLIENTS.md) and [CLIENT-RESEARCH-2026.md](CLIENT-RESEARCH-2026.md) for current client links and platform caveats.
