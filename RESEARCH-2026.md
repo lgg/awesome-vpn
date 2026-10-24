@@ -10,7 +10,7 @@
 - [Popular topics](https://ntc.party/top) — popularity-based discovery; check freshness separately.
 - [Community software](https://ntc.rkn.quest/c/community-software/27) — dedicated discussions for Zapret, ByeDPI, GoodbyeDPI, dnstt and community utilities.
 - [Circumvention methods & software](https://ntc.rkn.quest/c/censorship-circumvention-software/11) — proxy transports, network protocols, clients and methods.
-- [Research and publications](https://ntc.rkn.quest/c/censorship-research-and-publications/19) — forum category link subject to upstream path changes.
+- [Research and publications](https://ntc.rkn.quest/categories) — locate the **Censorship research & publications** category from NTC's canonical category index.
 
 **Access caveat:** During this pass, direct fetches to `ntc.party/top` returned 502 and `ntc.rkn.quest/latest` intermittently returned 429; indexed topic/category pages were used. **Do not interpret this as a comprehensive review of every latest/top post.** Forum comments are user claims until reproduced or corroborated upstream.
 
@@ -65,11 +65,21 @@ Primarily aggregates **public, periodically refreshed proxy configurations** (YA
 - [Zapret2](https://github.com/bol-van/zapret2) is the author's **current-generation engine**; [zapret v1](https://github.com/bol-van/zapret) explicitly states EOL/no new features. Prefer [official documentation](https://github.com/bol-van/zapret2/blob/master/docs/manual.md), not third-party repacks.
 - [Zapret2 OpenWrt builds](https://github.com/1andrevich/zapret2-openwrt) and [ByeDPI for OpenWrt](https://github.com/1andrevich/ByeDPI-OpenWrt) solve router-specific packaging problems.
 - [RKNHardering](https://github.com/xtclovver/RKNHardering) describes detection signals; hiding one check does not prove a VPN is undetectable.
+- [TrustTunnel](https://github.com/TrustTunnel/TrustTunnel), [Cloak](https://github.com/cbeuw/Cloak) and [CensorTracker](https://github.com/censortracker/censortracker) were also reviewed as separate protocol, transport and browser-extension approaches. Neither a release repository nor an active branch constitutes a security audit.
+- Original [dnstt upstream](https://www.bamsoftware.com/software/dnstt/) is preferred over [community mirrors](https://github.com/Mygod/dnstt); do not conflate DoH/DoT with payload tunneling.
 - [WINGS V](https://github.com/WINGS-N/WINGSV) exposes multiple subsystems (Xray, WireGuard, AmneziaWG, VK TURN); treat VK-based connection disguise as an experimental approach that depends on service/network behavior.
 - [GFW Report](https://gfw.report/) is a useful **research source** with contemporary analysis of regional filtering, QUIC behavior and the censorship arms race, not a VPN client.
 - [net4people/bbs](https://github.com/net4people/bbs), [Tor Project Forum](https://forum.torproject.org/) and [OpenWrt Forum](https://forum.openwrt.org/) are useful specialist communities with different focus areas.
 
-## 5. Maintenance follow-up checklist
+## 5. Peer-reviewed work and research tools found through NTC
+
+- **[FOCI 2026: QUIC SNI censorship in Russia](https://www.petsymposium.org/foci/2026/foci-2026-0010.php)** — historical and technical measurements of SNI-based QUIC filtering in Russia. [NTC discussion](https://ntc.rkn.quest/t/on-russias-early-introduction-of-quic-sni-censorship-foci-2026/25670).
+- **[FOCI 2026: Automated DNS Censorship Circumvention](https://www.petsymposium.org/foci/2026/foci-2026-0001.php)** — research into resolver/transport fallbacks, with implementation [DPYProxy](https://github.com/UPB-SysSec/DPYProxy). [NTC discussion](https://ntc.rkn.quest/t/towards-automated-dns-censorship-circumvention-foci-2026/22467).
+- **[PETS 2026: CensorLess](https://www.petsymposium.org/popets/2026/popets-2026-0096.php)** — research on serverless function-based proxying; evaluate research claims and infrastructure costs separately. [NTC discussion](https://ntc.rkn.quest/t/censorless-cost-efficient-censorship-circumvention-through-serverless-cloud-functions-pets-2026/25621).
+- **[Geneva](https://github.com/Kkevsterrr/geneva)** — academic automated packet-level strategy generation, not a universal managed VPN client. [NTC discussion](https://ntc.rkn.quest/t/government-censorship-system-and-bypass-strategies/13338).
+- **[GFW Report](https://gfw.report/)** — longitudinal, research-oriented monitoring that is useful for understanding filtering techniques and why heuristics age quickly.
+
+## 6. Maintenance follow-up checklist
 
 - [ ] Verify official latest release and signing provenance of new/experimental desktop and Android clients.
 - [ ] Check whether a panel manages an **Xray core**, **sing-box core**, **WireGuard device**, or just a GUI/dashboards; do not conflate them.
