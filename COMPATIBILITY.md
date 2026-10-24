@@ -1,6 +1,6 @@
 # Compatibility and platform matrix
 
-[← Back to README](README.md)
+[← Back to README](README.md) · [Platform-first client directory](CLIENTS.md)
 
 This document is a **high-level discovery index**, not an automated interoperability test. A client that bundles Xray or sing-box may support only a **subset** of the core's current protocols, transports and options. Subscription import support is **not** equivalent to raw JSON configuration support.
 
@@ -12,10 +12,16 @@ This document is a **high-level discovery index**, not an automated interoperabi
 | --- | --- | --- | --- | --- |
 | [WINGS V DeX](https://github.com/WINGS-N/WINGSV_DeX) | Windows, Linux | Xray, VK TURN | Open source | Project-specific VK TURN integration; check desktop builds and permissions |
 | [SkipIt](https://github.com/getskipit/skipit) | Windows (upstream repository description) | Xray, sing-box | Open source | Verify supported builds and current transport implementation |
+| [INCY](https://github.com/INCY-DEV/incy-platforms) | Android/TV, iOS/tvOS, Windows/macOS/Linux | Xray | **Closed client** / official binary releases | Desktop **pre-alpha**; GitHub hosts releases/metadata and does not contain complete app source |
+| [OneXray](https://github.com/YuanDevTeam/OneXray) | Android, iOS, Windows, macOS, Linux | Xray | GPL-3.0 | Imports share links, JSON, and provider subscriptions; verify each OS's packaged build |
+| [Clash Mi](https://github.com/KaringX/clashmi) | Android, iOS, Windows, macOS, Linux | mihomo | GPL-3.0 | Mihomo YAML config, not native arbitrary Xray JSON |
+| [FlClashX](https://github.com/pluralplay/FlClashX) | Android/TV, Windows, macOS, Linux (per upstream) | mihomo | GPL-3.0 | Community fork; Remnawave-specific HWID/metadata features |
+| [husi](https://github.com/xchacha20-poly1305/husi) | Android, Windows, Linux, macOS Apple Silicon | sing-box family | Source available | No asserted macOS Intel desktop or Windows ARM64 package |
+| [V2Box](https://apps.apple.com/us/app/v2box-v2ray-client/id6446814690) | iOS, iPadOS, supported Macs | Xray, multiple tunnel types | Closed, App Store | Store notes mention MasterDNS/DNSTT; protocol features need per-version tests |
 | [v2rayN](https://github.com/2dust/v2rayN) | Windows, Linux, macOS | Xray, sing-box and others | Open source | Profile types vary between cores/releases |
 | [v2rayNG](https://github.com/2dust/v2rayNG) | Android | Xray, V2Fly | Open source | Android VPN slot; TUN behavior differs from desktop |
 | [WINGS V](https://github.com/WINGS-N/WINGSV) | Android | Xray, WireGuard/AmneziaWG, VK TURN | Open source | Some hotspot/transport features need root and specific deployment |
-| [v2RayTun](https://github.com/LXST-CODE/v2RayTun) | Android and other advertised platforms | Xray and TUN integration | Partial-source / release-oriented | Android/Windows TUN DNS behavior must be checked per release |
+| [v2RayTun](https://github.com/LXST-CODE/v2RayTun) | Android/TV, iOS, macOS, Windows, Linux | Xray, AmneziaWG integration | **Closed** / release-oriented GitHub | Separate OS release tracks; Android/Windows TUN DNS behavior must be checked per release |
 | [SFA](https://github.com/SagerNet/sing-box-for-android) | Android | sing-box | Open source | No promise of feature parity with CLI |
 | [ByeByeDPI](https://github.com/romanvht/ByeByeDPI) | Android | Local DPI desync through ByeDPI | Open source | Not a remote VPN exit; competes for Android VPN slot |
 | [DesyncDroyd](https://github.com/sigmabosshvh/DesyncDroyd) | Android | zapret2 / nfqws2 | Source repository | Shizuku/permissions and device-specific capabilities require checking |
@@ -55,6 +61,7 @@ This document is a **high-level discovery index**, not an automated interoperabi
 | [Marzban](https://github.com/Gozargah/Marzban) | Xray | Multiuser/subscription management | Companion node deployment is separate |
 | [Hiddify Manager](https://github.com/hiddify/Hiddify-Manager) | Multi-protocol | Anti-censorship panel | Consult version-specific documentation |
 | [MetaCubeXD](https://github.com/MetaCubeX/metacubexd) | mihomo | Client/core monitoring dashboard | **Not** equivalent to a VPN service billing panel |
+| [Nikki](https://github.com/nikkinikki-org/OpenWrt-nikki) | mihomo | OpenWrt client transparent proxy plugin | Requires firmware/kernel/firewall4 support; not a general desktop client |
 
 ## Protocol and transport vocabulary
 
@@ -82,4 +89,4 @@ This document is a **high-level discovery index**, not an automated interoperabi
 5. Inspect actual egress IP/DNS and client logs. Avoid publishing credentials, node hostnames or subscription tokens.
 6. Update this matrix only with upstream documentation, a cited release note or reproducible tests.
 
-**Snapshot:** 2026-10-25; extended with [NTC and dVPN research](RESEARCH-2026.md). No claim is made that every combination above was manually tested.
+**Snapshot:** 2026-10-25; extended with [NTC and dVPN research](RESEARCH-2026.md) and [client release research](CLIENT-RESEARCH-2026.md). No claim is made that every combination above was manually tested.
