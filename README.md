@@ -17,6 +17,7 @@ This list covers **VPNs, application proxies, local DPI circumvention, encrypted
 - [Android clients](#android-clients)
 - [iOS, iPadOS and Apple clients](#ios-ipados-and-apple-clients)
 - [VPNs and private mesh networks](#vpns-and-private-mesh-networks)
+- [Decentralized and anonymity networks](#decentralized-and-anonymity-networks)
 - [Server panels and dashboards](#server-panels-and-dashboards)
 - [Subscriptions, billing and automation](#subscriptions-billing-and-automation)
 - [Deployment, forwarding and tunnels](#deployment-forwarding-and-tunnels)
@@ -27,6 +28,7 @@ This list covers **VPNs, application proxies, local DPI circumvention, encrypted
 - [Diagnostics and measurements](#diagnostics-and-measurements)
 - [Documentation and configuration examples](#documentation-and-configuration-examples)
 - [Communities and reference catalogs](#communities-and-reference-catalogs)
+- [Research and curated discussions](#research-and-curated-discussions)
 - [Maintenance and contributing](#maintenance-and-contributing)
 
 ## Proxy and VPN cores
@@ -36,12 +38,16 @@ This list covers **VPNs, application proxies, local DPI circumvention, encrypted
 - **[mihomo (Clash Meta)](https://github.com/MetaCubeX/mihomo/releases)** [OSS] — Rule-based Clash-family proxy core. **Note:** repository metadata may be inconsistent; prefer the verified release history and official documentation before downloading.
 - **[V2Ray (v2fly)](https://github.com/v2fly/v2ray-core)** [OSS] — General-purpose core from the V2Ray ecosystem.
 - **[Hysteria 2](https://github.com/HyNetworks/hysteria)** [OSS] — QUIC-based censorship-resistant proxy optimized for challenging networks.
+- **[TrustTunnel](https://github.com/TrustTunnel/TrustTunnel)** — VPN/tunnel protocol project focused on obfuscation; verify official clients and interoperability rather than assuming Xray/sing-box support.
 - **[TUIC protocol](https://github.com/tuic-protocol/tuic)** [OSS] — Specification for a QUIC-based TCP/UDP proxy; **not** an implementation.
 - **[TUIC implementation](https://github.com/Itsusinn/tuic)** [OSS] — Client/server implementation of TUIC.
 - **[Shadowsocks Rust](https://github.com/shadowsocks/shadowsocks-rust)** [OSS] — Rust implementation of the Shadowsocks proxy.
 - **[Trojan](https://github.com/trojan-gfw/trojan)** [OSS] — TLS-based Trojan proxy implementation; check maintenance before deploying.
 - **[mieru](https://github.com/enfein/mieru)** [OSS] — SOCKS5/HTTP(S) proxy system for circumventing censorship.
 - **[NaïveProxy](https://github.com/klzgrad/naiveproxy)** [OSS] — Chromium-network-stack-based HTTP/2/3 proxy camouflage and tunneling.
+- **[Cloak](https://github.com/cbeuw/Cloak)** [OSS] — Pluggable transport for proxy traffic camouflage and probe resistance.
+- **[Outline Server](https://github.com/OutlineFoundation/outline-server)** [OSS] — Self-hosted Shadowsocks server and API for managing Outline access keys.
+- **[AmneziaWG Go](https://github.com/amnezia-vpn/amneziawg-go)** [OSS] — Userspace AmneziaWG implementation; protocol family differs from WireGuard-compatible proxy subscriptions.
 - **[OpenVPN](https://github.com/OpenVPN/openvpn)** [OSS] — Traditional TLS VPN daemon.
 - **[SoftEther VPN](https://github.com/SoftEtherVPN/SoftEtherVPN)** [OSS] — Multiprotocol VPN server and client suite.
 
@@ -51,6 +57,8 @@ Windows, macOS and Linux availability varies by release; verify the build for yo
 
 - **[sing-box for Desktop](https://github.com/SagerNet/sing-box-for-desktop)** [OSS] — Official experimental desktop GUI (initially Windows); check release readiness.
 - **[v2rayN](https://github.com/2dust/v2rayN)** [OSS] — Multi-platform GUI for Xray, sing-box and other proxy cores; profiles and subscriptions.
+- **[WINGS V DeX](https://github.com/WINGS-N/WINGSV_DeX)** [OSS] — Linux/Windows companion for WINGS V, supporting Xray and VK TURN transports.
+- **[SkipIt](https://github.com/getskipit/skipit)** [OSS] — Windows desktop client using Xray-core and sing-box; verify current OS builds and release maturity.
 - **[Clash Verge Rev](https://github.com/clash-verge-rev/clash-verge-rev)** [OSS] — Desktop GUI based on mihomo.
 - **[FlClash](https://github.com/chen08209/FlClash)** [OSS] — Cross-platform Clash Meta client.
 - **[Clash Party](https://github.com/mihomo-party-org/clash-party)** [OSS] — Desktop mihomo GUI.
@@ -105,13 +113,32 @@ For private connectivity between your own devices and services; not interchangea
 - **[NetBird](https://github.com/netbirdio/netbird)** [OSS] — Identity-oriented secure mesh and access management.
 - **[ZeroTier](https://github.com/zerotier/ZeroTierOne)** — Virtual network overlay implementation.
 - **[Nebula](https://github.com/slackhq/nebula)** [OSS] — Scalable encrypted overlay networking.
+- **[DefGuard](https://github.com/DefGuard/defguard)** [Self-hosted] — WireGuard-based zero-trust access management with MFA/SSO-oriented integrations; check license by component.
+- **[strongSwan](https://github.com/strongswan/strongswan)** [OSS] — IPsec/IKEv2 VPN implementation.
+- **[sshuttle](https://github.com/sshuttle/sshuttle)** [OSS] — Transparent forwarding over SSH; a pragmatic VPN-like solution, not a traditional VPN protocol.
+- **[Gluetun](https://github.com/passteque/gluetun)** [OSS] [Self-hosted] — VPN-client Docker container supporting OpenVPN/WireGuard and provider configurations.
 - **[Firezone](https://github.com/firezone/firezone)** — Remote access/network connectivity stack; review hosting and identity requirements.
 - **[PiVPN](https://github.com/pivpn/pivpn)** [OSS] — Simple installation scripts for a personal VPN.
+
+## Decentralized and anonymity networks
+
+These are **different architectures**: some route traffic over community nodes, others offer private encrypted overlays without a general Internet exit. Read each trust and payment model before using it.
+
+- **[Mysterium Node](https://github.com/MysteriumNetwork/node)** [OSS] — Node software for the Mysterium distributed VPN ecosystem; economics and exit-node trust differ from conventional self-hosting.
+- **[Sentinel dVPN Node](https://github.com/sentinel-official/sentinel-dvpnx)** [OSS] — Node-side software for the Sentinel decentralized VPN network.
+- **[Sentinel dVPN CLI](https://github.com/sentinel-official/sentinel-dvpncli)** [OSS] — Command-line client for Sentinel dVPN connections.
+- **[Yggdrasil](https://github.com/yggdrasil-network/yggdrasil-go)** [OSS] — Encrypted IPv6 overlay/mesh; not necessarily an Internet VPN exit.
+- **[cjdns](https://github.com/cjdelisle/cjdns)** [OSS] — Public-key-addressed encrypted IPv6 mesh routing.
+- **[i2pd](https://github.com/PurpleI2P/i2pd)** [OSS] — C++ I2P router for an anonymity-oriented overlay network.
+- **[Orbot for Android](https://github.com/guardianproject/orbot-android)** [OSS] — Android Tor connectivity client (GitHub repository; other upstream distribution may exist).
 
 ## Server panels and dashboards
 
 - **[3x-ui](https://github.com/MHSanaei/3x-ui)** [OSS] [Self-hosted] — Xray web panel for users, inbounds, subscriptions and server management.
 - **[WireGuard Easy (wg-easy)](https://github.com/wg-easy/wg-easy)** [OSS] [Self-hosted] — WireGuard VPN with Docker-friendly web UI and client management.
+- **[swgPanel](https://github.com/SanityProtocol/swg-panel)** [OSS] [Self-hosted] — Web panel for WireGuard, AmneziaWG and related turn-proxy setups across nodes.
+- **[WINGS V Control Panel](https://github.com/WINGS-N/wingsv-panel)** [OSS] [Self-hosted] — WINGS V configuration and device control over a dedicated management channel.
+- **[WINGS 3x-ui fork](https://github.com/WINGS-N/3x-ui)** [OSS] [Self-hosted] — 3x-ui fork integrating VK TURN proxy alongside Xray inbounds.
 - **[x-ui](https://github.com/alireza0/x-ui)** [OSS] [Self-hosted] — Xray control panel with multiprotocol and multiuser features.
 - **[s-ui](https://github.com/alireza0/s-ui)** [OSS] [Self-hosted] — Web panel for sing-box.
 - **[Remnawave](https://github.com/remnawave/panel)** [Self-hosted] — Multi-node proxy management ecosystem; review upstream license and deployment docs.
@@ -125,6 +152,7 @@ For private connectivity between your own devices and services; not interchangea
 ## Subscriptions, billing and automation
 
 - **[Remnawave Bedolaga Telegram Bot](https://github.com/BEDOLAGA-DEV/remnawave-bedolaga-telegram-bot)** [OSS] — Telegram/web subscription sales and administrative tooling for Remnawave.
+- **[Bedolaga Cabinet](https://github.com/BEDOLAGA-DEV/bedolaga-cabinet)** [OSS] — Dedicated web cabinet used alongside Bedolaga subscriptions, purchases and gift flows; see upstream integration requirements.
 - **[Remnawave Telegram Shop](https://github.com/Jolymmiels/remnawave-telegram-shop)** — Telegram subscription shop integration; evaluate upstream code and payment handling.
 - **[Remnawave Reverse Proxy](https://github.com/eGamesAPI/remnawave-reverse-proxy)** — Reverse-proxy integration for Remnawave deployments; verify configuration and security properties.
 - **[3x-ui Sub Router](https://github.com/lgg/3x-ui-sub-router)** — Subscription delivery and Xray routing/orchestration project.
@@ -142,6 +170,7 @@ Never post real subscription URLs, tokens, panel credentials or VPN private keys
 - **[fscarmen/sing-box](https://github.com/fscarmen/sing-box)** [OSS] — Multi-protocol sing-box provisioning scripts.
 - **[frp](https://github.com/fatedier/frp)** [OSS] — Reverse proxy / NAT traversal for publishing a service behind NAT.
 - **[GOST v3](https://github.com/go-gost/gost)** [OSS] — Multi-protocol proxy chaining, forwarding, reverse tunneling, TUN/TAP and DNS integration.
+- **[WINGS V VK TURN proxy](https://github.com/WINGS-N/vk-turn-proxy)** [OSS] — WINGS-maintained TURN proxy fork for its mobile/desktop client ecosystem; review transport limitations and upstream architecture.
 - **[wstunnel](https://github.com/erebe/wstunnel)** [OSS] — Tunnel TCP/UDP traffic over WebSocket or HTTP/2.
 - **[chisel](https://github.com/jpillora/chisel)** [OSS] — HTTP-carried TCP/UDP tunneling with SSH security.
 - **[udp2raw](https://github.com/wangyu-/udp2raw)** [OSS] — Wrap UDP traffic in raw-socket packet forms for restrictive or unreliable paths.
@@ -155,8 +184,18 @@ Never post real subscription URLs, tokens, panel credentials or VPN private keys
 
 Local circumvention tools here primarily try to defeat packet inspection and filtering. They do **not** automatically replace a remote VPN.
 
-- **[zapret](https://github.com/bol-van/zapret)** [OSS] — Multi-platform DPI desynchronization and circumvention toolkit.
+- **[Zapret2](https://github.com/bol-van/zapret2)** [OSS] — Current-generation DPI desynchronization toolkit with configurable scripts and blockcheck2 strategy testing.
+- **[zapret (v1)](https://github.com/bol-van/zapret)** [OSS] [Legacy] — Earlier version; upstream explicitly directs new development to Zapret2.
+- **[Zapret Windows bundle](https://github.com/bol-van/zapret-win-bundle)** [OSS] — Upstream Windows binary bundle and blockcheck utilities; verify the included release generation.
+- **[Flowseal Zapret preset](https://github.com/Flowseal/zapret-discord-youtube)** — Windows-oriented packaged presets for Discord/YouTube; **third-party**, not the original Zapret upstream.
+- **[Floweryguard](https://github.com/KarlMerkel/Floweryguard)** [OSS] — Windows DPI-bypass utility and tethering/TTL helper; verify strategies for your network.
+- **[DesyncDroyd](https://github.com/sigmabosshvh/DesyncDroyd)** — Android client incorporating zapret2 via Shizuku; review permissions and device compatibility.
+- **[ByeDPI Manager](https://github.com/romanvht/ByeDPIManager)** [OSS] — Windows GUI for ByeDPI and ProxiFyre-based traffic redirection.
+- **[ByeByeDPI](https://github.com/romanvht/ByeByeDPI)** [OSS] — Android local DPI bypass with routed traffic; distinct from the older ByeDPIAndroid project.
 - **[Psiphon tunnel core](https://github.com/psiphon-labs/psiphon-tunnel-core)** [OSS] — Core of the Psiphon anti-censorship system.
+- **[CensorTracker](https://github.com/censortracker/censortracker)** [OSS] — Chrome/Firefox anti-censorship extension; check current proxy requirements.
+- **[CensorTracker Proxy](https://github.com/censortracker/proxy)** [OSS] — Companion client to connect extension traffic to Xray proxy configurations.
+- **[ReQrypt](https://github.com/basil00/reqrypt)** [Legacy] — Older censorship circumvention mechanism; preserved as research/historical resource.
 - **[Tor pluggable transports](https://support.torproject.org/tor-browser/circumvention/unblocking-tor/)** — Official overview of obfs4, Snowflake, meek and WebTunnel; distinct from generic VPN tunnels.
 - **[GoodbyeDPI](https://github.com/ValdikSS/GoodbyeDPI)** [OSS] — Windows DPI-circumvention utility.
 - **[ByeDPI](https://github.com/hufrea/byedpi)** [OSS] — Local DPI bypass engine.
@@ -164,7 +203,6 @@ Local circumvention tools here primarily try to defeat packet inspection and fil
 - **[ByeByeDPI-x-tg](https://github.com/EwenLoy/ByeByeDPI-x-tg)** [OSS] — Android ByeDPI-based utility with additional local-proxy functionality.
 - **[SwByeDPI](https://github.com/mIwr/SwByeDPI)** [OSS] — iOS-focused DPI bypass wrapper.
 - **[MuseDPI](https://github.com/zondaxxx/MuseDPI)** [OSS] — DPI bypass on iOS and Android.
-- **[RKNHardering](https://github.com/xtclovver/RKNHardering)** — Research/tooling around detecting VPN configurations and hardening against detection; read the project's documentation.
 - **[net4people/bbs](https://github.com/net4people/bbs)** — Research discussions about circumvention techniques (also under Communities).
 
 Strategies such as fragmentation, spoofed packets, TTL tricks and protocol camouflage can stop working or break connectivity when the network changes. Confirm client compatibility and actual results rather than treating a bypass name as a guarantee.
@@ -172,6 +210,8 @@ Strategies such as fragmentation, spoofed packets, TTL tricks and protocol camou
 ## DNS and DNS tunnels
 
 - **[MasterDnsVPN](https://github.com/masterking32/MasterDnsVPN)** [OSS] — DNS tunneling VPN with resilience and resolver-balancing features; distinct from ordinary encrypted DNS.
+- **[Slipstream](https://github.com/EndPositive/slipstream)** — DNS-based covert communication/tunnel implementation; actual throughput depends on resolvers and network policy.
+- **[dnstt](https://www.bamsoftware.com/software/dnstt/)** — DNS-based encrypted tunneling system; [GitHub community mirror](https://github.com/Mygod/dnstt) is not authoritative upstream.
 - **[AdGuard Home](https://github.com/AdguardTeam/AdGuardHome)** [OSS] — Self-hosted filtering DNS resolver.
 - **[AdGuard dnsproxy](https://github.com/AdguardTeam/dnsproxy)** [OSS] — DNS proxy with DoH/DoT/DoQ and DNSCrypt support.
 - **[dnscrypt-proxy](https://github.com/DNSCrypt/dnscrypt-proxy)** [OSS] — Local encrypted-DNS forwarder.
@@ -185,6 +225,10 @@ Strategies such as fragmentation, spoofed packets, TTL tricks and protocol camou
 
 - **[OpenClash](https://github.com/vernesong/OpenClash)** [OSS] — Mihomo/Clash-oriented OpenWrt client integration.
 - **[HomeProxy](https://github.com/immortalwrt/homeproxy)** [OSS] — sing-box-based ImmortalWrt/OpenWrt proxy management.
+- **[zapret2-openwrt](https://github.com/1andrevich/zapret2-openwrt)** [OSS] — OpenWrt packages for the Zapret2 DPI-bypass engine.
+- **[ByeDPI OpenWrt](https://github.com/1andrevich/ByeDPI-OpenWrt)** — OpenWrt package builds for the ByeDPI engine.
+- **[Re:Sputnik](https://github.com/1andrevich/re-sputnik)** [OSS] — Desktop wizard for deploying and managing a personal VPN router.
+- **[XKeen Panel](https://github.com/Dearonski/xkeen-panel)** — Web UI for XKeen/Xray on Keenetic routers.
 - **[ShellCrash](https://github.com/juewuy/ShellCrash)** [OSS] — Run sing-box or mihomo from a shell, often on routers.
 - **[Tachyon](https://github.com/Dushnilin/tachyon)** [OSS] — OpenWrt sing-box / DPI-bypass / per-device routing management.
 - **[v2rayA](https://github.com/v2rayA/v2rayA)** — Web GUI with transparent proxy capabilities for supported hosts (also listed under Desktop clients).
@@ -192,6 +236,7 @@ Strategies such as fragmentation, spoofed packets, TTL tricks and protocol camou
 ## Routing rules and geodata
 
 - **[russia-v2ray-rules-dat](https://github.com/runetfreedom/russia-v2ray-rules-dat)** — Auto-updated routing data for Russian domains/networks and blocking-related rules.
+- **[ITDOG allow-domains](https://github.com/itdoginfo/allow-domains)** — Curated domain lists relevant to local filtering and split routing; check licensing and update cadence.
 - **[v2ray-rules-dat](https://github.com/Loyalsoldier/v2ray-rules-dat)** — Enhanced GeoIP/geosite rule sets.
 - **[Loyalsoldier GeoIP](https://github.com/Loyalsoldier/geoip)** — GeoIP data in formats used by Xray, sing-box and mihomo.
 - **[sing-geosite](https://github.com/SagerNet/sing-geosite)** — Geosite rules for sing-box.
@@ -206,6 +251,9 @@ Rule formats are **not automatically interchangeable**: `geoip.dat`, `geosite.da
 
 ## Diagnostics and measurements
 
+- **[RKNHardering](https://github.com/xtclovver/RKNHardering)** [OSS] — Android diagnostic checks for VPN/proxy detection, including interface signals and IP comparisons; results are **heuristics**, not a guarantee of invisibility.
+- **[DPYProxy](https://github.com/UPB-SysSec/DPYProxy)** [OSS] — Research proxy for testing DPI/DNS censorship evasion mechanisms, including automatic DNS circumvention experiments.
+- **[Geneva](https://github.com/Kkevsterrr/geneva)** [OSS] — Academic censorship-evasion strategy exploration using generated packet-manipulation strategies; research-grade, not a plug-and-play VPN.
 - **[OONI Probe](https://github.com/ooni/probe)** [OSS] — Internet censorship measurement client.
 - **[OONI Probe CLI](https://github.com/ooni/probe-cli)** [OSS] — CLI measurement and testing engine.
 - **[OONI Explorer](https://explorer.ooni.org/)** — Public censorship measurement datasets.
@@ -224,6 +272,8 @@ Start with the [practical diagnostic checklist](TROUBLESHOOTING.md): distinguish
 
 ## Documentation and configuration examples
 
+- **[RKNHardering detection reference](https://xtclovver.github.io/RKNHardering/help/ru/)** — Explanations of Android VPN detection signals, with evidence-level distinctions.
+- **[Zapret2 manual](https://github.com/bol-van/zapret2/blob/master/docs/manual.md)** — Original DPI-engine documentation and diagnostics.
 - **[Xray documentation](https://xtls.github.io/en/)** — Xray configuration, DNS, routing, protocols and transport reference.
 - **[Xray examples](https://github.com/XTLS/Xray-examples)** — Upstream example configurations.
 - **[Xray docs source](https://github.com/XTLS/Xray-docs-next)** — Documentation source and changes.
@@ -250,16 +300,31 @@ Start with the [practical diagnostic checklist](TROUBLESHOOTING.md): distinguish
 - **[Hysteria Telegram](https://t.me/hysteria_github)** — Hysteria project community.
 - **[GOST Telegram](https://t.me/gogost)** — Proxy and tunnel chaining discussions (linked from upstream's older repository).
 - **[NTC forum](https://ntc.party/)** — Network restrictions and connectivity discussions (regional availability varies).
+- **[NTC community software](https://ntc.rkn.quest/c/community-software/27)** — Upstream discussions for Zapret/ByeDPI/GoodbyeDPI and community tools.
+- **[NTC circumvention methods](https://ntc.rkn.quest/c/censorship-circumvention-software/11)** — Proxy transports, anti-censorship clients, WebTunnel, XHTTP and related protocols.
+- **[NTC top topics](https://ntc.party/top)** — Popular threads index; access may be blocked or transiently unavailable.
+- **[NTC latest topics](https://ntc.rkn.quest/latest)** — Latest threads index; rate limiting may apply.
+- **[GFW Report](https://gfw.report/)** — Technical Internet censorship research and peer-reviewed publications.
+- **[FOCI 2026: QUIC SNI censorship in Russia](https://www.petsymposium.org/foci/2026/foci-2026-0010.php)** — Peer-reviewed study of QUIC/SNI filtering and its measurement.
+- **[FOCI 2026: Automated DNS circumvention](https://www.petsymposium.org/foci/2026/foci-2026-0001.php)** — Research on resolver/transport fallbacks and DNS filtering.
+- **[PETS 2026: CensorLess](https://www.petsymposium.org/popets/2026/popets-2026-0096.php)** — Serverless censorship-circumvention research; research prototype, not a recommended anonymous VPN service.
+- **[Tor Project Forum](https://forum.torproject.org/)** — Bridges, pluggable transports and Tor client troubleshooting.
+- **[OpenWrt Forum](https://forum.openwrt.org/)** — Router integrations, firewall/routing configurations and third-party packages.
 - **[NTC alternate host](https://ntc.rkn.quest/)** — Alternate forum host.
 - **[net4people/bbs](https://github.com/net4people/bbs)** — Research-led Internet censorship-circumvention discussions.
 - **[OONI](https://ooni.org/)** — Internet censorship measurement research.
 - **[Awesome sing-box](https://github.com/oceanapplications/awesome-sing-box)** — Ecosystem-specific curated reference.
 - **[Proxy Client Radar](https://clientsradar.com/)** — Independently maintained client activity/ranking tracker; metrics are not security audits.
 
+## Research and curated discussions
+
+- [Research notes: NTC, alternative awesome lists, protocol and dVPN ecosystems](RESEARCH-2026.md) — Source-by-source review, selected discussion threads, what was already in the catalog and what was deliberately excluded.
+
 ## Maintenance and contributing
 
 The list favors **maintained original repositories, official distribution pages, and verifiable technical resources**. Links are not endorsements or independent security audits. Activity is a point-in-time observation, not an uptime guarantee.
 
+- [Research notes](RESEARCH-2026.md) — Audited sources, primary discussions and editorial decisions from the October 2026 deep research.
 - [Contributing guidelines](CONTRIBUTING.md) — How to propose a project, verify links, and avoid misleading compatibility claims.
 - [Client compatibility matrix](COMPATIBILITY.md) — Platform, family of core, source/distribution and caveats. A supported core does **not** imply every transport is supported.
 - [Troubleshooting](TROUBLESHOOTING.md) — DNS, TUN, route leaks, connectivity, reverse tunnels and tests.
