@@ -38,12 +38,14 @@ This list covers **VPNs, application proxies, local DPI circumvention, encrypted
 - **[mihomo (Clash Meta)](https://github.com/MetaCubeX/mihomo/releases)** [OSS] — Rule-based Clash-family proxy core. **Note:** repository metadata may be inconsistent; prefer the verified release history and official documentation before downloading.
 - **[V2Ray (v2fly)](https://github.com/v2fly/v2ray-core)** [OSS] — General-purpose core from the V2Ray ecosystem.
 - **[Hysteria 2](https://github.com/HyNetworks/hysteria)** [OSS] — QUIC-based censorship-resistant proxy optimized for challenging networks.
+- **[TrustTunnel](https://github.com/TrustTunnel/TrustTunnel)** — VPN/tunnel protocol project focused on obfuscation; verify official clients and interoperability rather than assuming Xray/sing-box support.
 - **[TUIC protocol](https://github.com/tuic-protocol/tuic)** [OSS] — Specification for a QUIC-based TCP/UDP proxy; **not** an implementation.
 - **[TUIC implementation](https://github.com/Itsusinn/tuic)** [OSS] — Client/server implementation of TUIC.
 - **[Shadowsocks Rust](https://github.com/shadowsocks/shadowsocks-rust)** [OSS] — Rust implementation of the Shadowsocks proxy.
 - **[Trojan](https://github.com/trojan-gfw/trojan)** [OSS] — TLS-based Trojan proxy implementation; check maintenance before deploying.
 - **[mieru](https://github.com/enfein/mieru)** [OSS] — SOCKS5/HTTP(S) proxy system for circumventing censorship.
 - **[NaïveProxy](https://github.com/klzgrad/naiveproxy)** [OSS] — Chromium-network-stack-based HTTP/2/3 proxy camouflage and tunneling.
+- **[Cloak](https://github.com/cbeuw/Cloak)** [OSS] — Pluggable transport for proxy traffic camouflage and probe resistance.
 - **[Outline Server](https://github.com/OutlineFoundation/outline-server)** [OSS] — Self-hosted Shadowsocks server and API for managing Outline access keys.
 - **[AmneziaWG Go](https://github.com/amnezia-vpn/amneziawg-go)** [OSS] — Userspace AmneziaWG implementation; protocol family differs from WireGuard-compatible proxy subscriptions.
 - **[OpenVPN](https://github.com/OpenVPN/openvpn)** [OSS] — Traditional TLS VPN daemon.
@@ -191,6 +193,9 @@ Local circumvention tools here primarily try to defeat packet inspection and fil
 - **[ByeDPI Manager](https://github.com/romanvht/ByeDPIManager)** [OSS] — Windows GUI for ByeDPI and ProxiFyre-based traffic redirection.
 - **[ByeByeDPI](https://github.com/romanvht/ByeByeDPI)** [OSS] — Android local DPI bypass with routed traffic; distinct from the older ByeDPIAndroid project.
 - **[Psiphon tunnel core](https://github.com/psiphon-labs/psiphon-tunnel-core)** [OSS] — Core of the Psiphon anti-censorship system.
+- **[CensorTracker](https://github.com/censortracker/censortracker)** [OSS] — Chrome/Firefox anti-censorship extension; check current proxy requirements.
+- **[CensorTracker Proxy](https://github.com/censortracker/proxy)** [OSS] — Companion client to connect extension traffic to Xray proxy configurations.
+- **[ReQrypt](https://github.com/basil00/reqrypt)** [Legacy] — Older censorship circumvention mechanism; preserved as research/historical resource.
 - **[Tor pluggable transports](https://support.torproject.org/tor-browser/circumvention/unblocking-tor/)** — Official overview of obfs4, Snowflake, meek and WebTunnel; distinct from generic VPN tunnels.
 - **[GoodbyeDPI](https://github.com/ValdikSS/GoodbyeDPI)** [OSS] — Windows DPI-circumvention utility.
 - **[ByeDPI](https://github.com/hufrea/byedpi)** [OSS] — Local DPI bypass engine.
@@ -206,6 +211,7 @@ Strategies such as fragmentation, spoofed packets, TTL tricks and protocol camou
 
 - **[MasterDnsVPN](https://github.com/masterking32/MasterDnsVPN)** [OSS] — DNS tunneling VPN with resilience and resolver-balancing features; distinct from ordinary encrypted DNS.
 - **[Slipstream](https://github.com/EndPositive/slipstream)** — DNS-based covert communication/tunnel implementation; actual throughput depends on resolvers and network policy.
+- **[dnstt](https://www.bamsoftware.com/software/dnstt/)** — DNS-based encrypted tunneling system; [GitHub community mirror](https://github.com/Mygod/dnstt) is not authoritative upstream.
 - **[AdGuard Home](https://github.com/AdguardTeam/AdGuardHome)** [OSS] — Self-hosted filtering DNS resolver.
 - **[AdGuard dnsproxy](https://github.com/AdguardTeam/dnsproxy)** [OSS] — DNS proxy with DoH/DoT/DoQ and DNSCrypt support.
 - **[dnscrypt-proxy](https://github.com/DNSCrypt/dnscrypt-proxy)** [OSS] — Local encrypted-DNS forwarder.
