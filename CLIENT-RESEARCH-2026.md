@@ -54,6 +54,23 @@ Do **not** infer features from the name alone; for example, Hysteria2 in an App 
 | [xiaobaigroup/ClashBox](https://github.com/xiaobaigroup/ClashBox) | Included for native HarmonyOS NEXT, with signing/platform caveats. |
 | [YumeYucca/YumeBox](https://github.com/YumeYucca/YumeBox) | Repository exists with AGPL-3.0, but default `README.md` was not retrievable in this pass; treat feature coverage as unverified beyond client family. |
 
+## Cross-check with Xray-core's official GUI index
+
+The upstream [XTLS/Xray-core README](https://github.com/XTLS/Xray-core#gui-clients) explicitly lists desktop, Android, Apple, OpenWrt, ASUS and HarmonyOS client projects. This is a **discovery list**, not a compatibility or security certification.
+
+New relevant, independently verified entries:
+- [AnyPortal](https://github.com/AnyPortal/AnyPortal): Windows/macOS/Linux/Android multiple-core GUI. **Important:** its own README explicitly states that iOS support is blocked by Apple Network Extension signing/entitlement work; do not list it as a functioning iOS VPN.
+- [GenyConnect](https://github.com/genyleap/GenyConnect): GPL-3.0, cross-platform secure tunnel/routing application.
+- [Hey](https://github.com/popsiclelmlm/Hey): native HarmonyOS NEXT tunnel and protocol-debugging app.
+- [xray-knife](https://github.com/lilendian0x00/xray-knife): tooling for Xray/sing-box connection inspection and diagnostics.
+- [xray-checker](https://github.com/kutovoys/xray-checker): Xray proxy health checks and Prometheus export.
+- [Xray-install](https://github.com/XTLS/Xray-install): upstream's own Xray installer and upgrade tooling.
+- [libXray](https://github.com/XTLS/libXray) and [AndroidLibXrayLite](https://github.com/2dust/AndroidLibXrayLite): wrappers/toolchain for clients, **not end-user VPN applications**.
+
+The upstream list still points to [Furious](https://github.com/LorenEteval/Furious), but that GitHub repository returned **404** when checked on October 25, 2026. It was **not** added.
+
+Officially linked Telegram communities: [Project Xray](https://t.me/projectXray), [Project XTLS channel](https://t.me/projectXtls), [Project VLESS](https://t.me/projectVless), [Project XHTTP](https://t.me/projectXhttp), plus existing [v2rayN](https://t.me/v2rayN) and [INCY](https://t.me/incy_public).
+
 ## Maintainer checklist
 
 - Update the [platform directory](CLIENTS.md) whenever a client is added to the [main catalog](README.md).
