@@ -252,6 +252,8 @@ Rule formats are **not automatically interchangeable**: `geoip.dat`, `geosite.da
 ## Diagnostics and measurements
 
 - **[RKNHardering](https://github.com/xtclovver/RKNHardering)** [OSS] — Android diagnostic checks for VPN/proxy detection, including interface signals and IP comparisons; results are **heuristics**, not a guarantee of invisibility.
+- **[DPYProxy](https://github.com/UPB-SysSec/DPYProxy)** [OSS] — Research proxy for testing DPI/DNS censorship evasion mechanisms, including automatic DNS circumvention experiments.
+- **[Geneva](https://github.com/Kkevsterrr/geneva)** [OSS] — Academic censorship-evasion strategy exploration using generated packet-manipulation strategies; research-grade, not a plug-and-play VPN.
 - **[OONI Probe](https://github.com/ooni/probe)** [OSS] — Internet censorship measurement client.
 - **[OONI Probe CLI](https://github.com/ooni/probe-cli)** [OSS] — CLI measurement and testing engine.
 - **[OONI Explorer](https://explorer.ooni.org/)** — Public censorship measurement datasets.
@@ -303,6 +305,9 @@ Start with the [practical diagnostic checklist](TROUBLESHOOTING.md): distinguish
 - **[NTC top topics](https://ntc.party/top)** — Popular threads index; access may be blocked or transiently unavailable.
 - **[NTC latest topics](https://ntc.rkn.quest/latest)** — Latest threads index; rate limiting may apply.
 - **[GFW Report](https://gfw.report/)** — Technical Internet censorship research and peer-reviewed publications.
+- **[FOCI 2026: QUIC SNI censorship in Russia](https://www.petsymposium.org/foci/2026/foci-2026-0010.php)** — Peer-reviewed study of QUIC/SNI filtering and its measurement.
+- **[FOCI 2026: Automated DNS circumvention](https://www.petsymposium.org/foci/2026/foci-2026-0001.php)** — Research on resolver/transport fallbacks and DNS filtering.
+- **[PETS 2026: CensorLess](https://www.petsymposium.org/popets/2026/popets-2026-0096.php)** — Serverless censorship-circumvention research; research prototype, not a recommended anonymous VPN service.
 - **[Tor Project Forum](https://forum.torproject.org/)** — Bridges, pluggable transports and Tor client troubleshooting.
 - **[OpenWrt Forum](https://forum.openwrt.org/)** — Router integrations, firewall/routing configurations and third-party packages.
 - **[NTC alternate host](https://ntc.rkn.quest/)** — Alternate forum host.
