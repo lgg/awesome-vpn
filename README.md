@@ -61,6 +61,7 @@ Windows, macOS and Linux availability varies by release; verify the build for yo
 
 - **[sing-box for Desktop](https://github.com/SagerNet/sing-box-for-desktop)** [OSS] — Official experimental desktop GUI (initially Windows); check release readiness.
 - **[v2rayN](https://github.com/2dust/v2rayN)** [OSS] — Multi-platform GUI for Xray, sing-box and other proxy cores; profiles and subscriptions.
+- **[v2RayTun](https://github.com/LXST-CODE/v2RayTun)** [Closed] — Windows/macOS/Linux builds in a multi-platform Xray client distribution; download tracks differ by OS.
 - **[WINGS V DeX](https://github.com/WINGS-N/WINGSV_DeX)** [OSS] — Linux/Windows companion for WINGS V, supporting Xray and VK TURN transports.
 - **[SkipIt](https://github.com/getskipit/skipit)** [OSS] — Windows desktop client using Xray-core and sing-box; verify current OS builds and release maturity.
 - **[Clash Verge Rev](https://github.com/clash-verge-rev/clash-verge-rev)** [OSS] — Desktop GUI based on mihomo.
@@ -100,7 +101,7 @@ Windows, macOS and Linux availability varies by release; verify the build for yo
 - **[sing-box for Android (SFA)](https://github.com/SagerNet/sing-box-for-android)** [OSS] — Android GUI for sing-box.
 - **[NekoBox for Android](https://github.com/MatsuriDayo/NekoBoxForAndroid)** [OSS] — Advanced sing-box-based Android client; check release recency.
 - **[WINGS V](https://github.com/WINGS-N/WINGSV)** [OSS] — Android Xray-oriented client with per-app controls, WireGuard integration and local DPI-bypass features.
-- **[v2RayTun](https://github.com/LXST-CODE/v2RayTun)** — Xray-based client with public releases, issue tracker and roadmap; source availability may be limited.
+- **[v2RayTun](https://github.com/LXST-CODE/v2RayTun)** [Closed] — Cross-platform Xray/AmneziaWG client for Android/TV, Apple and desktop; official GitHub lists platform-specific releases but is not full application source.
 - **[Clash Meta for Android](https://github.com/MetaCubeX/ClashMetaForAndroid)** [OSS] — Android rule-based tunneling client.
 - **[Exclave](https://github.com/ExclaveNetwork/Exclave)** [OSS] — Android proxy client.
 - **[Hiddify](https://github.com/hiddify/hiddify-app)** [OSS] — Cross-platform client with sing-box-related protocols and subscriptions.
@@ -128,6 +129,7 @@ Windows, macOS and Linux availability varies by release; verify the build for yo
 - **[Karing](https://github.com/KaringX/karing)** [OSS] — Apple and other platform releases where available.
 - **[Hiddify](https://github.com/hiddify/hiddify-app)** [OSS] — Apple-platform client; check regional App Store availability.
 - **[Amnezia VPN](https://github.com/amnezia-vpn/amnezia-client)** [OSS] — Apple and other platform client builds.
+- **[v2RayTun for Apple](https://github.com/LXST-CODE/v2RayTun)** [Closed] — iOS/macOS Xray client, with region-dependent App Store availability and separate release tracks.
 - **[INCY](https://apps.apple.com/us/app/incy/id6756943388)** [Closed] — iPhone/iPad/Apple TV Xray client; developer publishes platform downloads at [INCY GitHub](https://github.com/INCY-DEV/incy-platforms), not full application source.
 - **[OneXray](https://github.com/YuanDevTeam/OneXray)** [OSS] — Xray client with iOS/macOS builds and official store releases.
 - **[Clash Mi](https://github.com/KaringX/clashmi)** [OSS] — Mihomo-based iOS/macOS proxy utility with official App Store listing.
@@ -350,6 +352,8 @@ Start with the [practical diagnostic checklist](TROUBLESHOOTING.md): distinguish
 - **[Xray UI topic link](https://t.me/c/2479497161/1)** — User-contributed deep link; Telegram membership may be required.
 - **[INCY Telegram](https://t.me/incy_public)** — Project community linked from INCY official releases.
 - **[Clash Mi Telegram](https://t.me/ClashMiApp)** — Community linked by KaringX's Clash Mi project.
+- **[v2RayTun Telegram](https://t.me/v2raytun)** — Official client release/news community linked from its GitHub README.
+- **[Nikki Telegram](https://t.me/nikkinikki_org)** — OpenWrt Nikki community linked from upstream.
 - **[Happ Proxy Telegram](https://t.me/happ_proxy)** — Happ-related Telegram community.
 - **[v2rayN Telegram group](https://t.me/v2rayN)** — Client community linked from official v2rayN documentation.
 - **[v2rayN Telegram channel](https://t.me/github_2dust)** — v2rayN release/development updates.
