@@ -18,6 +18,9 @@ This document is a **high-level discovery index**, not an automated interoperabi
 | [FlClashX](https://github.com/pluralplay/FlClashX) | Android/TV, Windows, macOS, Linux (per upstream) | mihomo | GPL-3.0 | Community fork; Remnawave-specific HWID/metadata features |
 | [husi](https://github.com/xchacha20-poly1305/husi) | Android, Windows, Linux, macOS Apple Silicon | sing-box family | Source available | No asserted macOS Intel desktop or Windows ARM64 package |
 | [V2Box](https://apps.apple.com/us/app/v2box-v2ray-client/id6446814690) | iOS, iPadOS, supported Macs | Xray, multiple tunnel types | Closed, App Store | Store notes mention MasterDNS/DNSTT; protocol features need per-version tests |
+| [AnyPortal](https://github.com/AnyPortal/AnyPortal) | Windows, macOS, Linux, Android | Xray, sing-box, mihomo, V2Ray | Source repository | **No working iOS TUN** per upstream; distinct OS feature sets |
+| [GenyConnect](https://github.com/genyleap/GenyConnect) | Cross-platform (see releases) | Secure tunnel/routing client | GPL-3.0 | Exact operating modes/permissions require verification per OS |
+| [Hey](https://github.com/popsiclelmlm/Hey) | HarmonyOS NEXT | Tunnel and protocol-debugging client | GPL-3.0 | Native HarmonyOS, not interchangeable with Android VPN apps |
 | [v2rayN](https://github.com/2dust/v2rayN) | Windows, Linux, macOS | Xray, sing-box and others | Open source | Profile types vary between cores/releases |
 | [v2rayNG](https://github.com/2dust/v2rayNG) | Android | Xray, V2Fly | Open source | Android VPN slot; TUN behavior differs from desktop |
 | [WINGS V](https://github.com/WINGS-N/WINGSV) | Android | Xray, WireGuard/AmneziaWG, VK TURN | Open source | Some hotspot/transport features need root and specific deployment |
