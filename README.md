@@ -75,6 +75,8 @@ Windows, macOS and Linux availability varies by release; verify the build for yo
 - **[Bettbox](https://github.com/appshubcc/Bettbox)** [OSS] — Desktop/Android network toolbox; consult upstream for supported cores.
 - **[INCY](https://github.com/INCY-DEV/incy-platforms)** [Closed] — Cross-platform Xray client with official desktop binary releases; **desktop is pre-alpha** and GitHub is a downloads/metadata repository, not full client source.
 - **[OneXray](https://github.com/YuanDevTeam/OneXray)** [OSS] — Xray GUI for Windows, macOS, Linux and mobile, with native configuration imports and Remnawave subscriptions.
+- **[GenyConnect](https://github.com/genyleap/GenyConnect)** [OSS] — Multi-platform tunnel/routing client; check upstream-supported builds and capabilities.
+- **[AnyPortal](https://github.com/AnyPortal/AnyPortal)** — GUI for Xray/sing-box/mihomo on Windows, macOS, Linux and Android; **iOS tunneling is not available** per upstream.
 - **[husi](https://github.com/xchacha20-poly1305/husi)** — Sing-box-family Android and desktop client; macOS desktop builds currently target Apple Silicon, check platform requirements.
 - **[FlClashX](https://github.com/pluralplay/FlClashX)** [OSS] — FlClash-derived mihomo client adapted for Remnawave subscriptions; confirm fork-specific maintenance.
 - **[Clash Nyanpasu](https://github.com/libnyanpasu/clash-nyanpasu)** [OSS] — Desktop mihomo/Clash GUI with profiles and subscription workflow.
@@ -116,6 +118,7 @@ Windows, macOS and Linux availability varies by release; verify the build for yo
 - **[YumeBox](https://github.com/YumeYucca/YumeBox)** [OSS] — Android mihomo GUI; check release/feature maturity.
 - **[Shadowsocks Android](https://github.com/shadowsocks/shadowsocks-android)** [OSS] — Official Shadowsocks client focused on the Shadowsocks protocol, not all Xray protocols.
 - **[SimpleXray](https://github.com/lhear/SimpleXray)** [OSS] — Smaller Xray-based Android GUI.
+- **[AnyPortal for Android](https://github.com/AnyPortal/AnyPortal)** — Multi-engine proxy GUI; mobile build limitations described upstream.
 - **[Xray GUI (SaeedDev94)](https://github.com/SaeedDev94/Xray)** [OSS] — Minimal Android Xray client.
 - **[Outline Client](https://github.com/OutlineFoundation/outline-apps)** [OSS] — Outline client/manager ecosystem.
 
@@ -150,6 +153,7 @@ Windows, macOS and Linux availability varies by release; verify the build for yo
 ## HarmonyOS NEXT clients
 
 - **[ClashBox](https://github.com/xiaobaigroup/ClashBox)** [OSS] — Native HarmonyOS NEXT mihomo-based GUI; check signing and HarmonyOS version requirements. It is **not** merely an Android APK.
+- **[Hey](https://github.com/popsiclelmlm/Hey)** [OSS] — Native HarmonyOS NEXT network tunneling and protocol-debugging client.
 ## VPNs and private mesh networks
 
 For private connectivity between your own devices and services; not interchangeable with censorship-bypass proxy transport.
@@ -211,6 +215,7 @@ Never post real subscription URLs, tokens, panel credentials or VPN private keys
 
 ## Deployment, forwarding and tunnels
 
+- **[Xray-install](https://github.com/XTLS/Xray-install)** [OSS] — **Official** Xray installer/update scripts, linked by Xray's own README.
 - **[v2ray-agent](https://github.com/mack-a/v2ray-agent)** [OSS] — Multi-protocol installer for Xray, TUIC, Hysteria 2 and sing-box.
 - **[233boy/v2ray](https://github.com/233boy/v2ray)** [OSS] — V2Ray install and management scripts.
 - **[sing-box-yg](https://github.com/yonggekkk/sing-box-yg)** [OSS] — VPS setup scripts for sing-box and associated transports.
@@ -310,6 +315,8 @@ Rule formats are **not automatically interchangeable**: `geoip.dat`, `geosite.da
 - **[RKNHardering](https://github.com/xtclovver/RKNHardering)** [OSS] — Android diagnostic checks for VPN/proxy detection, including interface signals and IP comparisons; results are **heuristics**, not a guarantee of invisibility.
 - **[DPYProxy](https://github.com/UPB-SysSec/DPYProxy)** [OSS] — Research proxy for testing DPI/DNS censorship evasion mechanisms, including automatic DNS circumvention experiments.
 - **[Geneva](https://github.com/Kkevsterrr/geneva)** [OSS] — Academic censorship-evasion strategy exploration using generated packet-manipulation strategies; research-grade, not a plug-and-play VPN.
+- **[xray-knife](https://github.com/lilendian0x00/xray-knife)** [OSS] — CLI diagnostics and utilities for Xray/sing-box connections; use only on authorized endpoints.
+- **[xray-checker](https://github.com/kutovoys/xray-checker)** [OSS] — Prometheus exporter for checking Xray proxy availability, latency and operational health.
 - **[OONI Probe](https://github.com/ooni/probe)** [OSS] — Internet censorship measurement client.
 - **[OONI Probe CLI](https://github.com/ooni/probe-cli)** [OSS] — CLI measurement and testing engine.
 - **[OONI Explorer](https://explorer.ooni.org/)** — Public censorship measurement datasets.
@@ -330,6 +337,8 @@ Start with the [practical diagnostic checklist](TROUBLESHOOTING.md): distinguish
 
 - **[RKNHardering detection reference](https://xtclovver.github.io/RKNHardering/help/ru/)** — Explanations of Android VPN detection signals, with evidence-level distinctions.
 - **[Zapret2 manual](https://github.com/bol-van/zapret2/blob/master/docs/manual.md)** — Original DPI-engine documentation and diagnostics.
+- **[libXray](https://github.com/XTLS/libXray)** [OSS] — Maintained wrapper for embedding Xray into multi-platform apps.
+- **[AndroidLibXrayLite](https://github.com/2dust/AndroidLibXrayLite)** [OSS] — Go Mobile/AAR bridge for Android Xray clients.
 - **[Xray documentation](https://xtls.github.io/en/)** — Xray configuration, DNS, routing, protocols and transport reference.
 - **[Xray examples](https://github.com/XTLS/Xray-examples)** — Upstream example configurations.
 - **[Xray docs source](https://github.com/XTLS/Xray-docs-next)** — Documentation source and changes.
@@ -347,6 +356,10 @@ Start with the [practical diagnostic checklist](TROUBLESHOOTING.md): distinguish
 
 ## Communities and reference catalogs
 
+- **[Project Xray Telegram](https://t.me/projectXray)** — Official community referenced by XTLS/Xray-core.
+- **[Project XTLS channel](https://t.me/projectXtls)** — Official development news referenced by XTLS/Xray-core.
+- **[Project VLESS (RU)](https://t.me/projectVless)** — Russian-language VLESS technical community linked by XTLS/Xray-core.
+- **[Project XHTTP](https://t.me/projectXhttp)** — XHTTP community linked by XTLS/Xray-core.
 - **[Xray UI Telegram channel](https://t.me/XrayUI)** — Channel linking 3x-ui, x-ui, s-ui and Raha.
 - **[Xray UI group](https://t.me/XrayUIGroup)** — Public group linked from the official channel.
 - **[Xray UI topic link](https://t.me/c/2479497161/1)** — User-contributed deep link; Telegram membership may be required.
