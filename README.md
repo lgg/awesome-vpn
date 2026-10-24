@@ -48,6 +48,7 @@ This list covers **VPNs, application proxies, local DPI circumvention, encrypted
 
 Windows, macOS and Linux availability varies by release; verify the build for your OS and CPU.
 
+- **[sing-box for Desktop](https://github.com/SagerNet/sing-box-for-desktop)** [OSS] — Official experimental desktop GUI (initially Windows); check release readiness.
 - **[v2rayN](https://github.com/2dust/v2rayN)** [OSS] — Multi-platform GUI for Xray, sing-box and other proxy cores; profiles and subscriptions.
 - **[Clash Verge Rev](https://github.com/clash-verge-rev/clash-verge-rev)** [OSS] — Desktop GUI based on mihomo.
 - **[FlClash](https://github.com/chen08209/FlClash)** [OSS] — Cross-platform Clash Meta client.
@@ -80,7 +81,7 @@ Windows, macOS and Linux availability varies by release; verify the build for yo
 
 ## iOS, iPadOS and Apple clients
 
-- **[sing-box for Apple platforms](https://sing-box.sagernet.org/installation/clients/)** [OSS] — Official sing-box client installation guidance; look for SFI/SFM/SFT.
+- **[sing-box for Apple platforms](https://github.com/SagerNet/sing-box-for-apple)** [OSS] — Official source for iOS, macOS and tvOS clients (SFI/SFM/SFT); see [official graphical clients](https://sing-box.sagernet.org/clients/).
 - **[Karing](https://github.com/KaringX/karing)** [OSS] — Apple and other platform releases where available.
 - **[Hiddify](https://github.com/hiddify/hiddify-app)** [OSS] — Apple-platform client; check regional App Store availability.
 - **[Amnezia VPN](https://github.com/amnezia-vpn/amnezia-client)** [OSS] — Apple and other platform client builds.
@@ -113,6 +114,7 @@ For private connectivity between your own devices and services; not interchangea
 - **[Marzban](https://github.com/Gozargah/Marzban)** [OSS] [Self-hosted] — Unified Xray panel.
 - **[Marzban Node](https://github.com/Gozargah/Marzban-node)** [OSS] — Worker node for Marzban deployments.
 - **[Hiddify Manager](https://github.com/hiddify/Hiddify-Manager)** [OSS] [Self-hosted] — Multiuser panel for censorship-resistant proxy services.
+- **[sing-box dashboard](https://github.com/SagerNet/sing-box-dashboard)** [OSS] — Official web dashboard for sing-box; check feature maturity.
 - **[MetaCubeXD](https://github.com/MetaCubeX/metacubexd)** [OSS] — Mihomo traffic/rules/connection web dashboard (**not** a subscription-selling server panel).
 - **[Raha](https://github.com/Raha-Project/Raha)** [Legacy] — Historical entry linked by the Xray UI community; latest observed repository activity was in 2023. Treat as unmaintained unless verified otherwise.
 
@@ -231,6 +233,8 @@ Start with the [practical diagnostic checklist](TROUBLESHOOTING.md): distinguish
 - **[Xray UI group](https://t.me/XrayUIGroup)** — Public group linked from the official channel.
 - **[Xray UI topic link](https://t.me/c/2479497161/1)** — User-contributed deep link; Telegram membership may be required.
 - **[Happ Proxy Telegram](https://t.me/happ_proxy)** — Happ-related Telegram community.
+- **[v2rayN Telegram group](https://t.me/v2rayN)** — Client community linked from official v2rayN documentation.
+- **[v2rayN Telegram channel](https://t.me/github_2dust)** — v2rayN release/development updates.
 - **[Hysteria Telegram](https://t.me/hysteria_github)** — Hysteria project community.
 - **[NTC forum](https://ntc.party/)** — Network restrictions and connectivity discussions (regional availability varies).
 - **[NTC alternate host](https://ntc.rkn.quest/)** — Alternate forum host.
