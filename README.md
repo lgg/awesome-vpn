@@ -19,7 +19,7 @@ This list covers **VPNs, application proxies, local DPI circumvention, encrypted
 - [VPNs and private mesh networks](#vpns-and-private-mesh-networks)
 - [Server panels and dashboards](#server-panels-and-dashboards)
 - [Subscriptions, billing and automation](#subscriptions-billing-and-automation)
-- [Deployment scripts and reverse tunnels](#deployment-scripts-and-reverse-tunnels)
+- [Deployment, forwarding and tunnels](#deployment-forwarding-and-tunnels)
 - [DPI bypass and censorship circumvention](#dpi-bypass-and-censorship-circumvention)
 - [DNS and DNS tunnels](#dns-and-dns-tunnels)
 - [Routers, OpenWrt and transparent proxying](#routers-openwrt-and-transparent-proxying)
@@ -41,6 +41,7 @@ This list covers **VPNs, application proxies, local DPI circumvention, encrypted
 - **[Shadowsocks Rust](https://github.com/shadowsocks/shadowsocks-rust)** [OSS] — Rust implementation of the Shadowsocks proxy.
 - **[Trojan](https://github.com/trojan-gfw/trojan)** [OSS] — TLS-based Trojan proxy implementation; check maintenance before deploying.
 - **[mieru](https://github.com/enfein/mieru)** [OSS] — SOCKS5/HTTP(S) proxy system for circumventing censorship.
+- **[NaïveProxy](https://github.com/klzgrad/naiveproxy)** [OSS] — Chromium-network-stack-based HTTP/2/3 proxy camouflage and tunneling.
 - **[OpenVPN](https://github.com/OpenVPN/openvpn)** [OSS] — Traditional TLS VPN daemon.
 - **[SoftEther VPN](https://github.com/SoftEtherVPN/SoftEtherVPN)** [OSS] — Multiprotocol VPN server and client suite.
 
@@ -88,6 +89,7 @@ Windows, macOS and Linux availability varies by release; verify the build for yo
 - **[Happ](https://happ.info/)** [Closed] — Xray-powered client with App Store distribution and vendor-maintained downloads.
 - **[Streisand](https://apps.apple.com/us/app/streisand/id6450534064)** [Closed] — Apple-platform proxy client; app availability varies by region.
 - **[Shadowrocket](https://apps.apple.com/us/app/shadowrocket/id932747118)** [Closed] — Paid Apple-platform network/proxy client.
+- **[Stash](https://stash.ws/ios)** [Closed] — Paid iOS/iPadOS/tvOS rule-based proxy client with routing, inspection and rewrites.
 - **[SwByeDPI](https://github.com/mIwr/SwByeDPI)** [OSS] — Swift iOS wrapper around the ByeDPI approach.
 - **[MuseDPI](https://github.com/zondaxxx/MuseDPI)** [OSS] — Local DPI circumvention project for iOS and Android.
 
@@ -103,11 +105,13 @@ For private connectivity between your own devices and services; not interchangea
 - **[NetBird](https://github.com/netbirdio/netbird)** [OSS] — Identity-oriented secure mesh and access management.
 - **[ZeroTier](https://github.com/zerotier/ZeroTierOne)** — Virtual network overlay implementation.
 - **[Nebula](https://github.com/slackhq/nebula)** [OSS] — Scalable encrypted overlay networking.
+- **[Firezone](https://github.com/firezone/firezone)** — Remote access/network connectivity stack; review hosting and identity requirements.
 - **[PiVPN](https://github.com/pivpn/pivpn)** [OSS] — Simple installation scripts for a personal VPN.
 
 ## Server panels and dashboards
 
 - **[3x-ui](https://github.com/MHSanaei/3x-ui)** [OSS] [Self-hosted] — Xray web panel for users, inbounds, subscriptions and server management.
+- **[WireGuard Easy (wg-easy)](https://github.com/wg-easy/wg-easy)** [OSS] [Self-hosted] — WireGuard VPN with Docker-friendly web UI and client management.
 - **[x-ui](https://github.com/alireza0/x-ui)** [OSS] [Self-hosted] — Xray control panel with multiprotocol and multiuser features.
 - **[s-ui](https://github.com/alireza0/s-ui)** [OSS] [Self-hosted] — Web panel for sing-box.
 - **[Remnawave](https://github.com/remnawave/panel)** [Self-hosted] — Multi-node proxy management ecosystem; review upstream license and deployment docs.
@@ -130,13 +134,18 @@ For private connectivity between your own devices and services; not interchangea
 
 Never post real subscription URLs, tokens, panel credentials or VPN private keys in a public issue.
 
-## Deployment scripts and reverse tunnels
+## Deployment, forwarding and tunnels
 
 - **[v2ray-agent](https://github.com/mack-a/v2ray-agent)** [OSS] — Multi-protocol installer for Xray, TUIC, Hysteria 2 and sing-box.
 - **[233boy/v2ray](https://github.com/233boy/v2ray)** [OSS] — V2Ray install and management scripts.
 - **[sing-box-yg](https://github.com/yonggekkk/sing-box-yg)** [OSS] — VPS setup scripts for sing-box and associated transports.
 - **[fscarmen/sing-box](https://github.com/fscarmen/sing-box)** [OSS] — Multi-protocol sing-box provisioning scripts.
 - **[frp](https://github.com/fatedier/frp)** [OSS] — Reverse proxy / NAT traversal for publishing a service behind NAT.
+- **[GOST v3](https://github.com/go-gost/gost)** [OSS] — Multi-protocol proxy chaining, forwarding, reverse tunneling, TUN/TAP and DNS integration.
+- **[wstunnel](https://github.com/erebe/wstunnel)** [OSS] — Tunnel TCP/UDP traffic over WebSocket or HTTP/2.
+- **[chisel](https://github.com/jpillora/chisel)** [OSS] — HTTP-carried TCP/UDP tunneling with SSH security.
+- **[udp2raw](https://github.com/wangyu-/udp2raw)** [OSS] — Wrap UDP traffic in raw-socket packet forms for restrictive or unreliable paths.
+- **[UDPspeeder](https://github.com/wangyu-/UDPspeeder)** [OSS] — Add forward-error correction for lossy UDP links; not an encrypted VPN on its own.
 - **[cloudflared](https://github.com/cloudflare/cloudflared)** — Cloudflare Tunnel connector.
 - **[edgetunnel](https://github.com/cmliu/edgetunnel)** — Edge-deployed proxy/tunnel tooling; read upstream terms and limitations.
 
@@ -147,6 +156,8 @@ Never post real subscription URLs, tokens, panel credentials or VPN private keys
 Local circumvention tools here primarily try to defeat packet inspection and filtering. They do **not** automatically replace a remote VPN.
 
 - **[zapret](https://github.com/bol-van/zapret)** [OSS] — Multi-platform DPI desynchronization and circumvention toolkit.
+- **[Psiphon tunnel core](https://github.com/psiphon-labs/psiphon-tunnel-core)** [OSS] — Core of the Psiphon anti-censorship system.
+- **[Tor pluggable transports](https://support.torproject.org/tor-browser/circumvention/unblocking-tor/)** — Official overview of obfs4, Snowflake, meek and WebTunnel; distinct from generic VPN tunnels.
 - **[GoodbyeDPI](https://github.com/ValdikSS/GoodbyeDPI)** [OSS] — Windows DPI-circumvention utility.
 - **[ByeDPI](https://github.com/hufrea/byedpi)** [OSS] — Local DPI bypass engine.
 - **[ByeDPI Android](https://github.com/dovecoteescapee/ByeDPIAndroid)** [OSS] — Android integration; older upstream, check alternatives.
@@ -223,6 +234,7 @@ Start with the [practical diagnostic checklist](TROUBLESHOOTING.md): distinguish
 - **[Remnawave documentation](https://docs.rw/)** — Panel and subscription ecosystem.
 - **[WireGuard quick start](https://www.wireguard.com/quickstart/)** — Basic secure tunnel configuration.
 - **[frp documentation](https://gofrp.org/en/)** — Reverse tunnel configuration.
+- **[GOST documentation](https://gost.run/)** — Chained forwarding, tunneling, transport and DNS reference.
 - **[Xray routing rules](https://xtls.github.io/en/config/routing.html)** — Domain/IP routing and balancers.
 - **[sing-box route rules](https://sing-box.sagernet.org/configuration/route/rule/)** — Rule schemas, priorities and actions.
 - **[TUIC specification](https://github.com/tuic-protocol/tuic/blob/main/SPEC.md)** — Protocol design (not a runnable binary).
@@ -236,6 +248,7 @@ Start with the [practical diagnostic checklist](TROUBLESHOOTING.md): distinguish
 - **[v2rayN Telegram group](https://t.me/v2rayN)** — Client community linked from official v2rayN documentation.
 - **[v2rayN Telegram channel](https://t.me/github_2dust)** — v2rayN release/development updates.
 - **[Hysteria Telegram](https://t.me/hysteria_github)** — Hysteria project community.
+- **[GOST Telegram](https://t.me/gogost)** — Proxy and tunnel chaining discussions (linked from upstream's older repository).
 - **[NTC forum](https://ntc.party/)** — Network restrictions and connectivity discussions (regional availability varies).
 - **[NTC alternate host](https://ntc.rkn.quest/)** — Alternate forum host.
 - **[net4people/bbs](https://github.com/net4people/bbs)** — Research-led Internet censorship-circumvention discussions.
