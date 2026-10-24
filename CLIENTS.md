@@ -16,6 +16,8 @@
 | **v2RayTun** | Xray, AmneziaWG | [Upstream](https://github.com/LXST-CODE/v2RayTun) | Closed client; public releases/roadmap, separate platform tracks |
 | **INCY** | Xray | [Upstream](https://github.com/INCY-DEV/incy-platforms) | Closed client; Windows/macOS/Linux desktop builds **pre-alpha** as of Oct 2026 |
 | **OneXray** | Xray | [Upstream](https://github.com/YuanDevTeam/OneXray) | GPL-3.0; direct JSON, profiles and provider subscriptions; native installers vary |
+| **GenyConnect** | Multi-protocol networking | [Upstream](https://github.com/genyleap/GenyConnect) | GPL-3.0; client and routing features depend on platform builds |
+| **AnyPortal** | Xray, sing-box, mihomo, V2Ray | [Upstream](https://github.com/AnyPortal/AnyPortal) | Windows/macOS/Linux/Android source; upstream **iOS TUN currently blocked** |
 | **Clash Verge Rev** | mihomo | [Upstream](https://github.com/clash-verge-rev/clash-verge-rev) | OSS; mature desktop policy routing and profiles |
 | **FlClash** | mihomo | [Upstream](https://github.com/chen08209/FlClash) | OSS; desktop, Android and Android TV |
 | **FlClashX** | mihomo | [Upstream](https://github.com/pluralplay/FlClashX) | GPL-3.0; community fork with Remnawave-oriented features |
@@ -60,6 +62,7 @@
 | **YumeBox** | mihomo | [Upstream](https://github.com/YumeYucca/YumeBox) | AGPL-3.0; niche Android GUI, upstream docs limited |
 | **Shadowsocks Android** | shadowsocks-rust | [Upstream](https://github.com/shadowsocks/shadowsocks-android) | OSS; Shadowsocks-specific rather than generic Xray |
 | **SimpleXray** | Xray | [Upstream](https://github.com/lhear/SimpleXray) | MPL-2.0; minimal Android GUI |
+| **AnyPortal** | Xray, sing-box, mihomo, V2Ray | [Upstream](https://github.com/AnyPortal/AnyPortal) | Android variant uses its own core integration; verify TUN permissions |
 | **Xray (SaeedDev94)** | Xray | [Upstream](https://github.com/SaeedDev94/Xray) | MIT; lightweight Android GUI |
 | **Outline** | Outline | [Upstream](https://github.com/OutlineFoundation/outline-apps) | OSS; compatible with Outline server, not arbitrary Xray |
 | **Amnezia VPN** | AmneziaWG, WireGuard, Xray integrations | [Upstream](https://github.com/amnezia-vpn/amnezia-client) | OSS; self-hosted VPN client/server ecosystem |
@@ -104,6 +107,7 @@
 | **Surfing** | mihomo | [Upstream](https://github.com/GitMetaio/Surfing) | GPL-3.0; root-only Magisk/KernelSU module |
 | **box4magisk** | Xray, V2Ray, sing-box, mihomo | [Upstream](https://github.com/CHIZI-0618/box4magisk) | GPL-3.0; root-only Android transparent proxy |
 | **ClashBox** | mihomo | [Upstream](https://github.com/xiaobaigroup/ClashBox) | Native HarmonyOS NEXT ArkTS client; not Android APK |
+| **Hey** | Network tunnel / protocol debug | [Upstream](https://github.com/popsiclelmlm/Hey) | GPL-3.0; native HarmonyOS NEXT, separate from Android APKs |
 
 ## Downloads, updates and trust
 
