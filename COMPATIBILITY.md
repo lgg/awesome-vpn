@@ -10,11 +10,15 @@ This document is a **high-level discovery index**, not an automated interoperabi
 
 | Client | Platforms | Engine / technology | Distribution / code | Important caveats |
 | --- | --- | --- | --- | --- |
+| [WINGS V DeX](https://github.com/WINGS-N/WINGSV_DeX) | Windows, Linux | Xray, VK TURN | Open source | Project-specific VK TURN integration; check desktop builds and permissions |
+| [SkipIt](https://github.com/getskipit/skipit) | Windows (upstream repository description) | Xray, sing-box | Open source | Verify supported builds and current transport implementation |
 | [v2rayN](https://github.com/2dust/v2rayN) | Windows, Linux, macOS | Xray, sing-box and others | Open source | Profile types vary between cores/releases |
 | [v2rayNG](https://github.com/2dust/v2rayNG) | Android | Xray, V2Fly | Open source | Android VPN slot; TUN behavior differs from desktop |
-| [WINGS V](https://github.com/WINGS-N/WINGSV) | Android | Xray, WG, local DPI integration | Open source | Check root-only features and integration modes |
+| [WINGS V](https://github.com/WINGS-N/WINGSV) | Android | Xray, WireGuard/AmneziaWG, VK TURN | Open source | Some hotspot/transport features need root and specific deployment |
 | [v2RayTun](https://github.com/LXST-CODE/v2RayTun) | Android and other advertised platforms | Xray and TUN integration | Partial-source / release-oriented | Android/Windows TUN DNS behavior must be checked per release |
 | [SFA](https://github.com/SagerNet/sing-box-for-android) | Android | sing-box | Open source | No promise of feature parity with CLI |
+| [ByeByeDPI](https://github.com/romanvht/ByeByeDPI) | Android | Local DPI desync through ByeDPI | Open source | Not a remote VPN exit; competes for Android VPN slot |
+| [DesyncDroyd](https://github.com/sigmabosshvh/DesyncDroyd) | Android | zapret2 / nfqws2 | Source repository | Shizuku/permissions and device-specific capabilities require checking |
 | [NekoBox for Android](https://github.com/MatsuriDayo/NekoBoxForAndroid) | Android | sing-box family | Open source | Confirm recent release, not just Git pushes |
 | [Clash Meta for Android](https://github.com/MetaCubeX/ClashMetaForAndroid) | Android | mihomo / Clash Meta | Open source | Clash subscriptions/configs differ from Xray |
 | [Exclave](https://github.com/ExclaveNetwork/Exclave) | Android | Proxy client | Open source | See upstream for exact core and supported formats |
@@ -40,6 +44,10 @@ This document is a **high-level discovery index**, not an automated interoperabi
 
 | Project | Backend focus | Primary purpose | Note |
 | --- | --- | --- | --- |
+| [WINGS V Panel](https://github.com/WINGS-N/wingsv-panel) | WINGS V ecosystem | Client profile and management control | Not an ordinary generic Xray panel |
+| [WINGS 3x-ui fork](https://github.com/WINGS-N/3x-ui) | Xray plus VK TURN integration | Forked server panel | Upstream-specific changes; do not assume upstream 3x-ui compatibility |
+| [swgPanel](https://github.com/SanityProtocol/swg-panel) | WireGuard / AmneziaWG | Web panel for VPN users and nodes | Not an Xray/VLESS panel |
+| [WireGuard Easy](https://github.com/wg-easy/wg-easy) | WireGuard | Web client management | Does not administer arbitrary Xray/sing-box profiles |
 | [3x-ui](https://github.com/MHSanaei/3x-ui) | Xray | Single-/multi-server panel, clients and subscriptions | Feature set evolves quickly |
 | [x-ui](https://github.com/alireza0/x-ui) | Xray | Inbounds and user management | Different project from 3x-ui |
 | [s-ui](https://github.com/alireza0/s-ui) | sing-box | Web management panel | Sing-box configuration family |
@@ -59,6 +67,8 @@ This document is a **high-level discovery index**, not an automated interoperabi
 | WireGuard / AmneziaWG | VPN protocol family | SOCKS/HTTP proxy |
 | DNS over HTTPS (DoH) | Encrypted DNS resolution | DNS-based VPN tunneling |
 | DNS tunneling | Carrying a payload over DNS messages | DoH, DoT or DNSCrypt alone |
+| Decentralized VPN (dVPN) | VPN routing through distributed network/nodes | Private mesh network with no public exit |
+| Private encrypted mesh / overlay | Connecting devices in a cryptographic virtual network | Public web exit node or anonymity guarantee |
 | TUN | Virtual network interface / traffic interception | Anonymous VPN provider |
 | DPI-bypass / desync | Local filtering-circumvention technique | Encrypted remote exit |
 | Subscription URL | Profile delivery and update mechanism | Transport protocol |
@@ -72,4 +82,4 @@ This document is a **high-level discovery index**, not an automated interoperabi
 5. Inspect actual egress IP/DNS and client logs. Avoid publishing credentials, node hostnames or subscription tokens.
 6. Update this matrix only with upstream documentation, a cited release note or reproducible tests.
 
-**Snapshot:** 2026-10-25. No claim is made that every combination above was manually tested.
+**Snapshot:** 2026-10-25; extended with [NTC and dVPN research](RESEARCH-2026.md). No claim is made that every combination above was manually tested.
