@@ -21,6 +21,8 @@ Not accepted: affiliate VPN rankings, referral campaigns, leaked subscriptions/c
 - [ ] Do not expose credentials, links containing tokens, user/device identifiers, panel URLs tied to private subscriptions, or sensitive logs.
 - [ ] Avoid duplicates and broken/redirecting old GitHub repository paths.
 - [ ] When changing client compatibility claims, update [COMPATIBILITY.md](COMPATIBILITY.md) with the corresponding caveats.
+- [ ] When adding a **VPN/proxy client**, update [CLIENTS.md](CLIENTS.md), identify its official release/store channel and distinguish a binary-only repository from open application source.
+- [ ] For new client source verification and exclusions, update [CLIENT-RESEARCH-2026.md](CLIENT-RESEARCH-2026.md).
 - [ ] For recurring diagnostics, add a short, **safe and reproducible** note to [TROUBLESHOOTING.md](TROUBLESHOOTING.md).
 
 ## Suggested entry style
