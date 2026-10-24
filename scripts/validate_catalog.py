@@ -9,7 +9,7 @@ from pathlib import Path
 from urllib.parse import unquote, urlparse
 
 ROOT = Path(__file__).resolve().parent.parent
-MARKDOWN = ["README.md", "COMPATIBILITY.md", "TROUBLESHOOTING.md", "CONTRIBUTING.md", "MAINTENANCE.md"]
+MARKDOWN = ["README.md", "COMPATIBILITY.md", "TROUBLESHOOTING.md", "CONTRIBUTING.md", "MAINTENANCE.md", "RESEARCH-2026.md"]
 LINK = re.compile(r"(?<!!)\[[^\]]+\]\(([^\s)]+)(?:\s+[^)]*)?\)")
 HEADING = re.compile(r"^#{1,6}\s+(.+?)\s*#*\s*$", re.MULTILINE)
 SECTION = re.compile(r"^##\s+(.+)$", re.MULTILINE)
