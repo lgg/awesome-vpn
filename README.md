@@ -15,6 +15,7 @@ This list covers **VPNs, application proxies, local DPI circumvention, encrypted
 - [Client directory and selection guide](CLIENTS.md)
 - [2026 research and ecosystem additions](ECOSYSTEM-RESEARCH-2026.md)
 - [DPI, router tools and specialist forum research (October 2026)](DPI-RESEARCH-2026.md)
+- [Further DPI/client research and security notes (October 2026)](DPI-RESEARCH-ROUND2-2026.md)
 - [Proxy and VPN cores](#proxy-and-vpn-cores)
 - [Desktop clients](#desktop-clients)
 - [Android clients](#android-clients)
@@ -59,6 +60,7 @@ This list covers **VPNs, application proxies, local DPI circumvention, encrypted
 - **[Outline Server](https://github.com/OutlineFoundation/outline-server)** [OSS] — Self-hosted Shadowsocks server and API for managing Outline access keys.
 - **[AmneziaWG Go](https://github.com/amnezia-vpn/amneziawg-go)** [OSS] — Userspace AmneziaWG implementation; protocol family differs from WireGuard-compatible proxy subscriptions.
 - **[OpenVPN](https://github.com/OpenVPN/openvpn)** [OSS] — Traditional TLS VPN daemon.
+- **[TiredVPN](https://github.com/tiredvpn/tiredvpn)** [OSS] [Experimental] — Separate Go client/server VPN using adaptive transport selection; cross-ISP robustness and protocol security claims are not independently tested here.
 - **[Qeli](https://github.com/litvinovtd/qeli)** [Experimental] — Self-hosted TUN VPN with Rust core and Android/Windows/macOS clients; hybrid cryptography and obfuscation are **not independently vetted here**. Pre-1.0 protocol.
 - **[Veil](https://github.com/alibakhtiari/Veil)** [Experimental] — MASQUE/WireGuard-oriented tunneling client with desktop and Android applications; confirm release maturity before use.
 - **[Mullvad VPN app](https://github.com/mullvad/mullvadvpn-app)** [OSS] — Provider-specific multi-platform VPN application; **not** a generic bring-your-own-Xray client.
@@ -74,6 +76,7 @@ Windows, macOS and Linux availability varies by release; verify the build for yo
 - **[v2RayTun](https://github.com/LXST-CODE/v2RayTun)** [Closed] — Windows/macOS/Linux builds in a multi-platform Xray client distribution; download tracks differ by OS.
 - **[WINGS V DeX](https://github.com/WINGS-N/WINGSV_DeX)** [OSS] — Linux/Windows companion for WINGS V, supporting Xray and VK TURN transports.
 - **[SkipIt](https://github.com/getskipit/skipit)** [OSS] — Windows desktop client using Xray-core and sing-box; verify current OS builds and release maturity.
+- **[KEQDIS (keqdroid)](https://github.com/Lemonochka/keqdroid)** [OSS] — Flutter-based Windows/Linux/Android proxy client with Xray/mihomo cores, subscriptions and per-app routing; verify exact OS package/core feature support.
 - **[Clash Verge Rev](https://github.com/clash-verge-rev/clash-verge-rev)** [OSS] — Desktop GUI based on mihomo.
 - **[FlClash](https://github.com/chen08209/FlClash)** [OSS] — Cross-platform Clash Meta client.
 - **[Clash Party](https://github.com/mihomo-party-org/clash-party)** [OSS] — Desktop mihomo GUI.
@@ -117,6 +120,9 @@ Windows, macOS and Linux availability varies by release; verify the build for yo
 - **[sing-box for Android (SFA)](https://github.com/SagerNet/sing-box-for-android)** [OSS] — Android GUI for sing-box.
 - **[NekoBox for Android](https://github.com/MatsuriDayo/NekoBoxForAndroid)** [OSS] — Advanced sing-box-based Android client; check release recency.
 - **[WINGS V](https://github.com/WINGS-N/WINGSV)** [OSS] — Android Xray-oriented client with per-app controls, WireGuard integration and local DPI-bypass features.
+- **[NoDPI4Android](https://github.com/GVCoder09/NoDPI4Android)** [OSS] [Beta] — Android local DPI-circumvention app from the NoDPI project, not a remote VPN exit; latest public APK was beta at review.
+- **[KEQDIS (keqdroid) for Android](https://github.com/Lemonochka/keqdroid)** [OSS] — Xray/mihomo client with subscriptions and Android APK releases, sharing a codebase with desktop builds.
+- **[TiredVPN Android](https://github.com/tiredvpn/tiredvpn-android)** [OSS] [Experimental] — Android client for its own TiredVPN server/protocol; not a generic Xray share-link importer; no independent security audit established.
 - **[v2RayTun](https://github.com/LXST-CODE/v2RayTun)** [Closed] — Cross-platform Xray/AmneziaWG client for Android/TV, Apple and desktop; official GitHub lists platform-specific releases but is not full application source.
 - **[Clash Meta for Android](https://github.com/MetaCubeX/ClashMetaForAndroid)** [OSS] — Android rule-based tunneling client.
 - **[Exclave](https://github.com/ExclaveNetwork/Exclave)** [OSS] — Android proxy client.
@@ -369,6 +375,8 @@ These projects are specific to Telegram transport. **Telegram MTProxy is not a g
 - **[nfqws-keenetic-web](https://github.com/nfqws/nfqws-keenetic-web)** [OSS] — Separate web UI for installed nfqws/nfqws2 router packages; not a DPI engine itself.
 - **[Zapret Web-GUI](https://github.com/avatarDD/zapret-gui)** [OSS] — Entware/OpenWrt dashboard combining nfqws2, several tunnel backends and per-destination fallback routing; review its firewall and upstream trust boundaries.
 - **[Zapret Manager](https://github.com/StressOzz/Zapret-Manager)** — OpenWrt tool for managing DPI, DNS and routing integrations; upstream also promotes a paid VPN service (not endorsed here).
+- **[NFQWS-MENU](https://github.com/rndnaame/nfqws-menu)** — Community Entware/Keenetic manager for nfqws/nfqws2 packages and contributed strategies; not the original engine or an official installer.
+- **[singA](https://github.com/infinjest/singA)** [Experimental] — arm64 OpenWrt sing-box-lx TProxy gateway with XHTTP/AWG2-oriented routes and web GUI, only tested upstream on a specific Netis NX31/OpenWrt build; license not verified.
 - **[Podkop](https://github.com/itdoginfo/podkop)** [OSS] [Beta] — OpenWrt sing-box selective routing; needs OpenWrt 24.10+ and modifies DNS/proxy configuration; read its telemetry caveat for the optional alternative installer.
 - **[XKeen](https://github.com/jameszeroX/XKeen)** [OSS] — Keenetic/Netcraze selective TCP/UDP proxy-routing manager using Xray or mihomo; distinct from local DPI desynchronization.
 
@@ -403,6 +411,9 @@ Rule formats are **not automatically interchangeable**: `geoip.dat`, `geosite.da
 - **[DPI Checkers](https://github.com/hyperion-cs/dpi-checkers)** [OSS] — Web/browser-facing and low-level censorship testing tools.
 - **[TSPU Probe](https://github.com/stpavel/tspu-probe)** — Android-focused VPN/TLS/VLESS diagnostics; a probe result is not a universal verdict.
 - **[RKN Block Checker](https://github.com/MayersScott/rkn-block-checker)** [OSS] — Layer-by-layer DNS, TCP, TLS and HTTP diagnostics for restrictions on authorized networks.
+- **[Prosvet](https://github.com/Derposd/prosvet)** [OSS] — Measurement-only utility with DNS, IP/SNI, TLS/QUIC and throttling checks; publishes local reports and optional public measurements, not a VPN.
+- **[YT-DPI](https://github.com/Shiperoid/YT-DPI)** [OSS] — Windows PowerShell/Linux/macOS Bash diagnostics for YouTube/Google DNS, TLS, QUIC and path failures; no bypass engine.
+- **[TiredVPN transport measurements](https://github.com/tiredvpn/tiredvpn-measurements)** [Data] — Maintainer-run dated ISP/transport handshake data; not an independent or exhaustive proxy effectiveness benchmark.
 - **[VPN Traffic Obfuscation Lab](https://github.com/maxlluky/VPN-Traffic-Obfuscation-Lab)** [OSS] — Reproducible Docker lab comparing packet inspection and obfuscation approaches (research).
 - **[Ladon](https://github.com/belotserkovtsev/Ladon)** [OSS] — Reactive DNS/TCP/TLS/HTTP censorship classifier for Linux gateways and OPNsense, producing ipset/routing decisions rather than acting as a VPN.
 - **[RKNHardering](https://github.com/xtclovver/RKNHardering)** [OSS] — Android diagnostic checks for VPN/proxy detection, including interface signals and IP comparisons; results are **heuristics**, not a guarantee of invisibility.
@@ -434,6 +445,7 @@ Start with the [practical diagnostic checklist](TROUBLESHOOTING.md): distinguish
 - **[libXray](https://github.com/XTLS/libXray)** [OSS] — Maintained wrapper for embedding Xray into multi-platform apps.
 - **[AndroidLibXrayLite](https://github.com/2dust/AndroidLibXrayLite)** [OSS] — Go Mobile/AAR bridge for Android Xray clients.
 - **[Xray documentation](https://xtls.github.io/en/)** — Xray configuration, DNS, routing, protocols and transport reference.
+- **[GHSA-5wf9-h793-w73c (Xray)](https://github.com/advisories/GHSA-5wf9-h793-w73c)** — Reviewed upstream certificate-pinning security advisory; check actual bundled/core versions and configuration.
 - **[Xray examples](https://github.com/XTLS/Xray-examples)** — Upstream example configurations.
 - **[Xray docs source](https://github.com/XTLS/Xray-docs-next)** — Documentation source and changes.
 - **[V2Ray examples](https://github.com/v2fly/v2ray-examples)** — Configuration templates from the V2Fly ecosystem.
@@ -489,6 +501,7 @@ Start with the [practical diagnostic checklist](TROUBLESHOOTING.md): distinguish
 - **[NTC circumvention methods](https://ntc.rkn.quest/c/censorship-circumvention-software/11)** — Proxy transports, anti-censorship clients, WebTunnel, XHTTP and related protocols.
 - **[NTC top topics](https://ntc.party/top)** — Popular threads index; access may be blocked or transiently unavailable.
 - **[NTC latest topics](https://ntc.rkn.quest/latest)** — Latest threads index; rate limiting may apply.
+- **[NTC GoodCheck discussion](https://ntc.rkn.quest/t/goodcheck-%D0%B1%D0%BB%D0%BE%D0%BA%D1%87%D0%B5%D0%BA-%D0%B4%D0%BB%D1%8F-gdpi-zapret-byedpi-%D0%B0%D0%BA%D1%82%D1%83%D0%B0%D0%BB%D1%8C%D0%BD%D0%B0%D1%8F-%D0%B2%D0%B5%D1%80%D1%81%D0%B8%D1%8F-%D0%B2-%D0%BF%D1%80%D0%BE%D1%84%D0%B8%D0%BB%D0%B5/10880)** — Forum-maintained multi-engine DPI checker; do not treat user-uploaded archives as audited.
 - **[GFW Report](https://gfw.report/)** — Technical Internet censorship research and peer-reviewed publications.
 - **[FOCI 2026: QUIC SNI censorship in Russia](https://www.petsymposium.org/foci/2026/foci-2026-0010.php)** — Peer-reviewed study of QUIC/SNI filtering and its measurement.
 - **[FOCI 2026: Automated DNS circumvention](https://www.petsymposium.org/foci/2026/foci-2026-0001.php)** — Research on resolver/transport fallbacks and DNS filtering.
@@ -505,6 +518,7 @@ Start with the [practical diagnostic checklist](TROUBLESHOOTING.md): distinguish
 
 - [Research notes: NTC, alternative awesome lists, protocol and dVPN ecosystems](RESEARCH-2026.md) — Source-by-source review, selected discussion threads, what was already in the catalog and what was deliberately excluded.
 - [DPI and router research: Zapret2/ByeDPI ecosystem, current project status and specialist communities](DPI-RESEARCH-2026.md) — Source-checked additions and explicit caveats (October 2026).
+- [Second DPI/client research pass: diagnostics, routers, transport measurements, current forums and Xray security advisory](DPI-RESEARCH-ROUND2-2026.md) — New source-checked references and explicit inclusion/exclusion criteria.
 
 ## Maintenance and contributing
 
