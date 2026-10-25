@@ -25,6 +25,9 @@ This document is a **high-level discovery index**, not an automated interoperabi
 | [GenyConnect](https://github.com/genyleap/GenyConnect) | Cross-platform (see releases) | Secure tunnel/routing client | GPL-3.0 | Exact operating modes/permissions require verification per OS |
 | [Hey](https://github.com/popsiclelmlm/Hey) | HarmonyOS NEXT | Tunnel and protocol-debugging client | GPL-3.0 | Native HarmonyOS, not interchangeable with Android VPN apps |
 | [v2rayN](https://github.com/2dust/v2rayN) | Windows, Linux, macOS | Xray, sing-box and others | Open source | Profile types vary between cores/releases |
+| [L×Box](https://github.com/Leadaxe/LxBox) | Android | sing-box-lx fork (XHTTP, AmneziaWG, MASQUE etc.) | GPL-3.0 | Maintainer-reported features; use matching fork build; one Android VpnService |
+| [Rethink DNS + Firewall](https://github.com/celzero/rethink-app) | Android | DNS/firewall/WireGuard proxifier | Apache-2.0 | No implicit compatibility with arbitrary Xray/Clash subscription URLs |
+| [Spoofy](https://github.com/ringolol/Spoofy) | iOS, macOS | Local DPI HTTP/SOCKS proxy | MIT | iOS Wi-Fi/app proxy or sideload; does **not** tunnel all cellular traffic |
 | [v2rayNG](https://github.com/2dust/v2rayNG) | Android | Xray, V2Fly | Open source | Android VPN slot; TUN behavior differs from desktop |
 | [WINGS V](https://github.com/WINGS-N/WINGSV) | Android | Xray, WireGuard/AmneziaWG, VK TURN | Open source | Some hotspot/transport features need root and specific deployment |
 | [v2RayTun](https://github.com/LXST-CODE/v2RayTun) | Android/TV, iOS, macOS, Windows, Linux | Xray, AmneziaWG integration | **Closed** / release-oriented GitHub | Separate OS release tracks; Android/Windows TUN DNS behavior must be checked per release |
@@ -78,6 +81,16 @@ This document is a **high-level discovery index**, not an automated interoperabi
 | [Asuswrt-Merlin AmneziaWG](https://github.com/william-aqn/asuswrt-merlin-amneziawg) | ASUS Merlin/Entware; AmneziaWG | Router client and server, selective routes | Firmware/architecture-specific |
 | [Remnawave Subscription Middleware](https://github.com/Mrvibecodic/remnawave-subscription-middleware) | Remnawave subscriptions | Mirroring, profile modification and access rules | Sensitive subscription data, reverse-proxy trust and authentication |
 | [MCP Remnawave](https://github.com/TrackLine/mcp-remnawave) | Remnawave API | Administrative automation and integrations | Never expose an unrestricted control/API token to untrusted agents |
+
+## Tunneling and camouflage compatibility
+
+| Tool | Endpoints and scope | What it does not do |
+| --- | --- | --- |
+| [wireproxy](https://github.com/windtf/wireproxy) | WireGuard client to local SOCKS5/HTTP | No general system-wide TUN; SOCKS5 UDP not implemented as described upstream |
+| [wireproxy-awg](https://github.com/artem-russkikh/wireproxy-awg) | AmneziaWG-compatible userspace WireGuard-to-SOCKS | Not a generic Xray protocol converter |
+| [wg-obfuscator](https://github.com/ClusterM/wg-obfuscator) | UDP wrapping on both client and self-hosted server | Not a VPN client/server; requires deployment at both ends |
+| [MTProxy](https://github.com/TelegramMessenger/MTProxy), [Telemt](https://github.com/telemt/telemt), [mtg](https://github.com/9seconds/mtg) | Telegram-only transport | Cannot replace a whole-device VPN |
+| [iodine](https://github.com/yarrick/iodine) | Client/server DNS tunnel carrying IPv4 | Not encrypted DNS alone; both endpoints need compatible protocol versions |
 
 ## Protocol and transport vocabulary
 

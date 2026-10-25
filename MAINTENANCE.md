@@ -63,3 +63,14 @@ See [CLIENTS.md](CLIENTS.md) and [CLIENT-RESEARCH-2026.md](CLIENT-RESEARCH-2026.
 - [coolcoala/clash-verge-rev-lite](https://github.com/coolcoala/clash-verge-rev-lite) could not be resolved by GitHub API; excluded until a validated upstream is found.
 - [Flowvy](https://github.com/flowvy/desktop) exists, but its listing was under removal discussion in [Remnawave PR #529](https://github.com/remnawave/panel/pull/529), so not recommended without updated provenance.
 - Fresh examples and upstream reports are recorded in [ECOSYSTEM-RESEARCH-2026.md](ECOSYSTEM-RESEARCH-2026.md).
+
+## Transport, mobile DNS and MTProxy research (2026-10-25)
+
+- Follow the independently linked projects and technical forum discussions in [TRANSPORT-RESEARCH-2026.md](TRANSPORT-RESEARCH-2026.md). This file separates primary GitHub upstreams from regional/ISP-dependent anecdotes.
+- [SpoofDPI](https://github.com/xvzc/spoofdpi) excludes Android/iOS official clients; [Spoofy](https://github.com/ringolol/Spoofy) is a local iOS/macOS proxy, **not** a system-wide iOS VPN or cellular full-tunnel.
+- [L×Box](https://github.com/Leadaxe/LxBox) runs a [sing-box-lx](https://github.com/Leadaxe/sing-box-lx) fork. Transport compatibility must be tested against the **fork/core revision**, not inferred from stock sing-box.
+- [WireGuard Obfuscator](https://github.com/ClusterM/wg-obfuscator) requires matching obfuscation at both endpoints and cannot convert an arbitrary commercial WireGuard server without changes.
+- [WDTT Android](https://github.com/amurcanov/proxy-turn-vk-android) states EOL; its linked [csqtt](https://github.com/amurcanov/csqtt) is archived. Keep out of active project recommendations.
+- [Algo VPN](https://github.com/trailofbits/algo) provides self-hosted WireGuard/IKEv2 deployment and explicitly disclaims censorship/anonymity coverage. [Pangolin](https://github.com/fosrl/pangolin) and [Netmaker](https://github.com/gravitl/netmaker) are chiefly private access/mesh products.
+- MTProxy project releases target **Telegram only**; differentiate official C MTProxy, Rust Telemt, Go mtg and Zig mtproto.zig in status/transport recommendations.
+- [iodine](https://github.com/yarrick/iodine) carries tunneled IPv4 inside DNS and must not be categorized as an encrypted-DNS resolver like DoH/DoT.

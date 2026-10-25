@@ -23,6 +23,7 @@ Not accepted: affiliate VPN rankings, referral campaigns, leaked subscriptions/c
 - [ ] When changing client compatibility claims, update [COMPATIBILITY.md](COMPATIBILITY.md) with the corresponding caveats.
 - [ ] When adding a **VPN/proxy client**, update [CLIENTS.md](CLIENTS.md), identify its official release/store channel and distinguish a binary-only repository from open application source.
 - [ ] For a **panel, monitoring tool, billing bot or router add-on**, describe required API privileges and trust boundaries; do not imply a security review or broad protocol compatibility based on a README alone.
+- [ ] For **DPI, MTProxy, DNS tunneling and WireGuard obfuscation**, say which application traffic is actually routed, whether both endpoints must be modified and whether the tool supplies an anonymous public exit. Cite current upstream/ISP evidence for censorship claims.
 - [ ] For new client source verification and exclusions, update [CLIENT-RESEARCH-2026.md](CLIENT-RESEARCH-2026.md).
 - [ ] For recurring diagnostics, add a short, **safe and reproducible** note to [TROUBLESHOOTING.md](TROUBLESHOOTING.md).
 
