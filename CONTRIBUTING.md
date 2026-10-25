@@ -24,8 +24,29 @@ Not accepted: affiliate VPN rankings, referral campaigns, leaked subscriptions/c
 - [ ] When adding a **VPN/proxy client**, update [CLIENTS.md](CLIENTS.md), identify its official release/store channel and distinguish a binary-only repository from open application source.
 - [ ] For a **panel, monitoring tool, billing bot or router add-on**, describe required API privileges and trust boundaries; do not imply a security review or broad protocol compatibility based on a README alone.
 - [ ] For **DPI, MTProxy, DNS tunneling and WireGuard obfuscation**, say which application traffic is actually routed, whether both endpoints must be modified and whether the tool supplies an anonymous public exit. Cite current upstream/ISP evidence for censorship claims.
-- [ ] For new client source verification and exclusions, update [CLIENT-RESEARCH-2026.md](CLIENT-RESEARCH-2026.md).
+- [ ] For new clients, document primary-source evidence, release/distribution channel, license and caveats in [README.md](README.md), [CLIENTS.md](CLIENTS.md) and [COMPATIBILITY.md](COMPATIBILITY.md) as applicable. Do not create another dated research-log file.
 - [ ] For recurring diagnostics, add a short, **safe and reproducible** note to [TROUBLESHOOTING.md](TROUBLESHOOTING.md).
+
+
+## Keeping the repository lean
+
+**README.md is the canonical curated project directory and home of important research/forum references.** Keep supplementary files only when they serve a specific enduring reader workflow:
+
+- [CLIENTS.md](CLIENTS.md): platform-first app directory and official download channels.
+- [COMPATIBILITY.md](COMPATIBILITY.md): protocol/core/platform support and explicit caveats.
+- [TROUBLESHOOTING.md](TROUBLESHOOTING.md): actionable, reproducible diagnostics.
+- [CONTRIBUTING.md](CONTRIBUTING.md): review rules and maintenance process.
+
+**Do not add `RESEARCH-YYYY.md`, `DPI-RESEARCH-*.md`, progress reports or duplicate meta-documents** for each research pass. Integrate verified, useful project entries into the relevant section of README, platform-specific client facts into CLIENTS/COMPATIBILITY, and practical diagnostics into TROUBLESHOOTING. Summarize notable exclusion decisions only when they help avoid misleading recommendations; routine research history already exists in PRs and git history.
+
+## Maintenance routine
+
+- **Monthly:** scan upstream archived/repository-move status, release maturity, distribution changes, external links and maintainer announcements; correct broken or redirected references.
+- **After notable core/client changes:** recheck real transport/platform support in [COMPATIBILITY.md](COMPATIBILITY.md), especially XHTTP, REALITY, iOS Network Extensions, Android VpnService, TUN and DNS detours.
+- **When adding router/VPS tooling:** review root access and network configuration changes (dnsmasq, nftables, iptables, sing-box), least-privilege API tokens, backup/restore and rollback plans.
+- **When a forum host changes:** check the forum's authentic upstream domain, do not silently replace with unverifiable mirrors.
+- **When reviewing a candidate:** distinguish repository activity from a signed release, tested bypass, independent security review or protocol interoperation. Reject ambiguous licensing claims, phishing/malware repacks and leaked/proxy-scraping node dumps.
+- **Before merging:** run local catalog validation or check successful GitHub Actions, review README duplicate entries/relative links, and ensure every added resource has a factual explanation.
 
 ## Suggested entry style
 
