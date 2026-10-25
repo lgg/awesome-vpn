@@ -30,7 +30,7 @@
 | **sing-box-windows** | sing-box | [Upstream](https://github.com/xinggaoya/sing-box-windows) | MIT; Tauri desktop UI |
 | **OneBox** | sing-box | [Upstream](https://github.com/OneOhCloud/OneBox) | Apache-2.0; macOS upstream support, other systems community/experimental |
 | **Satelite Proxy** | Xray, sing-box, mihomo | [Upstream](https://github.com/zn0wii/satelite-proxy) | Newer desktop client; verify individual core versions |
-| **KEQDIS** | Xray, mihomo | [Source and signed-by-upstream builds](https://github.com/Lemonochka/keqdroid/releases) | GPL-3.0; Windows x64/Linux desktops, separate Android APK; verify bundled-core feature set |
+| **KEQDIS** | Xray, mihomo | [Source and official release builds](https://github.com/Lemonochka/keqdroid/releases) | GPL-3.0; Windows x64/Linux desktops, separate Android APK; verify bundled-core feature set |
 | **Netch** | Mixed proxies | [Upstream](https://github.com/netchx/netch) | GPL-3.0; Windows-specific; version-dependent mode support |
 | **Clash Nyanpasu** | mihomo | [Upstream](https://github.com/libnyanpasu/clash-nyanpasu) | GPL-3.0; desktop |
 | **Sparkle** | mihomo | [Upstream](https://github.com/xishang0128/sparkle) | GPL-3.0; work in progress |
