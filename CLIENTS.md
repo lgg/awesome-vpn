@@ -30,6 +30,7 @@
 | **sing-box-windows** | sing-box | [Upstream](https://github.com/xinggaoya/sing-box-windows) | MIT; Tauri desktop UI |
 | **OneBox** | sing-box | [Upstream](https://github.com/OneOhCloud/OneBox) | Apache-2.0; macOS upstream support, other systems community/experimental |
 | **Satelite Proxy** | Xray, sing-box, mihomo | [Upstream](https://github.com/zn0wii/satelite-proxy) | Newer desktop client; verify individual core versions |
+| **KEQDIS** | Xray, mihomo | [Source and signed-by-upstream builds](https://github.com/Lemonochka/keqdroid/releases) | GPL-3.0; Windows x64/Linux desktops, separate Android APK; verify bundled-core feature set |
 | **Netch** | Mixed proxies | [Upstream](https://github.com/netchx/netch) | GPL-3.0; Windows-specific; version-dependent mode support |
 | **Clash Nyanpasu** | mihomo | [Upstream](https://github.com/libnyanpasu/clash-nyanpasu) | GPL-3.0; desktop |
 | **Sparkle** | mihomo | [Upstream](https://github.com/xishang0128/sparkle) | GPL-3.0; work in progress |
@@ -57,6 +58,9 @@
 | **sing-box for Android (SFA)** | sing-box | [Upstream](https://github.com/SagerNet/sing-box-for-android) | Official Android GUI; client/core version may differ |
 | **NekoBox for Android** | sing-box family | [Upstream](https://github.com/MatsuriDayo/NekoBoxForAndroid) | Upstream slower-moving; check actual latest release |
 | **WINGS V** | Xray, WireGuard, AmneziaWG, VK TURN | [Upstream](https://github.com/WINGS-N/WINGSV) | GPL-3.0; many additional features are root-dependent |
+| **KEQDIS** | Xray, mihomo | [Official Android APK](https://github.com/Lemonochka/keqdroid/releases) | GPL-3.0; Android 7+ per upstream, QR subscriptions, per-app routing; no iOS release verified |
+| **TiredVPN Android** | Dedicated TiredVPN protocol | [Source and APK releases](https://github.com/tiredvpn/tiredvpn-android/releases) | AGPL-3.0; **experimental** dedicated client/server ecosystem; no independent security evaluation verified |
+| **NoDPI4Android** | Local DPI workaround | [Source and APK releases](https://github.com/GVCoder09/NoDPI4Android/releases) | GPL-3.0; last observed APK v2.0-beta; **not a generic proxy subscription/VPN exit** |
 | **Clash Meta for Android** | mihomo | [Upstream](https://github.com/MetaCubeX/ClashMetaForAndroid) | OSS; Clash config family |
 | **Clash Mi** | mihomo | [Upstream](https://github.com/KaringX/clashmi) | GPL-3.0; Flutter, Android & iOS among other systems |
 | **FlClash** | mihomo | [Upstream](https://github.com/chen08209/FlClash) | OSS; Android/TV distribution |
@@ -103,6 +107,8 @@
 | --- | --- | --- | --- |
 | **WayHop** | sing-box policy routing | [Upstream](https://github.com/awadak3davra/wayhop) | MIT; OpenWrt/Entware/Keenetic; pre-1.0, not a desktop VPN client |
 | **routeflux** | Xray | [Upstream](https://github.com/Alaxay8/routeflux) | MIT; OpenWrt native, profile selection, DNS and transparent proxy |
+| **singA** | sing-box-lx, TProxy | [Source and releases](https://github.com/infinjest/singA) | Source-available, license not confirmed; experimental OpenWrt arm64/Netis NX31-specific testing |
+| **NFQWS-MENU** | nfqws2 local DPI management | [Upstream scripts](https://github.com/rndnaame/nfqws-menu) | Keenetic/Entware package manager; community strategies, privileged root install, **no remote VPN exit** |
 | **Asuswrt-Merlin AmneziaWG** | AmneziaWG | [Upstream](https://github.com/william-aqn/asuswrt-merlin-amneziawg) | MIT; firmware- and hardware-dependent ASUS router addon |
 | **wireproxy** | WireGuard → SOCKS5/HTTP | [Upstream](https://github.com/windtf/wireproxy) | ISC; userspace CLI proxy, not standard mobile TUN |
 | **wireproxy-awg** | AmneziaWG → SOCKS5 | [Upstream](https://github.com/artem-russkikh/wireproxy-awg) | ISC; AmneziaWG-compatible userspace fork |
