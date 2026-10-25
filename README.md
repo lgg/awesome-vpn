@@ -26,6 +26,7 @@ This list covers **VPNs, application proxies, local DPI circumvention, encrypted
 - [Subscriptions, billing and automation](#subscriptions-billing-and-automation)
 - [Deployment, forwarding and tunnels](#deployment-forwarding-and-tunnels)
 - [DPI bypass and censorship circumvention](#dpi-bypass-and-censorship-circumvention)
+- [Telegram connectivity and MTProto proxies](#telegram-connectivity-and-mtproto-proxies)
 - [DNS and DNS tunnels](#dns-and-dns-tunnels)
 - [Routers, OpenWrt and transparent proxying](#routers-openwrt-and-transparent-proxying)
 - [Routing rules and geodata](#routing-rules-and-geodata)
@@ -51,6 +52,9 @@ This list covers **VPNs, application proxies, local DPI circumvention, encrypted
 - **[mieru](https://github.com/enfein/mieru)** [OSS] — SOCKS5/HTTP(S) proxy system for circumventing censorship.
 - **[NaïveProxy](https://github.com/klzgrad/naiveproxy)** [OSS] — Chromium-network-stack-based HTTP/2/3 proxy camouflage and tunneling.
 - **[Cloak](https://github.com/cbeuw/Cloak)** [OSS] — Pluggable transport for proxy traffic camouflage and probe resistance.
+- **[Brook](https://github.com/txthinking/brook)** [OSS] — Programmable cross-platform client/server tunnel and proxy suite; use its own protocol/configuration rather than assuming Xray compatibility.
+- **[Shadowsocks v2ray-plugin](https://github.com/shadowsocks/v2ray-plugin)** [OSS] — SIP003 WebSocket/TLS transport plugin for Shadowsocks; requires server-side support.
+- **[sing-box-lx](https://github.com/Leadaxe/sing-box-lx)** [Fork] — Client-side sing-box fork behind L×Box, with additional transports such as XHTTP/AmneziaWG; not a substitute for upstream sing-box compatibility documentation.
 - **[Outline Server](https://github.com/OutlineFoundation/outline-server)** [OSS] — Self-hosted Shadowsocks server and API for managing Outline access keys.
 - **[AmneziaWG Go](https://github.com/amnezia-vpn/amneziawg-go)** [OSS] — Userspace AmneziaWG implementation; protocol family differs from WireGuard-compatible proxy subscriptions.
 - **[OpenVPN](https://github.com/OpenVPN/openvpn)** [OSS] — Traditional TLS VPN daemon.
@@ -106,6 +110,8 @@ Windows, macOS and Linux availability varies by release; verify the build for yo
 
 ## Android clients
 
+- **[L×Box (LxBox)](https://github.com/Leadaxe/LxBox)** [OSS] — Android sing-box-lx client combining VLESS/REALITY/XHTTP, AmneziaWG, WARP and Tailscale in one VPN interface; feature claims are version-specific.
+- **[Rethink DNS + Firewall](https://github.com/celzero/rethink-app)** [OSS] — Android firewall, encrypted DNS, connection tracking and WireGuard upstream routing; not a generic Xray subscription client.
 - **[v2rayNG](https://github.com/2dust/v2rayNG)** [OSS] — Widely used Android Xray/V2Ray client.
 - **[sing-box for Android (SFA)](https://github.com/SagerNet/sing-box-for-android)** [OSS] — Android GUI for sing-box.
 - **[NekoBox for Android](https://github.com/MatsuriDayo/NekoBoxForAndroid)** [OSS] — Advanced sing-box-based Android client; check release recency.
@@ -172,6 +178,8 @@ For private connectivity between your own devices and services; not interchangea
 - **[Headscale](https://github.com/juanfont/headscale)** [OSS] [Self-hosted] — Self-hosted implementation of the Tailscale control server.
 - **[NetBird](https://github.com/netbirdio/netbird)** [OSS] — Identity-oriented secure mesh and access management.
 - **[ZeroTier](https://github.com/zerotier/ZeroTierOne)** — Virtual network overlay implementation.
+- **[Pangolin](https://github.com/fosrl/pangolin)** — WireGuard-based zero-trust network access and reverse proxy for self-hosted resources; a private-access platform, **not** an Internet anonymity VPN.
+- **[Netmaker](https://github.com/gravitl/netmaker)** — WireGuard virtual-network orchestration for distributed nodes; check current community/commercial feature boundaries.
 - **[Nebula](https://github.com/slackhq/nebula)** [OSS] — Scalable encrypted overlay networking.
 - **[DefGuard](https://github.com/DefGuard/defguard)** [Self-hosted] — WireGuard-based zero-trust access management with MFA/SSO-oriented integrations; check license by component.
 - **[strongSwan](https://github.com/strongswan/strongswan)** [OSS] — IPsec/IKEv2 VPN implementation.
@@ -252,6 +260,11 @@ Never post real subscription URLs, tokens, panel credentials or VPN private keys
 - **[RemnaSetup](https://github.com/Capybara-z/RemnaSetup)** [OSS] — Automated Remnawave panel/node deployment; read script before execution.
 - **[Remnawave Ansible Playbook](https://github.com/iphizic/remna-playbook)** — Infrastructure-as-code installer for Remnawave; verify inventory and privilege requirements.
 - **[AmneziaWG Installer](https://github.com/bivlked/amneziawg-installer)** [OSS] — Ubuntu/Debian self-hosted AmneziaWG 3.x provisioning; test current client/server-version compatibility.
+- **[Algo VPN](https://github.com/trailofbits/algo)** [OSS] — Ansible-based personal WireGuard/IKEv2 deployment on a cloud VPS; upstream explicitly **does not claim censorship evasion**.
+- **[Wireproxy](https://github.com/windtf/wireproxy)** [OSS] — Userspace WireGuard client exposing SOCKS5/HTTP endpoints without a TUN interface or root access; no SOCKS5 UDP support claimed.
+- **[Wireproxy AWG](https://github.com/artem-russkikh/wireproxy-awg)** [OSS] — AmneziaWG-compatible Wireproxy fork for bridging client WireGuard-like tunnels to a SOCKS proxy.
+- **[WireGuard Obfuscator](https://github.com/ClusterM/wg-obfuscator)** [OSS] — Lightweight UDP wrapper for self-hosted WireGuard connections; **must be deployed at both ends and is not itself a VPN**.
+- **[MasterHttpRelayVPN Rust](https://github.com/therealaleph/MasterHttpRelayVPN-RUST)** [Experimental] — Google Apps Script HTTP relay-based tunnel; assess Google service terms, quotas, trust and security before using it.
 - **[Xray-install](https://github.com/XTLS/Xray-install)** [OSS] — **Official** Xray installer/update scripts, linked by Xray's own README.
 - **[v2ray-agent](https://github.com/mack-a/v2ray-agent)** [OSS] — Multi-protocol installer for Xray, TUIC, Hysteria 2 and sing-box.
 - **[233boy/v2ray](https://github.com/233boy/v2ray)** [OSS] — V2Ray install and management scripts.
@@ -273,6 +286,9 @@ Never post real subscription URLs, tokens, panel credentials or VPN private keys
 
 Local circumvention tools here primarily try to defeat packet inspection and filtering. They do **not** automatically replace a remote VPN.
 
+- **[SpoofDPI](https://github.com/xvzc/spoofdpi)** [OSS] — Cross-platform local DPI-evasion proxy for desktop operating systems; upstream explicitly states **no Android or iOS** distribution.
+- **[DPIBreak](https://github.com/dilluti0n/dpibreak)** [OSS] — Linux/Windows DPI-circumvention utility; uses system-level techniques, not a remote VPN exit.
+- **[GreenTunnel](https://github.com/SadeghHayeri/GreenTunnel)** [OSS] — Local HTTP/HTTPS anti-censorship tool; filtering effectiveness depends on ISP and network.
 - **[Zapret2](https://github.com/bol-van/zapret2)** [OSS] — Current-generation DPI desynchronization toolkit with configurable scripts and blockcheck2 strategy testing.
 - **[zapret (v1)](https://github.com/bol-van/zapret)** [OSS] [Legacy] — Earlier version; upstream explicitly directs new development to Zapret2.
 - **[Zapret Windows bundle](https://github.com/bol-van/zapret-win-bundle)** [OSS] — Upstream Windows binary bundle and blockcheck utilities; verify the included release generation.
@@ -296,8 +312,21 @@ Local circumvention tools here primarily try to defeat packet inspection and fil
 
 Strategies such as fragmentation, spoofed packets, TTL tricks and protocol camouflage can stop working or break connectivity when the network changes. Confirm client compatibility and actual results rather than treating a bypass name as a guarantee.
 
+## Telegram connectivity and MTProto proxies
+
+These projects are specific to Telegram transport. **Telegram MTProxy is not a general-purpose VPN exit** and does not automatically route other apps.
+
+- **[Official MTProxy](https://github.com/TelegramMessenger/MTProxy)** — Reference MTProto proxy server used by Telegram clients.
+- **[mtproto.zig](https://github.com/sleep3r/mtproto.zig)** [OSS] — Lightweight Zig MTProto proxy for a personally operated Linux server, with TLS-looking transport and a documented control interface.
+- **[tglock](https://github.com/by-sonic/tglock)** [OSS] — Desktop utility for Telegram-specific WebSocket connectivity; not a system-wide VPN.
+- **[PWDTT](https://github.com/luminescq/PWDTT)** [Experimental] — Desktop WireGuard-over-VK-TURN project; depends on third-party relay behaviour and a compatible endpoint.
+- **[VK TURN proxy for iOS](https://github.com/anton48/vk-turn-proxy-ios)** [Experimental] — iOS-side implementation of a VK TURN relay integration; inspect entitlements, server compatibility and trust boundaries.
+
+**Historical note:** [WDTT Android](https://github.com/amurcanov/proxy-turn-vk-android) says it is discontinued, and its linked successor [csqtt](https://github.com/amurcanov/csqtt) is archived. Neither is presented as an actively maintained recommendation.
+
 ## DNS and DNS tunnels
 
+- **[iodine](https://github.com/yarrick/iodine)** [OSS] — DNS tunnel carrying IPv4 packets over DNS; client and server must use compatible versions, and DNS relaying rules may restrict it.
 - **[MasterDnsVPN](https://github.com/masterking32/MasterDnsVPN)** [OSS] — DNS tunneling VPN with resilience and resolver-balancing features; distinct from ordinary encrypted DNS.
 - **[Slipstream](https://github.com/EndPositive/slipstream)** — DNS-based covert communication/tunnel implementation; actual throughput depends on resolvers and network policy.
 - **[dnstt](https://www.bamsoftware.com/software/dnstt/)** — DNS-based encrypted tunneling system; [GitHub community mirror](https://github.com/Mygod/dnstt) is not authoritative upstream.
@@ -430,6 +459,11 @@ Start with the [practical diagnostic checklist](TROUBLESHOOTING.md): distinguish
 - **[v2rayN Telegram channel](https://t.me/github_2dust)** — v2rayN release/development updates.
 - **[Hysteria Telegram](https://t.me/hysteria_github)** — Hysteria project community.
 - **[GOST Telegram](https://t.me/gogost)** — Proxy and tunnel chaining discussions (linked from upstream's older repository).
+- **[net4people: Russia-labelled discussions](https://github.com/net4people/bbs/issues?q=is%3Aissue%20label%3ARussia)** — ISP measurements, mass IP filtering, DNS hijacking and DPI research from the technical community; individual reports are not universal.
+- **[SpoofDPI community](https://discord.gg/k7qMbqhrcH)** — Developer-linked Discord for SpoofDPI troubleshooting.
+- **[Pangolin community](https://discord.gg/HCJR8Xhme4)** — Developer-linked community on zero-trust self-hosted access.
+- **[Netmaker community](https://discord.gg/zRb9Vfhk8A)** — Officially linked WireGuard orchestration discussion.
+- **[Tor Project discussion categories](https://forum.torproject.org/)** — Bridges, Snowflake/obfs and censored-network troubleshooting, rather than generic VPN performance.
 - **[NTC forum](https://ntc.party/)** — Network restrictions and connectivity discussions (regional availability varies).
 - **[NTC community software](https://ntc.rkn.quest/c/community-software/27)** — Upstream discussions for Zapret/ByeDPI/GoodbyeDPI and community tools.
 - **[NTC circumvention methods](https://ntc.rkn.quest/c/censorship-circumvention-software/11)** — Proxy transports, anti-censorship clients, WebTunnel, XHTTP and related protocols.
@@ -458,6 +492,7 @@ The list favors **maintained original repositories, official distribution pages,
 - [Client directory](CLIENTS.md) — OS/architecture-aware choice guide, current sources and proprietary/legacy labels.
 - [Client research notes](CLIENT-RESEARCH-2026.md) — New-project verification, sources and exclusions.
 - [Latest ecosystem research](ECOSYSTEM-RESEARCH-2026.md) — Verifications, active/experimental tools, and notable compatibility reports.
+- [Further transport & client research](TRANSPORT-RESEARCH-2026.md) — Verified upstream, NTC/net4people reports and explicit limitations.
 - [Research notes](RESEARCH-2026.md)
 - [Research notes](RESEARCH-2026.md) — Audited sources, primary discussions and editorial decisions from the October 2026 deep research.
 - [Contributing guidelines](CONTRIBUTING.md) — How to propose a project, verify links, and avoid misleading compatibility claims.
