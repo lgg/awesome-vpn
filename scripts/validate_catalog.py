@@ -90,6 +90,22 @@ def validate() -> int:
         if repeated_across:
             warnings.append(f"{len(repeated_across)} projects intentionally appear in multiple topical sections")
 
+    # Check that platform matrix entries remain valid Markdown table rows.
+    clients_path = ROOT / "CLIENTS.md"
+    if clients_path.is_file():
+        client_rows = 0
+        for line_no, line in enumerate(clients_path.read_text(encoding="utf-8").splitlines(), 1):
+            if line.startswith("| **"):
+                client_rows += 1
+                if len(line.split("|")) != 6:
+                    problems.append(f"CLIENTS.md:{line_no}: expected four table columns")
+                if "](" not in line:
+                    problems.append(f"CLIENTS.md:{line_no}: missing project link")
+        if client_rows < 10:
+            problems.append(f"CLIENTS.md: suspiciously short directory ({client_rows} rows)")
+    else:
+        problems.append("CLIENTS.md: required client catalog missing")
+
     print(f"Catalog check: {len(MARKDOWN)} Markdown files; {total_links} Markdown links; {entry_count} GitHub list entries")
     for notice in warnings:
         print(f"[WARN] {notice}")
