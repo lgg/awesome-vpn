@@ -160,6 +160,7 @@ Windows, macOS and Linux availability varies by release; verify the build for yo
 - **[Streisand](https://apps.apple.com/us/app/streisand/id6450534064)** [Closed] — Apple-platform proxy client; app availability varies by region.
 - **[Shadowrocket](https://apps.apple.com/us/app/shadowrocket/id932747118)** [Closed] — Paid Apple-platform network/proxy client.
 - **[Stash](https://stash.ws/ios)** [Closed] — Paid iOS/iPadOS/tvOS rule-based proxy client with routing, inspection and rewrites.
+- **[Spoofy](https://github.com/ringolol/Spoofy)** [OSS] [Experimental] — iOS/macOS local HTTP/SOCKS5 DPI-bypass proxy with optional Outline routing. **Not a system-wide iOS VPN**, not an App Store app; Wi-Fi/app proxy configuration or sideload is required.
 - **[SwByeDPI](https://github.com/mIwr/SwByeDPI)** [OSS] — Swift iOS wrapper around the ByeDPI approach.
 - **[MuseDPI](https://github.com/zondaxxx/MuseDPI)** [OSS] — Local DPI circumvention project for iOS and Android.
 
@@ -316,6 +317,8 @@ Strategies such as fragmentation, spoofed packets, TTL tricks and protocol camou
 
 These projects are specific to Telegram transport. **Telegram MTProxy is not a general-purpose VPN exit** and does not automatically route other apps.
 
+- **[Telemt](https://github.com/telemt/telemt)** — Rust/Tokio-based Telegram MTProxy with TLS-looking fronting and configurable server-side transport features; inspect its release/license.
+- **[mtg](https://github.com/9seconds/mtg)** [OSS] — Minimal Go Telegram MTProxy server with version-2 configuration and scalable concurrent sessions.
 - **[Official MTProxy](https://github.com/TelegramMessenger/MTProxy)** — Reference MTProto proxy server used by Telegram clients.
 - **[mtproto.zig](https://github.com/sleep3r/mtproto.zig)** [OSS] — Lightweight Zig MTProto proxy for a personally operated Linux server, with TLS-looking transport and a documented control interface.
 - **[tglock](https://github.com/by-sonic/tglock)** [OSS] — Desktop utility for Telegram-specific WebSocket connectivity; not a system-wide VPN.
@@ -387,6 +390,8 @@ Rule formats are **not automatically interchangeable**: `geoip.dat`, `geosite.da
 - **[TSPU Probe](https://github.com/stpavel/tspu-probe)** — Android-focused VPN/TLS/VLESS diagnostics; a probe result is not a universal verdict.
 - **[RKN Block Checker](https://github.com/MayersScott/rkn-block-checker)** [OSS] — Layer-by-layer DNS, TCP, TLS and HTTP diagnostics for restrictions on authorized networks.
 - **[VPN Traffic Obfuscation Lab](https://github.com/maxlluky/VPN-Traffic-Obfuscation-Lab)** [OSS] — Reproducible Docker lab comparing packet inspection and obfuscation approaches (research).
+- **[Ladon](https://github.com/belotserkovtsev/Ladon)** [OSS] — Reactive DNS/TCP/TLS/HTTP censorship classifier for Linux gateways and OPNsense, producing ipset/routing decisions rather than acting as a VPN.
+- **[NTC MTProto 2026 discussion](https://ntc.rkn.quest/t/mtproto-%D0%B2-2026-%D0%B3%D0%BE%D0%B4%D1%83/22506)** — Community comparisons of MTProxy, Telemt and mtg under filtering; field reports are not guarantees.
 - **[RKNHardering](https://github.com/xtclovver/RKNHardering)** [OSS] — Android diagnostic checks for VPN/proxy detection, including interface signals and IP comparisons; results are **heuristics**, not a guarantee of invisibility.
 - **[DPYProxy](https://github.com/UPB-SysSec/DPYProxy)** [OSS] — Research proxy for testing DPI/DNS censorship evasion mechanisms, including automatic DNS circumvention experiments.
 - **[SonicDPI](https://github.com/by-sonic/sonicdpi)** — Rust-based cross-platform DPI-bypass experiment; applicability and independent security review unverified.
