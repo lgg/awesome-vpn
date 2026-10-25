@@ -14,7 +14,6 @@ This document is a **high-level discovery index**, not an automated interoperabi
 | [KEQDIS](https://github.com/Lemonochka/keqdroid) | Windows x64, Linux, Android | Xray and mihomo (separate cores) | GPL-3.0; official GitHub APK/ZIP/Linux packages | Do not infer stock sing-box support, iOS builds, or every modern XHTTP option |
 | [TiredVPN](https://github.com/tiredvpn/tiredvpn) | Linux client/server, Android companion | Dedicated adaptive-tunnel implementation | AGPL-3.0 source and binaries | **Experimental security properties**, dedicated client; not a generic VLESS/Xray import client |
 | [NoDPI4Android](https://github.com/GVCoder09/NoDPI4Android) | Android | Local DPI workaround | GPL-3.0; upstream APK beta | Not a remote exit; generally conflicts with a separate Android VPNService; upstream warns that filtering methods vary |
-
 | [Veil](https://github.com/alibakhtiari/Veil) | Desktop, Android | MASQUE/WireGuard tunnel design | AGPL-3.0 | Experimental; check signed binaries and release readiness |
 | [v2whitelist](https://github.com/NullCoreDeveloper/v2whitelist) | Android | Xray/V2Ray | GPL-3.0 | Experimental network-filtering scenarios; no guarantee of accessibility |
 | [WINGS V DeX](https://github.com/WINGS-N/WINGSV_DeX) | Windows, Linux | Xray, VK TURN | Open source | Project-specific VK TURN integration; check desktop builds and permissions |
