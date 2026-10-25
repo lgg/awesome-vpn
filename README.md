@@ -13,9 +13,6 @@ This list covers **VPNs, application proxies, local DPI circumvention, encrypted
 ## Contents
 
 - [Client directory and selection guide](CLIENTS.md)
-- [2026 research and ecosystem additions](ECOSYSTEM-RESEARCH-2026.md)
-- [DPI, router tools and specialist forum research (October 2026)](DPI-RESEARCH-2026.md)
-- [Further DPI/client research and security notes (October 2026)](DPI-RESEARCH-ROUND2-2026.md)
 - [Proxy and VPN cores](#proxy-and-vpn-cores)
 - [Desktop clients](#desktop-clients)
 - [Android clients](#android-clients)
@@ -516,22 +513,49 @@ Start with the [practical diagnostic checklist](TROUBLESHOOTING.md): distinguish
 
 ## Research and curated discussions
 
-- [Research notes: NTC, alternative awesome lists, protocol and dVPN ecosystems](RESEARCH-2026.md) — Source-by-source review, selected discussion threads, what was already in the catalog and what was deliberately excluded.
-- [DPI and router research: Zapret2/ByeDPI ecosystem, current project status and specialist communities](DPI-RESEARCH-2026.md) — Source-checked additions and explicit caveats (October 2026).
-- [Second DPI/client research pass: diagnostics, routers, transport measurements, current forums and Xray security advisory](DPI-RESEARCH-ROUND2-2026.md) — New source-checked references and explicit inclusion/exclusion criteria.
+Technical research, incident reports and practitioner notes complement the [project catalog above](#contents). They are **not** proof that any specific bypass works for every ISP, access network or date. Original project documentation and reproducible measurements take precedence over forum votes and installers from unknown sources.
+
+### DPI engines and practical strategy discussions
+
+- **[Zapret2 development on NTC](https://ntc.rkn.quest/t/zapret2-%D0%BE%D0%B1%D1%81%D1%83%D0%B6%D0%B4%D0%B5%D0%BD%D0%B8%D0%B5/21161)** — upstream nfqws2/winws2/Lua discussion; [author's Zapret changes thread](https://ntc.rkn.quest/t/zapret-whats-new/61) explains the transition from v1 and blockcheck2.
+- **[B-Checker (ByeDPI/ByeByeDPI)](https://ntc.rkn.quest/t/b-checker-%D0%B0%D0%B2%D1%82%D0%BE-%D0%BF%D0%BE%D0%B4%D0%B1%D0%BE%D1%80-%D0%B8-%D1%81%D0%BE%D1%85%D1%80%D0%B0%D0%BD%D0%B5%D0%BD%D0%B8%D0%B5-%D1%81%D1%82%D1%80%D0%B0%D1%82%D0%B5%D0%B3%D0%B8%D0%B9-byedpibyebyedpi-%D0%B1%D0%B0%D1%82%D0%BD%D0%B8%D0%BA-%D0%B4%D0%BB%D1%8F-windows/14291)** and **[Zapret Checker](https://ntc.rkn.quest/t/zapret-checker-%D0%B0%D0%B2%D1%82%D0%BE-%D0%BF%D0%BE%D0%B4%D0%B1%D0%BE%D1%80-%D0%B8-%D1%81%D0%BE%D1%85%D1%80%D0%B0%D0%BD%D0%B5%D0%BD%D0%B8%D0%B5-%D1%81%D1%82%D1%80%D0%B0%D1%82%D0%B5%D0%B3%D0%B8%D0%B9-windows/23814)** — community strategy-selection discussions; treat executable attachments as untrusted until reviewed.
+- **[Zapret2 16-KB stall investigations](https://github.com/bol-van/zapret2/discussions/327)** — targeted October 2026 reproduction of truncated connections, not a universal workaround.
+- **[ByeDPI engine discussions](https://github.com/hufrea/byedpi/discussions)** — engine-specific issues, regressions and local-proxy behavior.
+- **[DesyncDroyd + Shizuku on Android](https://ntc.rkn.quest/t/desyncdroyd-zapret2-%D0%BD%D0%B0-android-%D0%B1%D0%B5%D0%B7-root-%D1%81-%D0%B0%D0%B2%D1%82%D0%BE%D0%BF%D0%BE%D0%B4%D0%B1%D0%BE%D1%80%D0%BE%D0%BC-%D1%81%D1%82%D1%80%D0%B0%D1%82%D0%B5%D0%B3%D0%B8%D0%B9/25826)** — Android permissions and real-world strategy limits.
+- **[nfqws/Entware community](https://t.me/nfqws)**, **[Podkop docs](https://podkop.net/)** and **[OpenWrt forum](https://forum.openwrt.org/)** — router firmware, nftables and policy routing.
+- **[iOS alternatives to ByeDPI](https://ntc.rkn.quest/t/%D0%B0%D0%BD%D0%B0%D0%BB%D0%BE%D0%B3-byedpi-%D0%B4%D0%BB%D1%8F-ios-%E2%80%94-rumble/19150)** — source discovery; local proxy mode is **not** full iOS/cellular tunneling.
+- **[Re:HomeProxy with ByeDPI and Zapret2](https://ntc.rkn.quest/t/rehomeproxy-%D0%BE%D0%B1%D0%BE%D0%BB%D0%BE%D1%87%D0%BA%D0%B0-%D0%BA%D0%BB%D0%B8%D0%B5%D0%BD%D1%82-sing-box-%D0%BD%D0%B0-openwrt-%D1%81-%D0%B8%D0%BD%D1%82%D0%B5%D0%B3%D1%80%D0%B0%D1%86%D0%B8%D0%B5%D0%B9-byedpi-%D0%B8-zapret2/25263)** — integration discussion, not a vetted stable release.
+
+### Research on filtering and protocol behavior
+
+- **[net4people: mass IP blocks](https://github.com/net4people/bbs/issues/671)** — Russia hosting/provider restrictions, September–October 2026.
+- **[net4people: DNS hijacking](https://github.com/net4people/bbs/issues/657)** — resolver paths and UDP/TCP differences observed on particular networks.
+- **[net4people: TUN detection hypothesis](https://github.com/net4people/bbs/issues/663)** — hypothesis/limited report, **not established proof** of DPI seeing client-side TUN mode.
+- **[net4people: Cloudflare IP-prefix behavior](https://github.com/net4people/bbs/issues/662)** — Moscow-AS-specific reachability observation, not a worldwide rule.
+- **[net4people: mobile-network allowlists](https://github.com/net4people/bbs/issues/650)** — restricted LTE access and reported failures, not guaranteed access recipes.
+- **[net4people: QDPI entropy analysis](https://github.com/net4people/bbs/issues/677)** and **[Fountain-code rendezvous research](https://github.com/net4people/bbs/issues/658)** — research leads rather than proven ISP deployment.
+- **[Xray REALITY/uTLS fingerprint regression report](https://github.com/XTLS/Xray-core/discussions/7144)** and **[v2rayN core discrepancy report](https://github.com/2dust/v2rayN/discussions/9567)** — individual configurations/networks; check actual versions and reproductions.
+- **[MTProto in 2026 on NTC](https://ntc.rkn.quest/t/mtproto-%D0%B2-2026-%D0%B3%D0%BE%D0%B4%D1%83/22506)** — Telegram-only MTProxy/Telemt/mtg comparisons by users, not general VPN testing.
+- **[Ladon router gateway discussion](https://ntc.rkn.quest/t/ladon-%D0%B0%D0%B2%D1%82%D0%BE%D0%BC%D0%B0%D1%82%D0%B8%D1%87%D0%B5%D1%81%D0%BA%D0%B8%D0%B9-%D0%BE%D0%B1%D1%85%D0%BE%D0%B4-dpi-%D0%B1%D0%BB%D0%BE%D0%BA%D0%B8%D1%80%D0%BE%D0%B2%D0%BE%D0%BA/24686)** — traffic classification for routing; not itself a remote VPN.
+
+For longer-term reading, see the peer-reviewed **FOCI 2026 QUIC/SNI study**, **FOCI 2026 automated DNS circumvention**, and **PETS 2026 CensorLess** already linked under [Communities and reference catalogs](#communities-and-reference-catalogs). The [official Xray certificate-pinning advisory GHSA-5wf9-h793-w73c](https://github.com/advisories/GHSA-5wf9-h793-w73c) applies to specific pinned-certificate TLS configurations; inspect your **embedded core** version and [patched upstream release](https://github.com/XTLS/Xray-core/releases/tag/v26.7.11), not just a GUI version.
+
+### Discovery lists and project provenance
+
+- **[Awesome Sysadmin — VPN](https://github.com/awesome-foss/awesome-sysadmin#vpn)** — traditional self-hosted VPN tooling; **[Awesome decentralized VPN](https://github.com/carmen41511/awesome-decentralized-vpn)** — historical decentralized/mesh projects (some entries may be stale).
+- **[XTLS official GUI client index](https://github.com/XTLS/Xray-core#gui-clients)** — official developer-linked discovery (not interoperability certification); **[GitHub Xray topic](https://github.com/topics/xray)** and **[sing-box topic](https://github.com/topics/sing-box)** — broad project discovery, not a recommendation list.
+- **[Awesome VPN public proxy-list aggregator](https://github.com/awesome-vpn/awesome-vpn)** is a *different* project: do not mirror or recommend untrusted free exit nodes or publish private subscription URLs.
+- **[Zapret2 Windows wrapper security discussion](https://github.com/bol-van/zapret2/discussions/159)** — review helper downloads, elevated access, firewall/hosts changes and autostart; third-party repacks are not automatically equivalent to the upstream engine.
+
+**Superseded or research-only, not current default recommendations:** [nfqws-keenetic v1](https://github.com/nfqws/nfqws-keenetic) (replaced by [nfqws2-keenetic](https://github.com/nfqws/nfqws2-keenetic)); [olcRTC](https://github.com/openlibrecommunity/olcrtc) (archived, future work at [snolc](https://github.com/owenewans/snolc)); [PowerTunnel](https://github.com/krlvm/PowerTunnel) and [DPITunnel](https://github.com/nomoresat/DPITunnel-cli) (historical); [FlClashM](https://github.com/makriq-org/FlClashM) (experimental custom mihomo/ByeDPI/TURN/DNS backends); [OSTP](https://github.com/ospab/ostp) (experimental, [research discussion](https://github.com/net4people/bbs/issues/673)); and [Flowvy](https://github.com/flowvy/desktop) (listing was disputed in [Remnawave PR #529](https://github.com/remnawave/panel/pull/529)). Treat these as research leads unless current releases, licensing, safety and compatibility have been independently verified.
 
 ## Maintenance and contributing
 
-The list favors **maintained original repositories, official distribution pages, and verifiable technical resources**. Links are not endorsements or independent security audits. Activity is a point-in-time observation, not an uptime guarantee.
+The list prioritizes **original upstream repositories, official distribution channels and verifiable technical resources**. A GitHub commit, successful handshake or individual forum report does not independently establish bypass reliability, security or compatibility. The October 25, 2026 review was source/documentation based; it did **not** install every client, test every ISP or independently audit binaries.
 
-- [Client directory](CLIENTS.md) — OS/architecture-aware choice guide, current sources and proprietary/legacy labels.
-- [Client research notes](CLIENT-RESEARCH-2026.md) — New-project verification, sources and exclusions.
-- [Latest ecosystem research](ECOSYSTEM-RESEARCH-2026.md) — Verifications, active/experimental tools, and notable compatibility reports.
-- [Further transport & client research](TRANSPORT-RESEARCH-2026.md) — Verified upstream, NTC/net4people reports and explicit limitations.
-- [Research notes](RESEARCH-2026.md) — Audited sources, primary discussions and editorial decisions from the October 2026 deep research.
-- [Contributing guidelines](CONTRIBUTING.md) — How to propose a project, verify links, and avoid misleading compatibility claims.
-- [Client compatibility matrix](COMPATIBILITY.md) — Platform, family of core, source/distribution and caveats. A supported core does **not** imply every transport is supported.
-- [Troubleshooting](TROUBLESHOOTING.md) — DNS, TUN, route leaks, connectivity, reverse tunnels and tests.
-- [Source and maintenance notes](MAINTENANCE.md) — Snapshot of edge cases and outdated links from the initial review.
+- [Client directory](CLIENTS.md) — app selection by OS, architecture, release/distribution and legacy/closed status.
+- [Compatibility matrix](COMPATIBILITY.md) — protocol and transport claims with version/platform caveats.
+- [Troubleshooting](TROUBLESHOOTING.md) — DNS/TUN/MTU, local anti-DPI vs remote VPN, TLS/XHTTP and network diagnosis.
+- [Contributing & maintenance](CONTRIBUTING.md) — inclusion criteria, verification rules, maintenance schedule and catalog tests.
 
-**Last curated:** 2026-10-25. New suggestions and corrections are welcome via pull request.
+**Last curated:** 2026-10-25. Corrections and trustworthy new projects are welcome in pull requests.
