@@ -13,6 +13,7 @@ This list covers **VPNs, application proxies, local DPI circumvention, encrypted
 ## Contents
 
 - [Client directory and selection guide](CLIENTS.md)
+- [2026 research and ecosystem additions](ECOSYSTEM-RESEARCH-2026.md)
 - [Proxy and VPN cores](#proxy-and-vpn-cores)
 - [Desktop clients](#desktop-clients)
 - [Android clients](#android-clients)
@@ -21,6 +22,7 @@ This list covers **VPNs, application proxies, local DPI circumvention, encrypted
 - [VPNs and private mesh networks](#vpns-and-private-mesh-networks)
 - [Decentralized and anonymity networks](#decentralized-and-anonymity-networks)
 - [Server panels and dashboards](#server-panels-and-dashboards)
+- [Monitoring, resilience and node operations](#monitoring-resilience-and-node-operations)
 - [Subscriptions, billing and automation](#subscriptions-billing-and-automation)
 - [Deployment, forwarding and tunnels](#deployment-forwarding-and-tunnels)
 - [DPI bypass and censorship circumvention](#dpi-bypass-and-censorship-circumvention)
@@ -52,6 +54,10 @@ This list covers **VPNs, application proxies, local DPI circumvention, encrypted
 - **[Outline Server](https://github.com/OutlineFoundation/outline-server)** [OSS] — Self-hosted Shadowsocks server and API for managing Outline access keys.
 - **[AmneziaWG Go](https://github.com/amnezia-vpn/amneziawg-go)** [OSS] — Userspace AmneziaWG implementation; protocol family differs from WireGuard-compatible proxy subscriptions.
 - **[OpenVPN](https://github.com/OpenVPN/openvpn)** [OSS] — Traditional TLS VPN daemon.
+- **[Qeli](https://github.com/litvinovtd/qeli)** [Experimental] — Self-hosted TUN VPN with Rust core and Android/Windows/macOS clients; hybrid cryptography and obfuscation are **not independently vetted here**. Pre-1.0 protocol.
+- **[Veil](https://github.com/alibakhtiari/Veil)** [Experimental] — MASQUE/WireGuard-oriented tunneling client with desktop and Android applications; confirm release maturity before use.
+- **[Mullvad VPN app](https://github.com/mullvad/mullvadvpn-app)** [OSS] — Provider-specific multi-platform VPN application; **not** a generic bring-your-own-Xray client.
+- **[SoftEther VPN](https://github.com/SoftEtherVPN/SoftEtherVPN)**
 - **[SoftEther VPN](https://github.com/SoftEtherVPN/SoftEtherVPN)** [OSS] — Multiprotocol VPN server and client suite.
 
 
@@ -94,6 +100,9 @@ Windows, macOS and Linux availability varies by release; verify the build for yo
 - **[Netch](https://github.com/netchx/netch)** [OSS] — Windows system-/application-level proxy client; check version-specific modes.
 - **[Invisible Man XRay](https://github.com/InvisibleManVPN/InvisibleMan-XRayClient)** [OSS] — Windows WPF Xray GUI; last significant activity older, verify releases.
 - **[Shadowsocks for Windows](https://github.com/shadowsocks/shadowsocks-windows)** [Legacy] — Classic C# client; upstream had no recent updates as of 2026.
+- **[Qeli client](https://github.com/litvinovtd/qeli)** [Experimental] — Native desktop application for Qeli protocol; incompatible with ordinary Xray profile subscriptions.
+- **[Veil client](https://github.com/alibakhtiari/Veil)** [Experimental] — Desktop GUI for its MASQUE/WireGuard-based tunnel design; early-stage.
+- **[Happ Desktop](https://github.com/Happ-proxy/happ-desktop)**
 - **[Happ Desktop](https://github.com/Happ-proxy/happ-desktop)** [Closed] — Official Windows/macOS/Linux release repository for the Xray-powered Happ utility.
 - **[Nekoray](https://github.com/MatsuriDayo/nekoray)** [Legacy] — Archived Qt client; use only for historical reference.
 
@@ -120,6 +129,9 @@ Windows, macOS and Linux availability varies by release; verify the build for yo
 - **[SimpleXray](https://github.com/lhear/SimpleXray)** [OSS] — Smaller Xray-based Android GUI.
 - **[AnyPortal for Android](https://github.com/AnyPortal/AnyPortal)** — Multi-engine proxy GUI; mobile build limitations described upstream.
 - **[Xray GUI (SaeedDev94)](https://github.com/SaeedDev94/Xray)** [OSS] — Minimal Android Xray client.
+- **[v2whitelist](https://github.com/NullCoreDeveloper/v2whitelist)** [OSS] [Experimental] — Android Xray/V2Ray client exploring mobile-network allowlist environments; ISP results and reliability not guaranteed.
+- **[Qeli for Android](https://github.com/litvinovtd/qeli)** [Experimental] — Android client for the dedicated Qeli protocol, not an Xray configuration importer.
+- **[Outline Client](https://github.com/OutlineFoundation/outline-apps)**
 - **[Outline Client](https://github.com/OutlineFoundation/outline-apps)** [OSS] — Outline client/manager ecosystem.
 
 **Root users:** See [Surfing](https://github.com/GitMetaio/Surfing) and [box4magisk](https://github.com/CHIZI-0618/box4magisk) under router/transparent-proxy tools; these are not ordinary rootless VPN apps.
@@ -198,6 +210,9 @@ These are **different architectures**: some route traffic over community nodes, 
 - **[Hiddify Manager](https://github.com/hiddify/Hiddify-Manager)** [OSS] [Self-hosted] — Multiuser panel for censorship-resistant proxy services.
 - **[sing-box dashboard](https://github.com/SagerNet/sing-box-dashboard)** [OSS] — Official web dashboard for sing-box; check feature maturity.
 - **[MetaCubeXD](https://github.com/MetaCubeX/metacubexd)** [OSS] — Mihomo traffic/rules/connection web dashboard (**not** a subscription-selling server panel).
+- **[mikan](https://github.com/Miroshka000/mikan)** [OSS] [Experimental] — New proxy/VPN management panel built on Citrus core; verify protocol coverage and code maturity.
+- **[z_panel](https://github.com/acidmiku/z_panel)** [Self-hosted] — Multi-server sing-box management and Hysteria2/VLESS+REALITY provisioning; verify security controls before public deployment.
+- **[Raha](https://github.com/Raha-Project/Raha)**
 - **[Raha](https://github.com/Raha-Project/Raha)** [Legacy] — Historical entry linked by the Xray UI community; latest observed repository activity was in 2023. Treat as unmaintained unless verified otherwise.
 
 ## Subscriptions, billing and automation
@@ -205,6 +220,12 @@ These are **different architectures**: some route traffic over community nodes, 
 - **[Remnawave Bedolaga Telegram Bot](https://github.com/BEDOLAGA-DEV/remnawave-bedolaga-telegram-bot)** [OSS] — Telegram/web subscription sales and administrative tooling for Remnawave.
 - **[Bedolaga Cabinet](https://github.com/BEDOLAGA-DEV/bedolaga-cabinet)** [OSS] — Dedicated web cabinet used alongside Bedolaga subscriptions, purchases and gift flows; see upstream integration requirements.
 - **[Remnawave Telegram Shop](https://github.com/Jolymmiels/remnawave-telegram-shop)** — Telegram subscription shop integration; evaluate upstream code and payment handling.
+- **[Remnashop](https://github.com/snoups/remnashop)** [OSS] — Remnawave-integrated Telegram subscription store; check available payment integrations.
+- **[Remnawave Admin](https://github.com/Case211/remnawave-admin)** — Web dashboard plus Telegram admin bot for Remnawave; inspect license and admin permissions.
+- **[STEALTHNET Remnawave Bot](https://github.com/STEALTHNET-APP/remnawave-STEALTHNET-Bot)** — Remnawave-oriented storefront, admin panel and Telegram bot; verify license and payment handling.
+- **[Remnawave Telegram Mini App](https://github.com/maposia/remnawave-telegram-sub-mini-app)** — Next.js/Telegram Mini App front end for subscription interactions.
+- **[Remnawave Subscription Middleware](https://github.com/Mrvibecodic/remnawave-subscription-middleware)** — Subscription reverse proxy/mirror with API middleware, HWID rules and operator controls.
+- **[Remnawave Reverse Proxy](https://github.com/eGamesAPI/remnawave-reverse-proxy)**
 - **[Remnawave Reverse Proxy](https://github.com/eGamesAPI/remnawave-reverse-proxy)** — Reverse-proxy integration for Remnawave deployments; verify configuration and security properties.
 - **[3x-ui Sub Router](https://github.com/lgg/3x-ui-sub-router)** — Subscription delivery and Xray routing/orchestration project.
 - **[sublink-worker](https://github.com/7Sageer/sublink-worker)** [OSS] — Cloudflare Worker for processing/converting subscriptions.
@@ -213,8 +234,30 @@ These are **different architectures**: some route traffic over community nodes, 
 
 Never post real subscription URLs, tokens, panel credentials or VPN private keys in a public issue.
 
+## Monitoring, resilience and node operations
+
+- **[whitebox](https://github.com/quyxishi/whitebox)** [OSS] — Prometheus exporter checking reachability of Xray, WireGuard, AmneziaWG and Shadowsocks-style endpoints.
+- **[Xray Checker Statuspage](https://github.com/Mrvibecodic/xray-checker-statuspage)** [OSS] — Status/incident frontend and Telegram management around Xray Checker; monitoring is not a security audit.
+- **[Remnawave Watchdog](https://github.com/vrezerni-netizen/remnawave-watchdog)** [OSS] — Panel-server watchdog with backup/recovery checks and Telegram alerts.
+- **[Infra Billing](https://github.com/mishkatik/infra-billing)** — Infrastructure cost/balance dashboard for multiple VPS providers; verify API token scopes.
+- **[Remnawave Limiter](https://github.com/syvlech/remnawave-limiter)** [OSS] — Monitor simultaneous connections and device/HWID-related limits with Remnawave.
+- **[Remnawave Cloudflare Nodes](https://github.com/hteppl/remnawave-cloudflare-nodes)** [OSS] — Sync Cloudflare DNS records with Remnawave node-health decisions; use least-privilege API keys.
+- **[Caddy Tblocker](https://github.com/Medium1992/caddy-tblocker)** — Caddy integration for blocking traffic based on reported client addresses behind trusted reverse proxies.
+- **[Remnawave Backup & Restore](https://github.com/distillium/remnawave-backup-restore)** [OSS] — Backup/restore script for the Remnawave deployment and database.
+- **[Remnawave scripts](https://github.com/DigneZzZ/remnawave-scripts)** [OSS] — Deployment, upgrades, configuration and lifecycle scripts for Remnawave.
+- **[MCP Remnawave](https://github.com/TrackLine/mcp-remnawave)** — MCP integration for Remnawave panel administration; restrict access to trusted assistants.
+- **[Xray Config UI Editor](https://github.com/bropines/xray-config-ui-editor)** [OSS] — UI to edit Xray JSON configurations through Remnawave's API.
+- **[MRS Converter](https://github.com/MakostaDev/mrs-converter)** [OSS] — Converter/viewer for mihomo `.mrs` routing-rule files.
+
+**Operational warning:** These tools may have privileged access to subscriptions, panel databases, SSH credentials or Cloudflare APIs. Review their permission models, backups and update channels before production deployment.
+
+
 ## Deployment, forwarding and tunnels
 
+- **[RemnaSetup](https://github.com/Capybara-z/RemnaSetup)** [OSS] — Automated Remnawave panel/node deployment; read script before execution.
+- **[Remnawave Ansible Playbook](https://github.com/iphizic/remna-playbook)** — Infrastructure-as-code installer for Remnawave; verify inventory and privilege requirements.
+- **[AmneziaWG Installer](https://github.com/bivlked/amneziawg-installer)** [OSS] — Ubuntu/Debian self-hosted AmneziaWG 3.x provisioning; test current client/server-version compatibility.
+- **[Xray-install](https://github.com/XTLS/Xray-install)**
 - **[Xray-install](https://github.com/XTLS/Xray-install)** [OSS] — **Official** Xray installer/update scripts, linked by Xray's own README.
 - **[v2ray-agent](https://github.com/mack-a/v2ray-agent)** [OSS] — Multi-protocol installer for Xray, TUIC, Hysteria 2 and sing-box.
 - **[233boy/v2ray](https://github.com/233boy/v2ray)** [OSS] — V2Ray install and management scripts.
@@ -284,6 +327,10 @@ Strategies such as fragmentation, spoofed packets, TTL tricks and protocol camou
 - **[clash-for-linux](https://github.com/wnlen/clash-for-linux)** [OSS] — Terminal-based Linux deployment of Clash/mihomo.
 - **[clashctl](https://github.com/nelvko/clashctl)** [OSS] — CLI setup and management for mihomo on headless Linux.
 - **[fancyss](https://github.com/hq450/fancyss)** [OSS] — ASUS/Merlin router proxy plugin; hardware and firmware support must be checked.
+- **[WayHop](https://github.com/awadak3davra/wayhop)** [OSS] [Experimental] — Browser-based sing-box policy-routing control for Entware/Keenetic and OpenWrt; pre-1.0.
+- **[routeflux](https://github.com/Alaxay8/routeflux)** [OSS] — OpenWrt-native Xray subscription manager with node selection, DNS configuration and transparent routing.
+- **[Asuswrt-Merlin AmneziaWG](https://github.com/william-aqn/asuswrt-merlin-amneziawg)** [OSS] — ASUS/Merlin AmneziaWG client and server addon with web UI, on supported routers.
+- **[OpenClash](https://github.com/vernesong/OpenClash)**
 - **[OpenClash](https://github.com/vernesong/OpenClash)** [OSS] — Mihomo/Clash-oriented OpenWrt client integration.
 - **[HomeProxy](https://github.com/immortalwrt/homeproxy)** [OSS] — sing-box-based ImmortalWrt/OpenWrt proxy management.
 - **[zapret2-openwrt](https://github.com/1andrevich/zapret2-openwrt)** [OSS] — OpenWrt packages for the Zapret2 DPI-bypass engine.
@@ -296,6 +343,8 @@ Strategies such as fragmentation, spoofed packets, TTL tricks and protocol camou
 
 ## Routing rules and geodata
 
+- **[Russia mobile Internet allowlist data](https://github.com/hxehex/russia-mobile-internet-whitelist)** — Community-observed domains/IPs accessible during some mobile-network restrictions; data varies by ISP/time and is **not** a guaranteed bypass.
+- **[russia-v2ray-rules-dat](https://github.com/runetfreedom/russia-v2ray-rules-dat)**
 - **[russia-v2ray-rules-dat](https://github.com/runetfreedom/russia-v2ray-rules-dat)** — Auto-updated routing data for Russian domains/networks and blocking-related rules.
 - **[ITDOG allow-domains](https://github.com/itdoginfo/allow-domains)** — Curated domain lists relevant to local filtering and split routing; check licensing and update cadence.
 - **[v2ray-rules-dat](https://github.com/Loyalsoldier/v2ray-rules-dat)** — Enhanced GeoIP/geosite rule sets.
@@ -312,8 +361,13 @@ Rule formats are **not automatically interchangeable**: `geoip.dat`, `geosite.da
 
 ## Diagnostics and measurements
 
+- **[RKN Block Checker](https://github.com/MayersScott/rkn-block-checker)** [OSS] — Layer-by-layer DNS, TCP, TLS and HTTP diagnostics for restrictions on authorized networks.
+- **[VPN Traffic Obfuscation Lab](https://github.com/maxlluky/VPN-Traffic-Obfuscation-Lab)** [OSS] — Reproducible Docker lab comparing packet inspection and obfuscation approaches (research).
+- **[RKNHardering](https://github.com/xtclovver/RKNHardering)**
 - **[RKNHardering](https://github.com/xtclovver/RKNHardering)** [OSS] — Android diagnostic checks for VPN/proxy detection, including interface signals and IP comparisons; results are **heuristics**, not a guarantee of invisibility.
 - **[DPYProxy](https://github.com/UPB-SysSec/DPYProxy)** [OSS] — Research proxy for testing DPI/DNS censorship evasion mechanisms, including automatic DNS circumvention experiments.
+- **[SonicDPI](https://github.com/by-sonic/sonicdpi)** — Rust-based cross-platform DPI-bypass experiment; applicability and independent security review unverified.
+- **[Geneva](https://github.com/Kkevsterrr/geneva)**
 - **[Geneva](https://github.com/Kkevsterrr/geneva)** [OSS] — Academic censorship-evasion strategy exploration using generated packet-manipulation strategies; research-grade, not a plug-and-play VPN.
 - **[xray-knife](https://github.com/lilendian0x00/xray-knife)** [OSS] — CLI diagnostics and utilities for Xray/sing-box connections; use only on authorized endpoints.
 - **[xray-checker](https://github.com/kutovoys/xray-checker)** [OSS] — Prometheus exporter for checking Xray proxy availability, latency and operational health.
@@ -356,6 +410,14 @@ Start with the [practical diagnostic checklist](TROUBLESHOOTING.md): distinguish
 
 ## Communities and reference catalogs
 
+- **[Awesome Remnawave](https://docs.rw/awesome-remnawave/)** — Official curated ecosystem of management, billing, deployments, monitoring and clients.
+- **[Remnawave community source list](https://github.com/remnawave/panel/blob/main/docs/awesome-remnawave.mdx)** — Source of the community curation (includes provenance and contributed projects).
+- **[Awesome anti-censorship](https://github.com/danoctavian/awesome-anti-censorship)** — Additional anti-censorship research/software directory; check each upstream.
+- **[Awesome resilient communication](https://github.com/gdamdam/awesome-resilient-communication)** — Failure-tolerant connectivity and off-grid communication projects; some are not VPNs.
+- **[VPN Protocol Registry](https://github.com/steveprice-dev/vpn-protocol-registry)** — Evidence-oriented index of provider-developed protocols and obfuscation, not a client.
+- **[Xray GitHub Discussions](https://github.com/XTLS/Xray-core/discussions)** — Upstream REALITY/XHTTP and client/core regressions.
+- **[Remnawave GitHub Discussions](https://github.com/remnawave/panel/discussions)** — Panel deployment, extensions and community solutions.
+- **[Project Xray Telegram](https://t.me/projectXray)**
 - **[Project Xray Telegram](https://t.me/projectXray)** — Official community referenced by XTLS/Xray-core.
 - **[Project XTLS channel](https://t.me/projectXtls)** — Official development news referenced by XTLS/Xray-core.
 - **[Project VLESS (RU)](https://t.me/projectVless)** — Russian-language VLESS technical community linked by XTLS/Xray-core.
@@ -399,6 +461,8 @@ The list favors **maintained original repositories, official distribution pages,
 
 - [Client directory](CLIENTS.md) — OS/architecture-aware choice guide, current sources and proprietary/legacy labels.
 - [Client research notes](CLIENT-RESEARCH-2026.md) — New-project verification, sources and exclusions.
+- [Latest ecosystem research](ECOSYSTEM-RESEARCH-2026.md) — Verifications, active/experimental tools, and notable compatibility reports.
+- [Research notes](RESEARCH-2026.md)
 - [Research notes](RESEARCH-2026.md) — Audited sources, primary discussions and editorial decisions from the October 2026 deep research.
 - [Contributing guidelines](CONTRIBUTING.md) — How to propose a project, verify links, and avoid misleading compatibility claims.
 - [Client compatibility matrix](COMPATIBILITY.md) — Platform, family of core, source/distribution and caveats. A supported core does **not** imply every transport is supported.
