@@ -121,4 +121,4 @@ This document is a **high-level discovery index**, not an automated interoperabi
 5. Inspect actual egress IP/DNS and client logs. Avoid publishing credentials, node hostnames or subscription tokens.
 6. Update this matrix only with upstream documentation, a cited release note or reproducible tests.
 
-**Snapshot:** 2026-10-25; extended with [NTC and dVPN research](RESEARCH-2026.md), [client release research](CLIENT-RESEARCH-2026.md), and [ecosystem/operations research](ECOSYSTEM-RESEARCH-2026.md). No claim is made that every combination above was manually tested.
+**Snapshot:** 2026-10-25. The [main catalog](README.md) collects technical discussions and research sources; [client directory](CLIENTS.md) lists platform-specific releases. This matrix is a source-reviewed discovery aid, **not** a claim that every combination was manually tested.
