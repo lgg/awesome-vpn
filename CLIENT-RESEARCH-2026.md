@@ -81,3 +81,14 @@ Officially linked Telegram communities: [Project Xray](https://t.me/projectXray)
 - Run `python scripts/validate_catalog.py` before approving PRs and check external links independently where access allows.
 
 *Snapshot date: October 25, 2026. This was an upstream metadata/documentation audit, not a security penetration test or hands-on installation of every app.*
+
+
+## October 25 follow-up: verified current release channels
+
+- **[KEQDIS](https://github.com/Lemonochka/keqdroid)** is GPL-3.0, with [v0.29.0](https://github.com/Lemonochka/keqdroid/releases/tag/v0.29.0) published 2026-10-23 containing Android APK, Windows x64 ZIP and Linux packages. Upstream describes Xray/mihomo and split tunneling, **not** an iOS release or automatically every core-specific transport. Cross-indexed in [CLIENTS.md](CLIENTS.md) and [COMPATIBILITY.md](COMPATIBILITY.md).
+- **[TiredVPN Android](https://github.com/tiredvpn/tiredvpn-android)** is a separate AGPL-3.0 client for [TiredVPN](https://github.com/tiredvpn/tiredvpn), not a generic VLESS importer; [v1.11.3 APK](https://github.com/tiredvpn/tiredvpn-android/releases/tag/v1.11.3) published 2026-10-20. **Experimental**, no independent security/compatibility test was established. [TiredVPN measurement data](https://github.com/tiredvpn/tiredvpn-measurements) is from its own maintainer, not an independent benchmark.
+- **[NoDPI4Android](https://github.com/GVCoder09/NoDPI4Android)** is a local DPI bypass tool rather than remote tunnel; GPL-3.0, [v2.0-beta APK](https://github.com/GVCoder09/NoDPI4Android/releases/tag/v2.0-beta) was the latest observed release. The Android VPNService limitation applies when trying to run another VPN client at the same time.
+- **[singA](https://github.com/infinjest/singA)** is an experimental arm64 OpenWrt gateway rather than a general-purpose Android or desktop client. Only Netis NX31/OpenWrt 25.12.4 is explicitly reported tested; no SPDX license appeared in repository metadata, so it is not labeled OSS.
+- **[NFQWS-MENU](https://github.com/rndnaame/nfqws-menu)** is a *router management script* for community nfqws strategies, and therefore does not imply a full general-purpose VPN exit or official bol-van endorsement.
+
+Consult [the detailed second-pass research and security review](DPI-RESEARCH-ROUND2-2026.md) for exact evidence, testing scope and exclusions. Client build availability, source-code licensing, and transport compatibility remain separate checks.
