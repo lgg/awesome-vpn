@@ -1,6 +1,6 @@
 # VPN & Proxy Client Directory (October 2026)
 
-[← Awesome VPN](README.md) · [Compatibility notes](COMPATIBILITY.md) · [Troubleshooting](TROUBLESHOOTING.md) · [Source audit](CLIENT-RESEARCH-2026.md)
+[← Awesome VPN](README.md) · [Compatibility notes](COMPATIBILITY.md) · [Troubleshooting](TROUBLESHOOTING.md) · [Contributing](CONTRIBUTING.md)
 
 > Platform-first catalog of proxy/VPN client applications and router integrations. Entries are cross-indexed here for discoverability, not ranked by speed or promised bypass reliability. **Last curated 2026-10-25.**
 
