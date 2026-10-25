@@ -132,3 +132,9 @@ Reproduction steps:
 ```
 
 **Never include:** private keys, subscription identifiers, auth headers, real user credentials, full config URLs, personal device IDs, or identifiable packet captures.
+
+## Fresh 2026 measurements and TLS security
+
+For a failing VPN/DPI configuration, separate the *observed failure* from its hypothesized root cause. [Prosvet](https://github.com/Derposd/prosvet) and [YT-DPI](https://github.com/Shiperoid/YT-DPI) perform local service/path measurements; [tiredvpn-measurements](https://github.com/tiredvpn/tiredvpn-measurements) publishes maintainer-controlled, dated transport checks. None alone proves that your provider performs particular DPI classification or that a strategy works for every application. Record ISP/ASN, date, client/core version, SNI/TLS handshake details, DNS path, target IP, access type (mobile/wired), and both direct/proxied/TUN results. Avoid sharing packet captures with private credentials or connection identifiers.
+
+**Xray-core security reminder.** Reviewed [advisory GHSA-5wf9-h793-w73c](https://github.com/advisories/GHSA-5wf9-h793-w73c) describes a certificate-pinning configuration that could skip proper hostname verification, potentially enabling MITM. It was published July 10 and updated October 2, 2026; inspect the advisory's affected/fixed module versions and your **actual bundled Xray core**, not merely the GUI/panel version. Specifically inspect configurations that use `pinnedPeerCertSha256`, especially without an explicit `serverName`. This does **not** imply that every VLESS/REALITY connection is affected. Keep certificate/host verification enabled and update affected clients or embedded cores.
