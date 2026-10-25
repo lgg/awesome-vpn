@@ -14,6 +14,7 @@ This list covers **VPNs, application proxies, local DPI circumvention, encrypted
 
 - [Client directory and selection guide](CLIENTS.md)
 - [2026 research and ecosystem additions](ECOSYSTEM-RESEARCH-2026.md)
+- [DPI, router tools and specialist forum research (October 2026)](DPI-RESEARCH-2026.md)
 - [Proxy and VPN cores](#proxy-and-vpn-cores)
 - [Desktop clients](#desktop-clients)
 - [Android clients](#android-clients)
@@ -290,10 +291,13 @@ Local circumvention tools here primarily try to defeat packet inspection and fil
 - **[SpoofDPI](https://github.com/xvzc/spoofdpi)** [OSS] — Cross-platform local DPI-evasion proxy for desktop operating systems; upstream explicitly states **no Android or iOS** distribution.
 - **[DPIBreak](https://github.com/dilluti0n/dpibreak)** [OSS] — Linux/Windows DPI-circumvention utility; uses system-level techniques, not a remote VPN exit.
 - **[GreenTunnel](https://github.com/SadeghHayeri/GreenTunnel)** [OSS] — Local HTTP/HTTPS anti-censorship tool; filtering effectiveness depends on ISP and network.
+- **[NoDPI](https://github.com/GVCoder09/NoDPI)** [OSS] — Desktop DPI-bypass utility; upstream documents services it cannot unblock and links a separate Android port.
 - **[Zapret2](https://github.com/bol-van/zapret2)** [OSS] — Current-generation DPI desynchronization toolkit with configurable scripts and blockcheck2 strategy testing.
 - **[zapret (v1)](https://github.com/bol-van/zapret)** [OSS] [Legacy] — Earlier version; upstream explicitly directs new development to Zapret2.
 - **[Zapret Windows bundle](https://github.com/bol-van/zapret-win-bundle)** [OSS] — Upstream Windows binary bundle and blockcheck utilities; verify the included release generation.
+- **[Zapret2UI](https://github.com/Asterlike/zapret2UI)** [Experimental] — Independent Windows GUI for Zapret2 with strategy selection; verify bundled binaries and licensing before installing.
 - **[Flowseal Zapret preset](https://github.com/Flowseal/zapret-discord-youtube)** — Windows-oriented packaged presets for Discord/YouTube; **third-party**, not the original Zapret upstream.
+- **[youtubeUnblock](https://github.com/Waujito/youtubeUnblock)** [OSS] — YouTube-focused SNI/DPI bypass for Linux, OpenWrt and Entware using NFQUEUE or a kernel module; **not** a Windows/mobile client.
 - **[Floweryguard](https://github.com/KarlMerkel/Floweryguard)** [OSS] — Windows DPI-bypass utility and tethering/TTL helper; verify strategies for your network.
 - **[DesyncDroyd](https://github.com/sigmabosshvh/DesyncDroyd)** — Android client incorporating zapret2 via Shizuku; review permissions and device compatibility.
 - **[ByeDPI Manager](https://github.com/romanvht/ByeDPIManager)** [OSS] — Windows GUI for ByeDPI and ProxiFyre-based traffic redirection.
@@ -332,6 +336,7 @@ These projects are specific to Telegram transport. **Telegram MTProxy is not a g
 
 - **[iodine](https://github.com/yarrick/iodine)** [OSS] — DNS tunnel carrying IPv4 packets over DNS; client and server must use compatible versions, and DNS relaying rules may restrict it.
 - **[MasterDnsVPN](https://github.com/masterking32/MasterDnsVPN)** [OSS] — DNS tunneling VPN with resilience and resolver-balancing features; distinct from ordinary encrypted DNS.
+- **[StormDNS](https://github.com/nullroute1970/StormDNS)** [Experimental] — Client/server TCP-over-DNS tunnel with SOCKS interface; needs a remote endpoint, DNS delegation and encryption-key management, **not** DoH.
 - **[Slipstream](https://github.com/EndPositive/slipstream)** — DNS-based covert communication/tunnel implementation; actual throughput depends on resolvers and network policy.
 - **[dnstt](https://www.bamsoftware.com/software/dnstt/)** — DNS-based encrypted tunneling system; [GitHub community mirror](https://github.com/Mygod/dnstt) is not authoritative upstream.
 - **[AdGuard Home](https://github.com/AdguardTeam/AdGuardHome)** [OSS] — Self-hosted filtering DNS resolver.
@@ -360,6 +365,13 @@ These projects are specific to Telegram transport. **Telegram MTProxy is not a g
 - **[OpenClash](https://github.com/vernesong/OpenClash)** [OSS] — Mihomo/Clash-oriented OpenWrt client integration.
 - **[HomeProxy](https://github.com/immortalwrt/homeproxy)** [OSS] — sing-box-based ImmortalWrt/OpenWrt proxy management.
 - **[zapret2-openwrt](https://github.com/1andrevich/zapret2-openwrt)** [OSS] — OpenWrt packages for the Zapret2 DPI-bypass engine.
+- **[nfqws2-keenetic](https://github.com/nfqws/nfqws2-keenetic)** [OSS] — Current-generation nfqws2 packages for Keenetic/Netcraze Entware, with documented use on some other router firmware; succeeds the unmaintained v1 packages.
+- **[nfqws-keenetic-web](https://github.com/nfqws/nfqws-keenetic-web)** [OSS] — Separate web UI for installed nfqws/nfqws2 router packages; not a DPI engine itself.
+- **[Zapret Web-GUI](https://github.com/avatarDD/zapret-gui)** [OSS] — Entware/OpenWrt dashboard combining nfqws2, several tunnel backends and per-destination fallback routing; review its firewall and upstream trust boundaries.
+- **[Zapret Manager](https://github.com/StressOzz/Zapret-Manager)** — OpenWrt tool for managing DPI, DNS and routing integrations; upstream also promotes a paid VPN service (not endorsed here).
+- **[Podkop](https://github.com/itdoginfo/podkop)** [OSS] [Beta] — OpenWrt sing-box selective routing; needs OpenWrt 24.10+ and modifies DNS/proxy configuration; read its telemetry caveat for the optional alternative installer.
+- **[XKeen](https://github.com/jameszeroX/XKeen)** [OSS] — Keenetic/Netcraze selective TCP/UDP proxy-routing manager using Xray or mihomo; distinct from local DPI desynchronization.
+
 - **[ByeDPI OpenWrt](https://github.com/1andrevich/ByeDPI-OpenWrt)** — OpenWrt package builds for the ByeDPI engine.
 - **[Re:Sputnik](https://github.com/1andrevich/re-sputnik)** [OSS] — Desktop wizard for deploying and managing a personal VPN router.
 - **[XKeen Panel](https://github.com/Dearonski/xkeen-panel)** — Web UI for XKeen/Xray on Keenetic routers.
@@ -387,6 +399,7 @@ Rule formats are **not automatically interchangeable**: `geoip.dat`, `geosite.da
 ## Diagnostics and measurements
 
 - **[DPI Detector](https://github.com/Runnin4ik/dpi-detector)** [OSS] — Detect DNS, TCP/TLS, HTTP filtering and suspicious connection truncation; results are network-specific.
+- **[blockcheckw](https://github.com/rcd27/blockcheckw)** [OSS] — Parallel Zapret2 blockcheck strategy-search wrapper with real-content follow-up checks; its block-type classification remains a diagnostic heuristic.
 - **[DPI Checkers](https://github.com/hyperion-cs/dpi-checkers)** [OSS] — Web/browser-facing and low-level censorship testing tools.
 - **[TSPU Probe](https://github.com/stpavel/tspu-probe)** — Android-focused VPN/TLS/VLESS diagnostics; a probe result is not a universal verdict.
 - **[RKN Block Checker](https://github.com/MayersScott/rkn-block-checker)** [OSS] — Layer-by-layer DNS, TCP, TLS and HTTP diagnostics for restrictions on authorized networks.
@@ -464,6 +477,10 @@ Start with the [practical diagnostic checklist](TROUBLESHOOTING.md): distinguish
 - **[Hysteria Telegram](https://t.me/hysteria_github)** — Hysteria project community.
 - **[GOST Telegram](https://t.me/gogost)** — Proxy and tunnel chaining discussions (linked from upstream's older repository).
 - **[net4people: Russia-labelled discussions](https://github.com/net4people/bbs/issues?q=is%3Aissue%20label%3ARussia)** — ISP measurements, mass IP filtering, DNS hijacking and DPI research from the technical community; individual reports are not universal.
+- **[Zapret2 developer discussions](https://github.com/bol-van/zapret2/discussions)** — Current nfqws2/winws2 strategy changes, 2026 regressions and troubleshooting.
+- **[nfqws2-keenetic community](https://github.com/nfqws/nfqws2-keenetic/discussions)** — Router integration issues, firmware compatibility and Entware packages.
+- **[youtubeUnblock developer discussions](https://github.com/Waujito/youtubeUnblock/discussions)** — Linux/OpenWrt userspace and kernel-module troubleshooting.
+- **[NoDPI Lab](https://nodpi.forumotion.com/)** — Tool-focused community forum linked by NoDPI upstream.
 - **[SpoofDPI community](https://discord.gg/k7qMbqhrcH)** — Developer-linked Discord for SpoofDPI troubleshooting.
 - **[Pangolin community](https://discord.gg/HCJR8Xhme4)** — Developer-linked community on zero-trust self-hosted access.
 - **[Netmaker community](https://discord.gg/zRb9Vfhk8A)** — Officially linked WireGuard orchestration discussion.
@@ -487,6 +504,7 @@ Start with the [practical diagnostic checklist](TROUBLESHOOTING.md): distinguish
 ## Research and curated discussions
 
 - [Research notes: NTC, alternative awesome lists, protocol and dVPN ecosystems](RESEARCH-2026.md) — Source-by-source review, selected discussion threads, what was already in the catalog and what was deliberately excluded.
+- [DPI and router research: Zapret2/ByeDPI ecosystem, current project status and specialist communities](DPI-RESEARCH-2026.md) — Source-checked additions and explicit caveats (October 2026).
 
 ## Maintenance and contributing
 
