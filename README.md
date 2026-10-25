@@ -353,6 +353,9 @@ Rule formats are **not automatically interchangeable**: `geoip.dat`, `geosite.da
 
 ## Diagnostics and measurements
 
+- **[DPI Detector](https://github.com/Runnin4ik/dpi-detector)** [OSS] — Detect DNS, TCP/TLS, HTTP filtering and suspicious connection truncation; results are network-specific.
+- **[DPI Checkers](https://github.com/hyperion-cs/dpi-checkers)** [OSS] — Web/browser-facing and low-level censorship testing tools.
+- **[TSPU Probe](https://github.com/stpavel/tspu-probe)** — Android-focused VPN/TLS/VLESS diagnostics; a probe result is not a universal verdict.
 - **[RKN Block Checker](https://github.com/MayersScott/rkn-block-checker)** [OSS] — Layer-by-layer DNS, TCP, TLS and HTTP diagnostics for restrictions on authorized networks.
 - **[VPN Traffic Obfuscation Lab](https://github.com/maxlluky/VPN-Traffic-Obfuscation-Lab)** [OSS] — Reproducible Docker lab comparing packet inspection and obfuscation approaches (research).
 - **[RKNHardering](https://github.com/xtclovver/RKNHardering)** [OSS] — Android diagnostic checks for VPN/proxy detection, including interface signals and IP comparisons; results are **heuristics**, not a guarantee of invisibility.
@@ -400,6 +403,9 @@ Start with the [practical diagnostic checklist](TROUBLESHOOTING.md): distinguish
 
 ## Communities and reference catalogs
 
+- **[wiki.zapret.moe: TSPU inspectors](https://wiki.zapret.moe/DPI/tspu-inspectors-checkers-2026)** — Technical comparison of censorship measurement tools and their evidentiary limits.
+- **[wiki.zapret.moe: protocol index](https://wiki.zapret.moe/protocols/)** — Versioned survey of VPN, proxy and transport family differences; recheck upstream before adopting claims.
+- **[Atlas RKN: how network filtering is measured](https://rkn.kitten.software/wiki/tspu-detectors/)** — Research map of independent probes, DNS and traffic-filtering evidence.
 - **[Awesome Remnawave](https://docs.rw/awesome-remnawave/)** — Official curated ecosystem of management, billing, deployments, monitoring and clients.
 - **[Remnawave community source list](https://github.com/remnawave/panel/blob/main/docs/awesome-remnawave.mdx)** — Source of the community curation (includes provenance and contributed projects).
 - **[Awesome anti-censorship](https://github.com/danoctavian/awesome-anti-censorship)** — Additional anti-censorship research/software directory; check each upstream.
