@@ -9,7 +9,7 @@ from pathlib import Path
 from urllib.parse import unquote, urlparse
 
 ROOT = Path(__file__).resolve().parent.parent
-MARKDOWN = ["README.md", "COMPATIBILITY.md", "CLIENTS.md", "TROUBLESHOOTING.md", "CONTRIBUTING.md", "MAINTENANCE.md", "RESEARCH-2026.md", "CLIENT-RESEARCH-2026.md"]
+MARKDOWN = ["README.md", "COMPATIBILITY.md", "CLIENTS.md", "TROUBLESHOOTING.md", "CONTRIBUTING.md", "MAINTENANCE.md", "RESEARCH-2026.md", "CLIENT-RESEARCH-2026.md", "ECOSYSTEM-RESEARCH-2026.md"]
 LINK = re.compile(r"(?<!!)\[[^\]]+\]\(([^\s)]+)(?:\s+[^)]*)?\)")
 HEADING = re.compile(r"^#{1,6}\s+(.+?)\s*#*\s*$", re.MULTILINE)
 SECTION = re.compile(r"^##\s+(.+)$", re.MULTILINE)
@@ -89,6 +89,22 @@ def validate() -> int:
         repeated_across = [url for url, n in cross.items() if n > 1]
         if repeated_across:
             warnings.append(f"{len(repeated_across)} projects intentionally appear in multiple topical sections")
+
+    # Check that platform matrix entries remain valid Markdown table rows.
+    clients_path = ROOT / "CLIENTS.md"
+    if clients_path.is_file():
+        client_rows = 0
+        for line_no, line in enumerate(clients_path.read_text(encoding="utf-8").splitlines(), 1):
+            if line.startswith("| **"):
+                client_rows += 1
+                if len(line.split("|")) != 6:
+                    problems.append(f"CLIENTS.md:{line_no}: expected four table columns")
+                if "](" not in line:
+                    problems.append(f"CLIENTS.md:{line_no}: missing project link")
+        if client_rows < 10:
+            problems.append(f"CLIENTS.md: suspiciously short directory ({client_rows} rows)")
+    else:
+        problems.append("CLIENTS.md: required client catalog missing")
 
     print(f"Catalog check: {len(MARKDOWN)} Markdown files; {total_links} Markdown links; {entry_count} GitHub list entries")
     for notice in warnings:

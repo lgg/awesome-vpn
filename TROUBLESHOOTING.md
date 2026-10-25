@@ -66,6 +66,23 @@ Relevant upstream references: [Xray DNS](https://xtls.github.io/en/config/dns.ht
 
 References: [zapret](https://github.com/bol-van/zapret), [ByeDPI](https://github.com/hufrea/byedpi), [OONI Probe](https://github.com/ooni/probe).
 
+## VLESS + REALITY: a client reports connected, but no usable traffic
+
+**Separate handshake and application delivery.** A client's green connection indicator can mean the upstream accepted a connection while TCP application requests, DNS or routed streams still fail.
+
+Recent upstream reports (not a universal fault statement):
+
+- [Xray-core discussion #7144](https://github.com/XTLS/Xray-core/discussions/7144), opened 2026-10-13: one reporter described a specific `qq` uTLS fingerprint/regression across Xray versions and networks. A core downgrade was used in that report, **not recommended here as a blanket fix** because it can forgo security updates.
+- [v2rayN discussion #9567](https://github.com/2dust/v2rayN/discussions/9567): one setup transported traffic with a sing-box core while failing with Xray on the same VLESS + REALITY profile. This does not establish that either core universally works better.
+
+For an authorized diagnostic comparison:
+
+1. Log the exact **server and client core versions**, client build, platform and REALITY/transport settings (omit secret keys).
+2. Compare a direct server path with any multihop chain. Do not change DNS, route, core version and fingerprint all at once.
+3. Test DNS separately from TLS handshake and an actual HTTPS request. See [TUN DNS](#tun-connects-but-dns-fails).
+4. If the client permits **core selection**, compare current supported Xray and sing-box versions using the same imported profile, and record differences.
+5. Check upstream issues/releases for known compatibility changes. Do not blindly disable certificate checks, leak private keys or pin vulnerable old versions.
+
 ## Domain and application routing
 
 For a split tunnel using country/domain/IP rules:

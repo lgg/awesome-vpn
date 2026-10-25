@@ -10,6 +10,9 @@ This document is a **high-level discovery index**, not an automated interoperabi
 
 | Client | Platforms | Engine / technology | Distribution / code | Important caveats |
 | --- | --- | --- | --- | --- |
+| [Qeli](https://github.com/litvinovtd/qeli) | Windows, macOS, Android (upstream claims) | **Qeli custom VPN protocol** | AGPL-3.0 core, MPL-2.0 client dirs | **Beta/pre-1.0, security not independently established**; does not import standard Xray subscriptions |
+| [Veil](https://github.com/alibakhtiari/Veil) | Desktop, Android | MASQUE/WireGuard tunnel design | AGPL-3.0 | Experimental; check signed binaries and release readiness |
+| [v2whitelist](https://github.com/NullCoreDeveloper/v2whitelist) | Android | Xray/V2Ray | GPL-3.0 | Experimental network-filtering scenarios; no guarantee of accessibility |
 | [WINGS V DeX](https://github.com/WINGS-N/WINGSV_DeX) | Windows, Linux | Xray, VK TURN | Open source | Project-specific VK TURN integration; check desktop builds and permissions |
 | [SkipIt](https://github.com/getskipit/skipit) | Windows (upstream repository description) | Xray, sing-box | Open source | Verify supported builds and current transport implementation |
 | [INCY](https://github.com/INCY-DEV/incy-platforms) | Android/TV, iOS/tvOS, Windows/macOS/Linux | Xray | **Closed client** / official binary releases | Desktop **pre-alpha**; GitHub hosts releases/metadata and does not contain complete app source |
@@ -66,6 +69,16 @@ This document is a **high-level discovery index**, not an automated interoperabi
 | [MetaCubeXD](https://github.com/MetaCubeX/metacubexd) | mihomo | Client/core monitoring dashboard | **Not** equivalent to a VPN service billing panel |
 | [Nikki](https://github.com/nikkinikki-org/OpenWrt-nikki) | mihomo | OpenWrt client transparent proxy plugin | Requires firmware/kernel/firewall4 support; not a general desktop client |
 
+## Router and subscription integrations
+
+| Project | Platform / backend | Use case | Important caveats |
+| --- | --- | --- | --- |
+| [WayHop](https://github.com/awadak3davra/wayhop) | OpenWrt/Entware; sing-box | Browser-based configuration, failover and traffic charts | **Pre-1.0**; may overlap existing firewall/routing policies |
+| [routeflux](https://github.com/Alaxay8/routeflux) | OpenWrt; Xray | Subscribe/select nodes and transparent proxy routing | Firmware, firewall and DNS configuration must be verified |
+| [Asuswrt-Merlin AmneziaWG](https://github.com/william-aqn/asuswrt-merlin-amneziawg) | ASUS Merlin/Entware; AmneziaWG | Router client and server, selective routes | Firmware/architecture-specific |
+| [Remnawave Subscription Middleware](https://github.com/Mrvibecodic/remnawave-subscription-middleware) | Remnawave subscriptions | Mirroring, profile modification and access rules | Sensitive subscription data, reverse-proxy trust and authentication |
+| [MCP Remnawave](https://github.com/TrackLine/mcp-remnawave) | Remnawave API | Administrative automation and integrations | Never expose an unrestricted control/API token to untrusted agents |
+
 ## Protocol and transport vocabulary
 
 | Term | Type | Do not confuse with |
@@ -92,4 +105,4 @@ This document is a **high-level discovery index**, not an automated interoperabi
 5. Inspect actual egress IP/DNS and client logs. Avoid publishing credentials, node hostnames or subscription tokens.
 6. Update this matrix only with upstream documentation, a cited release note or reproducible tests.
 
-**Snapshot:** 2026-10-25; extended with [NTC and dVPN research](RESEARCH-2026.md) and [client release research](CLIENT-RESEARCH-2026.md). No claim is made that every combination above was manually tested.
+**Snapshot:** 2026-10-25; extended with [NTC and dVPN research](RESEARCH-2026.md), [client release research](CLIENT-RESEARCH-2026.md), and [ecosystem/operations research](ECOSYSTEM-RESEARCH-2026.md). No claim is made that every combination above was manually tested.
