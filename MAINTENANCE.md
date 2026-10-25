@@ -53,3 +53,13 @@ Cross-checked with [awesome-sing-box](https://github.com/oceanapplications/aweso
 - [YumeBox](https://github.com/YumeYucca/YumeBox): repository has an AGPL-3.0 license but README.md was absent from default branch at review time; feature list intentionally conservative.
 
 See [CLIENTS.md](CLIENTS.md) and [CLIENT-RESEARCH-2026.md](CLIENT-RESEARCH-2026.md) for current client links and platform caveats.
+
+## Operations and self-hosted tooling (2026-10-25)
+
+- [Official Awesome Remnawave](https://docs.rw/awesome-remnawave/) is the upstream catalog for many new monitoring, commerce, backup and integration projects. Original source: [docs/awesome-remnawave.mdx](https://github.com/remnawave/panel/blob/main/docs/awesome-remnawave.mdx).
+- Panel automation and subscription middleware can access credentials, HWIDs, payments, traffic and customer data. For production, require operator code review, token scoping, backups and tested rollback.
+- [Qeli](https://github.com/litvinovtd/qeli), [Veil](https://github.com/alibakhtiari/Veil) and [mikan](https://github.com/Miroshka000/mikan) are explicitly categorized as experimental/new; GitHub activity is not a security guarantee.
+- [WayHop](https://github.com/awadak3davra/wayhop) is pre-1.0 and operates router routing/firewall configuration; verify interactions with installed LuCI/Entware plugins.
+- [coolcoala/clash-verge-rev-lite](https://github.com/coolcoala/clash-verge-rev-lite) could not be resolved by GitHub API; excluded until a validated upstream is found.
+- [Flowvy](https://github.com/flowvy/desktop) exists, but its listing was under removal discussion in [Remnawave PR #529](https://github.com/remnawave/panel/pull/529), so not recommended without updated provenance.
+- Fresh examples and upstream reports are recorded in [ECOSYSTEM-RESEARCH-2026.md](ECOSYSTEM-RESEARCH-2026.md).
