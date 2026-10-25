@@ -319,6 +319,7 @@ These projects are specific to Telegram transport. **Telegram MTProxy is not a g
 
 - **[Telemt](https://github.com/telemt/telemt)** — Rust/Tokio-based Telegram MTProxy with TLS-looking fronting and configurable server-side transport features; inspect its release/license.
 - **[mtg](https://github.com/9seconds/mtg)** [OSS] — Minimal Go Telegram MTProxy server with version-2 configuration and scalable concurrent sessions.
+- **[NTC MTProto 2026 discussion](https://ntc.rkn.quest/t/mtproto-%D0%B2-2026-%D0%B3%D0%BE%D0%B4%D1%83/22506)** — Community comparisons of MTProxy, Telemt and mtg under filtering; field reports are not guarantees.
 - **[Official MTProxy](https://github.com/TelegramMessenger/MTProxy)** — Reference MTProto proxy server used by Telegram clients.
 - **[mtproto.zig](https://github.com/sleep3r/mtproto.zig)** [OSS] — Lightweight Zig MTProto proxy for a personally operated Linux server, with TLS-looking transport and a documented control interface.
 - **[tglock](https://github.com/by-sonic/tglock)** [OSS] — Desktop utility for Telegram-specific WebSocket connectivity; not a system-wide VPN.
@@ -391,7 +392,6 @@ Rule formats are **not automatically interchangeable**: `geoip.dat`, `geosite.da
 - **[RKN Block Checker](https://github.com/MayersScott/rkn-block-checker)** [OSS] — Layer-by-layer DNS, TCP, TLS and HTTP diagnostics for restrictions on authorized networks.
 - **[VPN Traffic Obfuscation Lab](https://github.com/maxlluky/VPN-Traffic-Obfuscation-Lab)** [OSS] — Reproducible Docker lab comparing packet inspection and obfuscation approaches (research).
 - **[Ladon](https://github.com/belotserkovtsev/Ladon)** [OSS] — Reactive DNS/TCP/TLS/HTTP censorship classifier for Linux gateways and OPNsense, producing ipset/routing decisions rather than acting as a VPN.
-- **[NTC MTProto 2026 discussion](https://ntc.rkn.quest/t/mtproto-%D0%B2-2026-%D0%B3%D0%BE%D0%B4%D1%83/22506)** — Community comparisons of MTProxy, Telemt and mtg under filtering; field reports are not guarantees.
 - **[RKNHardering](https://github.com/xtclovver/RKNHardering)** [OSS] — Android diagnostic checks for VPN/proxy detection, including interface signals and IP comparisons; results are **heuristics**, not a guarantee of invisibility.
 - **[DPYProxy](https://github.com/UPB-SysSec/DPYProxy)** [OSS] — Research proxy for testing DPI/DNS censorship evasion mechanisms, including automatic DNS circumvention experiments.
 - **[SonicDPI](https://github.com/by-sonic/sonicdpi)** — Rust-based cross-platform DPI-bypass experiment; applicability and independent security review unverified.
@@ -447,7 +447,6 @@ Start with the [practical diagnostic checklist](TROUBLESHOOTING.md): distinguish
 - **[VPN Protocol Registry](https://github.com/steveprice-dev/vpn-protocol-registry)** — Evidence-oriented index of provider-developed protocols and obfuscation, not a client.
 - **[Xray GitHub Discussions](https://github.com/XTLS/Xray-core/discussions)** — Upstream REALITY/XHTTP and client/core regressions.
 - **[Remnawave GitHub Discussions](https://github.com/remnawave/panel/discussions)** — Panel deployment, extensions and community solutions.
-- **[Project Xray Telegram](https://t.me/projectXray)**
 - **[Project Xray Telegram](https://t.me/projectXray)** — Official community referenced by XTLS/Xray-core.
 - **[Project XTLS channel](https://t.me/projectXtls)** — Official development news referenced by XTLS/Xray-core.
 - **[Project VLESS (RU)](https://t.me/projectVless)** — Russian-language VLESS technical community linked by XTLS/Xray-core.
@@ -468,7 +467,6 @@ Start with the [practical diagnostic checklist](TROUBLESHOOTING.md): distinguish
 - **[SpoofDPI community](https://discord.gg/k7qMbqhrcH)** — Developer-linked Discord for SpoofDPI troubleshooting.
 - **[Pangolin community](https://discord.gg/HCJR8Xhme4)** — Developer-linked community on zero-trust self-hosted access.
 - **[Netmaker community](https://discord.gg/zRb9Vfhk8A)** — Officially linked WireGuard orchestration discussion.
-- **[Tor Project discussion categories](https://forum.torproject.org/)** — Bridges, Snowflake/obfs and censored-network troubleshooting, rather than generic VPN performance.
 - **[NTC forum](https://ntc.party/)** — Network restrictions and connectivity discussions (regional availability varies).
 - **[NTC community software](https://ntc.rkn.quest/c/community-software/27)** — Upstream discussions for Zapret/ByeDPI/GoodbyeDPI and community tools.
 - **[NTC circumvention methods](https://ntc.rkn.quest/c/censorship-circumvention-software/11)** — Proxy transports, anti-censorship clients, WebTunnel, XHTTP and related protocols.
@@ -498,7 +496,6 @@ The list favors **maintained original repositories, official distribution pages,
 - [Client research notes](CLIENT-RESEARCH-2026.md) — New-project verification, sources and exclusions.
 - [Latest ecosystem research](ECOSYSTEM-RESEARCH-2026.md) — Verifications, active/experimental tools, and notable compatibility reports.
 - [Further transport & client research](TRANSPORT-RESEARCH-2026.md) — Verified upstream, NTC/net4people reports and explicit limitations.
-- [Research notes](RESEARCH-2026.md)
 - [Research notes](RESEARCH-2026.md) — Audited sources, primary discussions and editorial decisions from the October 2026 deep research.
 - [Contributing guidelines](CONTRIBUTING.md) — How to propose a project, verify links, and avoid misleading compatibility claims.
 - [Client compatibility matrix](COMPATIBILITY.md) — Platform, family of core, source/distribution and caveats. A supported core does **not** imply every transport is supported.
