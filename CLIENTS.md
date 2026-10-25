@@ -12,6 +12,9 @@
 
 | Client | Engine / family | Official project or distribution | Status / limitations |
 | --- | --- | --- | --- |
+| **Qeli desktop (beta)** | Dedicated Qeli protocol | [Upstream](https://github.com/litvinovtd/qeli) | **Experimental/pre-1.0**, Windows/macOS; full VPN, not an Xray GUI; see threat model |
+| **Veil desktop (experimental)** | MASQUE/WireGuard | [Upstream](https://github.com/alibakhtiari/Veil) | Early stage desktop GUI; check release signing and tested platforms |
+| **v2rayN** |
 | **v2rayN** | Xray, sing-box, V2Fly | [Upstream](https://github.com/2dust/v2rayN) | OSS; multi-platform, signed releases; features vary with selected core |
 | **v2RayTun** | Xray, AmneziaWG | [Upstream](https://github.com/LXST-CODE/v2RayTun) | Closed client; public releases/roadmap, separate platform tracks |
 | **INCY** | Xray | [Upstream](https://github.com/INCY-DEV/incy-platforms) | Closed client; Windows/macOS/Linux desktop builds **pre-alpha** as of Oct 2026 |
@@ -44,6 +47,9 @@
 
 | Client | Engine / family | Official project or distribution | Status / limitations |
 | --- | --- | --- | --- |
+| **v2whitelist** | Xray/V2Ray | [Upstream](https://github.com/NullCoreDeveloper/v2whitelist) | GPL-3.0; Android client for experimental mobile-network allowlist scenarios; no guaranteed ISP support |
+| **Qeli Android (beta)** | Dedicated Qeli protocol | [Upstream](https://github.com/litvinovtd/qeli) | Experimental; incompatible with VLESS/Reality subscription import |
+| **v2rayNG** |
 | **v2rayNG** | Xray, V2Fly | [Upstream](https://github.com/2dust/v2rayNG) | GPL-3.0; Android client; official GitHub releases |
 | **v2RayTun** | Xray, AmneziaWG | [Upstream](https://github.com/LXST-CODE/v2RayTun) | Closed; Android/Android TV packages; GitHub and Google Play |
 | **INCY** | Xray | [Upstream](https://github.com/INCY-DEV/incy-platforms) | Closed; Google Play and signed APK; Android release tags separate |
@@ -94,6 +100,10 @@
 
 | Client | Engine / family | Official project or distribution | Status / limitations |
 | --- | --- | --- | --- |
+| **WayHop** | sing-box policy routing | [Upstream](https://github.com/awadak3davra/wayhop) | MIT; OpenWrt/Entware/Keenetic; pre-1.0, not a desktop VPN client |
+| **routeflux** | Xray | [Upstream](https://github.com/Alaxay8/routeflux) | MIT; OpenWrt native, profile selection, DNS and transparent proxy |
+| **Asuswrt-Merlin AmneziaWG** | AmneziaWG | [Upstream](https://github.com/william-aqn/asuswrt-merlin-amneziawg) | MIT; firmware- and hardware-dependent ASUS router addon |
+| **OpenClash** |
 | **OpenClash** | mihomo/Clash | [Upstream](https://github.com/vernesong/OpenClash) | OSS; OpenWrt integration |
 | **Nikki** | mihomo | [Upstream](https://github.com/nikkinikki-org/OpenWrt-nikki) | GPL-3.0; OpenWrt 24.10+, kernel 5.13+, firewall4 per upstream |
 | **PassWall** | Xray, sing-box + multiple options | [Upstream](https://github.com/Openwrt-Passwall/openwrt-passwall) | GPL-3.0; LuCI OpenWrt |
