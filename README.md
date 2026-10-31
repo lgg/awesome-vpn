@@ -403,6 +403,7 @@ Rule formats are **not automatically interchangeable**: `geoip.dat`, `geosite.da
 
 ## Diagnostics and measurements
 
+- **[Kilobat CLI](https://github.com/seifip/kilobat-cli)** [OSS] — macOS network diagnostic CLI with proxy status and HTTP timing checks; it does not provide a proxy or VPN.
 - **[DPI Detector](https://github.com/Runnin4ik/dpi-detector)** [OSS] — Detect DNS, TCP/TLS, HTTP filtering and suspicious connection truncation; results are network-specific.
 - **[blockcheckw](https://github.com/rcd27/blockcheckw)** [OSS] — Parallel Zapret2 blockcheck strategy-search wrapper with real-content follow-up checks; its block-type classification remains a diagnostic heuristic.
 - **[DPI Checkers](https://github.com/hyperion-cs/dpi-checkers)** [OSS] — Web/browser-facing and low-level censorship testing tools.

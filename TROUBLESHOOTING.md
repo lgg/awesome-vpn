@@ -42,6 +42,15 @@ curl -Iv --connect-timeout 10 https://example.com
 
 Commands above gather local evidence. They are not proof that a route, proxy or DNS server is safe or private. Before packet capture, check that you have authorization and remove private information from any shared logs.
 
+**macOS, with Kilobat CLI installed**
+
+```bash
+kilobat proxy --json
+kilobat http-check https://example.com --json
+```
+
+The first command reports local proxy state; the second times an HTTP check. Use an authorized target and remove local network details before sharing output. A successful HTTP check alone does not establish which proxy or route carried the request. Some status information depends on the desktop app and its permissions; see the [CLI documentation](https://github.com/seifip/kilobat-cli).
+
 ## TUN connects but DNS fails
 
 A recurring failure mode in some desktop clients: packets to an IP address work inside the TUN, but domain lookups time out.
