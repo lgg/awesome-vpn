@@ -42,6 +42,19 @@ curl -Iv --connect-timeout 10 https://example.com
 
 Commands above gather local evidence. They are not proof that a route, proxy or DNS server is safe or private. Before packet capture, check that you have authorization and remove private information from any shared logs.
 
+## Compare Linux public egress before and during a VPN session
+
+Run the same read-only request before connecting and while connected, noting each address family separately:
+
+```bash
+curl --max-time 10 -4 https://api.ipify.org
+curl --max-time 10 -6 https://api6.ipify.org
+```
+
+An address change establishes the exit observed for that request, not every application. A failed IPv6 request can mean unavailable connectivity; it does not prove a leak-free setup. On NetworkManager systems, `nmcli -f NAME,TYPE,DEVICE connection show --active` adds local connection context. On systems using systemd-resolved, `resolvectl status` shows resolver configuration; it is not a complete DNS leak test. Skip tools that do not apply rather than changing network configuration for a test.
+
+Keep addresses and local connection names private. See the [step-by-step Linux checklist](https://ethicalvpn.app/blog/check-vpn-connection-linux/) for baseline, browser/profile and disconnect comparisons, and [ipify's endpoint documentation](https://www.ipify.org/) for IPv4/IPv6 behavior.
+
 ## TUN connects but DNS fails
 
 A recurring failure mode in some desktop clients: packets to an IP address work inside the TUN, but domain lookups time out.

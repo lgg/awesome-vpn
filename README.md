@@ -433,6 +433,8 @@ Rule formats are **not automatically interchangeable**: `geoip.dat`, `geosite.da
 - **[NTC top](https://ntc.party/top)** — Forum's topical entry point (access may vary).
 - **[NTC updates](https://ntc.rkn.quest/latest)** — Alternate NTC latest discussions index (availability may vary).
 
+- **[How to check your VPN connection on Linux](https://ethicalvpn.app/blog/check-vpn-connection-linux/)** — Read-only IPv4/IPv6, NetworkManager and resolver observations, with explicit limits on what each test establishes.
+
 Start with the [practical diagnostic checklist](TROUBLESHOOTING.md): distinguish DNS failures from routing, TCP/UDP, MTU, TLS and TUN-specific problems.
 
 ## Documentation and configuration examples
